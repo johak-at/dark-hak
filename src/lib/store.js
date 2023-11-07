@@ -1,10 +1,13 @@
+import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
+let localData = null;
 // lesen aus dem localStorage:
-const localData = localStorage.patterns
-    ? JSON.parse(localStorage.patterns)
-    : null;
-
+if (browser) {
+    localData = localStorage.patterns
+        ? JSON.parse(localStorage.patterns)
+        : null;
+}
 export const patterns = writable(localData || [
     {
         id: 1,
@@ -58,5 +61,6 @@ export const patterns = writable(localData || [
 
 // schreiben in den localStorage:
 patterns.subscribe((value) => {
-    localStorage.patterns = JSON.stringify(value);
+    if (browser)
+        localStorage.patterns = JSON.stringify(value);
 });
