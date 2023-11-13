@@ -13,7 +13,7 @@ export const patterns = writable(localData || [
         id: 1,
         name: "bait'n'switch",
         slug: "bait-switch",
-        done: false
+        done: true
     },
     {
         id: 2,
