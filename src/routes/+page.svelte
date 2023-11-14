@@ -1,5 +1,9 @@
 <script>
-	import { patterns } from '$lib/store';
+	import { patterns, defaultValue } from '$lib/store';
+
+	function clearProgress() {
+		$patterns = defaultValue;
+	}
 </script>
 
 <ul class="flex flex-col items-center gap-5">
@@ -11,6 +15,8 @@
 		</li>
 	{/each}
 </ul>
+
+<button on:click={clearProgress} class="btn">Clear Progress</button>
 
 <style>
 	.done {

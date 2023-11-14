@@ -14,7 +14,7 @@ export const defaultValue = [
         id: 1,
         name: "bait'n'switch",
         slug: "bait-switch",
-        done: true
+        done: false
     },
     {
         id: 2,
