@@ -8,7 +8,8 @@ if (browser) {
         ? JSON.parse(localStorage.patterns)
         : null;
 }
-export const patterns = writable(localData || [
+
+export const defaultValue = [
     {
         id: 1,
         name: "bait'n'switch",
@@ -57,10 +58,13 @@ export const patterns = writable(localData || [
         slug: "simulated-urgency",
         done: false
     },
-]);
+]
+
+export const patterns = writable(localData || defaultValue);
 
 // schreiben in den localStorage:
 patterns.subscribe((value) => {
     if (browser)
         localStorage.patterns = JSON.stringify(value);
 });
+
