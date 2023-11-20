@@ -1,4 +1,1 @@
-<script>
-	/** @type {import('./$types').PageData} */
-	export let data;
-</script>
+<h1>Hallo Basti! 😚 Ich liebe meinen Kanzler</h1>
