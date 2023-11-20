@@ -22,9 +22,9 @@
 	</p>
 
 	<p>
-		Das wirksamste Mittel zum Schutz vor diesen manipulativen Designpraktiken ist Aufklärung und
-		zahlreiche Initiativen bieten wertvolle Informationen und gesammelte Beispiele, u.a. widmet sich
-		der VKI auf den Seiten
+		Das wirksamste Mittel zum Schutz vor diesen manipulativen Designpraktiken ist Aufklärung.
+		Zahlreiche Initiativen bieten daher wertvolle Informationen und gesammelte Beispiele, u.a.
+		widmet sich der VKI auf den Seiten
 		<a href="https://konsument.at/dark-patterns-so-manipulieren-websites-und-apps/66873"
 			>konsument.at</a
 		>
