@@ -6,6 +6,12 @@
 	}
 </script>
 
+<p class="prose">
+	Als <em>Dark Patterns</em> bzw. <em>Deceptive Design</em> werden insbesondere Online-Designpraktiken
+	bezeichnet, die User*innen zu Handlungen veranlassen, welche sie unbeeinflusst so nicht setzen würden.
+	Sie basieren auf der gezielten Ausnutzung einer Reihe menschlicher Schwächen.
+</p>
+
 <ul class="flex flex-col items-center gap-5">
 	{#each $patterns as pattern}
 		<li>
