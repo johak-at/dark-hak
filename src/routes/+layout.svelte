@@ -20,7 +20,6 @@
 	<select bind:value={theme} class="fixed top-0 right-0">
 		<option value="synthwave">synthwave</option>
 		<option value="cyberpunk">cyberpunk</option>
-		<option value="coffee">coffee</option>
 	</select>
 
 	<slot />
