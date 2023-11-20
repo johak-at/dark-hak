@@ -3,4 +3,4 @@
 	export let data;
 </script>
 
-<h1>Migei, Pezi und Lämmerhofer</h1>
+<h1>Migei, Pezi und Lämmerhofer sind die Besten</h1>
