@@ -8,12 +8,14 @@ const config = {
 
 	plugins: [require("daisyui"), require('@tailwindcss/typography')],
 	daisyui: {
-		themes: ["synthwave", "cyberpunk", {
+		themes: ["synthwave", "cyberpunk", "corporate", {
 			johak: {
+				...require("daisyui/src/theming/themes")["corporate"],
 				"primary": "#005577",
 				"secondary": "#E4003A",
 				"accent": "#F7A823",
 				"base-100": "#FFFFFF",
+				"neutral": "#1A2E3C"
 			}
 		}]
 	},
