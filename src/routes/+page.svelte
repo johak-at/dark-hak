@@ -55,7 +55,7 @@
 	</ul>
 </nav>
 
-<button on:click={clearProgress} class="btn mb-5">Clear Progress</button>
+<button on:click={clearProgress} class="btn mb-5 btn-secondary">Clear Progress</button>
 
 <aside id="quellen" class="prose">
 	<h2>Zusätzliche Quellen</h2>
