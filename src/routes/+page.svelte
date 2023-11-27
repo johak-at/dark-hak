@@ -41,21 +41,23 @@
 	</p>
 </main>
 
-<nav>
-	<ul class="flex flex-col items-center gap-5 my-5">
-		{#each $patterns as pattern}
-			<li>
-				<a
-					href="/{pattern.slug}"
-					class="transition-all hover:underline {pattern.done ? 'line-through' : ''}"
-					>{pattern.name}</a
-				>
-			</li>
-		{/each}
-	</ul>
-</nav>
+<div class="flex flex-col gap-7">
+	<nav>
+		<ul class="flex flex-col items-center gap-6 my-5">
+			{#each $patterns as pattern}
+				<li>
+					<a
+						href="/{pattern.slug}"
+						class="text-lg transition-all hover:underline {pattern.done ? 'line-through' : ''}"
+						>{pattern.name}</a
+					>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 
-<button on:click={clearProgress} class="btn mb-5">Clear Progress</button>
+	<button on:click={clearProgress} class="btn mb-5">Clear Progress</button>
+</div>
 
 <aside id="quellen" class="prose">
 	<h2>Zusätzliche Quellen</h2>
