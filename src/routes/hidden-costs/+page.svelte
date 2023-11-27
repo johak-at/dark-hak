@@ -4,7 +4,7 @@
 	</div>
 	<div>Willkommen bei unserem Onlinehsop!</div>
 
-	<div class="flex justify-center px-4 py-16 bg-base-200">
+	<div class="flex justify-center px-64 py-64 bg-base-800">
 		<button class="btn btn-info">Info</button>
 		<button class="btn btn-success">Success</button>
 		<button class="btn btn-warning">Warning</button>
