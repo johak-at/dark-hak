@@ -1,6 +1,7 @@
 <script>
 	import { onNavigate } from '$app/navigation';
 	import { theme } from '$lib/store';
+	import Icon from '@iconify/svelte';
 	import '../app.postcss';
 
 	onNavigate((navigation) => {
@@ -19,11 +20,20 @@
 	data-theme={$theme}
 	class="min-h-screen flex flex-col items-center justify-center gap-5 py-32 px-4"
 >
-	<select bind:value={$theme} class="fixed top-1 right-1 select select-bordered">
-		<option value="synthwave">synthwave</option>
-		<option value="cyberpunk">cyberpunk</option>
-		<option value="johak">johak</option>
-	</select>
+	<header class="flex absolute top-0 w-full justify-between items-center p-3 bg-base-100">
+		<a href="/" class="text-4xl flip"><Icon icon="streamline:emergency-exit" /></a>
+		<select bind:value={$theme} class="select select-bordered">
+			<option value="synthwave">synthwave</option>
+			<option value="cyberpunk">cyberpunk</option>
+			<option value="johak">johak</option>
+		</select>
+	</header>
 
 	<slot />
 </div>
+
+<style>
+	.flip {
+		transform: scaleX(-1);
+	}
+</style>

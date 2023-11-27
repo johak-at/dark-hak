@@ -33,8 +33,8 @@
 	</p>
 
 	<p>
-		Basierend auf diesen und weiteren Quellen<sup>[<a href="#quellen">1</a>]</sup> haben
-		Schüler*innen der <a href="https://www.johak.at">JO.HAK</a>
+		Basierend auf diesen und weiteren Quellen<sup>[<a href="#quellen">1</a>]</sup>
+		haben Schüler*innen der <a href="https://www.johak.at">JO.HAK</a>
 		auf der vorliegenden Website einen kleinen interaktiven "Hindernisparcours" zur Demonstration einer
 		Reihe verschiedener <em>Dark Patterns</em> erstellt. Wurde eine Aufgabe erfolgreich bewältigt, wird
 		sie von der Liste gestrichen:
