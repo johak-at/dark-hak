@@ -6,8 +6,7 @@
 		currentPage = 'checkout';
 	}
 </script>
-
-<div class="mockup-browser border bg-base-300 max-w-[90%]">
+<div class="mockup-browser border bg-base-300 max-w-[90%] bg-fixed">
 	<div class="mockup-browser-toolbar">
 		<div class="input">https://sicherlichecht.shop</div>
 	</div>
@@ -31,6 +30,5 @@
 		<div>Mein Warenkorb</div>
 	{/if}
 </div>
-
 <style>
 </style>
