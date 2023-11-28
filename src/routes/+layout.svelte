@@ -1,14 +1,39 @@
 <script>
+	import { onNavigate } from '$app/navigation';
+	import { theme } from '$lib/store';
+	import Icon from '@iconify/svelte';
 	import '../app.postcss';
-	let theme = 'synthwave';
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
-<div data-theme={theme} class="min-h-screen flex flex-col items-center justify-center gap-5">
-	<select bind:value={theme} class="fixed top-0 right-0">
-		<option value="synthwave">synthwave</option>
-		<option value="cyberpunk">cyberpunk</option>
-		<option value="coffee">coffee</option>
-	</select>
+<div
+	data-theme={$theme}
+	class="min-h-screen flex flex-col items-center justify-center gap-10 py-32 px-4"
+>
+	<header class="flex absolute top-0 w-full justify-between items-center p-3 bg-base-100">
+		<a href="/" class="text-4xl flip"><Icon icon="streamline:emergency-exit" /></a>
+		<select bind:value={$theme} class="select select-bordered">
+			<option value="synthwave">synthwave</option>
+			<option value="cyberpunk">cyberpunk</option>
+			<option value="johak">johak</option>
+		</select>
+	</header>
 
 	<slot />
 </div>
+
+<style>
+	.flip {
+		transform: scaleX(-1);
+	}
+</style>
