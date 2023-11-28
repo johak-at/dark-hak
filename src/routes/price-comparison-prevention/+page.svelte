@@ -42,7 +42,6 @@
 		</div>
 	</div>
 </div>
-=======
 
 <style>
 	@import 'price.css';
