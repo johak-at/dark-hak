@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div class="mockup-browser border bg-base-300 max-w-[80%]">
     <div class="mockup-browser-toolbar">
       <div class="input">https://verrydarkpattern.org</div>
@@ -164,6 +164,9 @@
 
 
   </style>
+=======
+<h1>Hallo Gabriel!</h1>
+>>>>>>> b6b6f039b834c2b3f3df08d506df2855cfc366c1
 =======
 <h1>Hallo Gabriel!</h1>
 >>>>>>> b6b6f039b834c2b3f3df08d506df2855cfc366c1
