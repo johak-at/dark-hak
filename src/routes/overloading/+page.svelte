@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <script>
 	import { onMount } from 'svelte';
 
@@ -70,3 +71,12 @@
 
 <style>
 </style>
+=======
+<h1>Migei, Pezi und Lämmerhofer sind die Besten</h1>
+<<<<<<< HEAD
+
+<p>Nikolas, benimm dich!!! LG</p>
+=======
+<h2>Niemand ist so toll wie wir</h2>
+>>>>>>> a9d35d082eefc235aea386edcff0bf711fbd26fd
+>>>>>>> Stashed changes

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 <div class="mockup-browser border bg-base-300 max-w-[80%]">
     <div class="mockup-browser-toolbar">
@@ -170,3 +171,6 @@
 =======
 <h1>Hallo Gabriel!</h1>
 >>>>>>> b6b6f039b834c2b3f3df08d506df2855cfc366c1
+=======
+<p> hello</p>
+>>>>>>> Stashed changes
