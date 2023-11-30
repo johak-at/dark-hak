@@ -1,3 +1,11 @@
+<script>
+	let showMore = false;
+
+	function toggleDetails() {
+		showMore = !showMore;
+	}
+</script>
+
 <h1>Choose your abo</h1>
 <div class="boxes">
 	<div class="card w-96 bg-base-100 shadow-xl">
