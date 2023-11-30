@@ -35,7 +35,7 @@
 			</div>
 			<div class="navbar-center">
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<a class="btn btn-ghost text-xl">Home</a>
+				<a class="btn btn-ghost text-xl">Shop</a>
 			</div>
 			<div class="navbar-end">
 				<button class="btn btn-ghost btn-circle">
@@ -75,14 +75,47 @@
 		</div>
 
 		<div class="hero min-h-screen bg-base-200">
+	
 			<div class="hero-content text-center">
-				<div class="max-w-md">
-					<h1 class="text-5xl font-bold">Hello there</h1>
-					<p class="py-6">
-						Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
-						exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-					</p>
-					<button class="btn btn-primary">Get Started</button>
+				<div>
+					
+					<br>
+					<div class="flex justify-center">
+						<p class="py-6">
+
+							<div class="card w-[300px] bg-base-100 shadow-xl">
+								<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+								<div class="card-body">
+							 	 <h2 class="card-title">Shoes!</h2>
+							 	 <p>If a dog chews shoes whose shoes does he choose?</p>
+							 	 <div class="card-actions justify-end">
+									<button class="btn btn-primary">Buy Now</button>
+							  	</div>
+								</div>
+						  	</div>
+
+						 	 <div class="card w-[300px] bg-base-100 shadow-xl">
+								<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+								<div class="card-body">
+								  <h2 class="card-title">Shoes!</h2>
+								  <p>If a dog chews shoes whose shoes does he choose?</p>
+								  <div class="card-actions justify-end">
+									<button class="btn btn-primary">Buy Now</button>
+							 	 </div>
+								</div>
+						  	</div>
+
+						 	 <div class="card w-[300px] bg-base-100 shadow-xl">
+								<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+								<div class="card-body">
+								  <h2 class="card-title">Shoes!</h2>
+								  <p>If a dog chews shoes whose shoes does he choose?</p>
+								  <div class="card-actions justify-end">
+									<button class="btn btn-primary">Buy Now</button>
+								  </div>
+								</div>
+						 	 </div>
+						</div>	  	
 				</div>
 			</div>
 		</div>
@@ -234,11 +267,26 @@
 	}
 
 	/* the hero is centered in the mockup browser window */
-	.mockup-browser .hero {
+	/* .mockup-browser .hero {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 0;
+	} */
+
+	/* the text "hello there" is centered in the mockup browser window */
+	.mockup-browser .hero-content {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 0;
 	}
-</style>
+	
+	
+        .mockup-browser .card {
+            margin: 2rem; 
+            
+        }
+</style>	
