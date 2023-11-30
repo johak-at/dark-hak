@@ -72,6 +72,11 @@
 			<button class="checkout-button" on:click={switchPageToCheckout}>Zur Kasse</button>
 		</div>
 	{/if}
+
+	{#if currentPage === 'switchPage'}
+		<div class="flex justify-center px-64 py-64 bg-base-800">Zahlungsmethode</div>
+	{/if}
 </div>
+
 <style>
 </style>
