@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <script>
 	import Icon from '@iconify/svelte';
 	let currentPage = 'product';
@@ -84,4 +83,3 @@
 		<button class="btn btn-error">Error</button>
 	</div>
 </div>
->>>>>>> Stashed changes
