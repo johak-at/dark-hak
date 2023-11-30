@@ -77,55 +77,55 @@
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="card w-96 bg-base-100 shadow-xl1">
-	<figure>
-		<p>some cool picture</p>
-		<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
-	</figure>
-	<div class="card-body">
-		<h2 class="card-title">Standard Abo</h2>
-		<p>bla bla bla</p>
+	<div class="card w-96 bg-base-100 shadow-xl1">
+		<figure>
+			<p>some cool picture</p>
+			<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title">Standard Abo</h2>
+			<p>bla bla bla</p>
 
-		<div class="collapse bg-base-100x">
-			<input type="checkbox" />
-			<div class="collapse-title text-s font-medium-light">Show more!</div>
-			<div class="collapse-content">
-				<p>hello</p>
+			<div class="collapse bg-base-100x">
+				<input type="checkbox" />
+				<div class="collapse-title text-s font-medium-light">Show more!</div>
+				<div class="collapse-content">
+					<p>hello</p>
+				</div>
 			</div>
-		</div>
 
-		<div class="card-actions justify-end">
-			<button class="btn btn-primary">Choose the abo!</button>
+			<div class="card-actions justify-end">
+				<button class="btn btn-primary">Choose the abo!</button>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="card w-96 bg-base-100 shadow-xl2">
-	<figure>
-		<p>some cool picture</p>
-		<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
-	</figure>
-	<div class="card-body">
-		<h2 class="card-title">ABO PLUS</h2>
-		<p>bla bla bla</p>
+	<div class="card w-96 bg-base-100 shadow-xl2">
+		<figure>
+			<p>some cool picture</p>
+			<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title">ABO PLUS</h2>
+			<p>bla bla bla</p>
 
-		<ul>
-			<li>pure Spielfreude ohne Werbeunterbrechen</li>
-			<li />
-		</ul>
+			<ul>
+				<li>pure Spielfreude ohne Werbeunterbrechen</li>
+				<li />
+			</ul>
 
-		<div class="collapse bg-base-100x">
-			<input type="checkbox" />
-			<div class="collapse-title text-s font-medium-light">Show more!</div>
-			<div class="collapse-content">
-				<p>hello</p>
+			<div class="collapse bg-base-100x">
+				<input type="checkbox" />
+				<div class="collapse-title text-s font-medium-light">Show more!</div>
+				<div class="collapse-content">
+					<p>hello</p>
+				</div>
 			</div>
-		</div>
 
-		<div class="card-actions justify-end">
-			<button class="btn btn-primary">Choose the abo!</button>
+			<div class="card-actions justify-end">
+				<button class="btn btn-primary">Choose the abo!</button>
+			</div>
 		</div>
 	</div>
 </div>
@@ -134,6 +134,7 @@
 	.boxes {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		/* or use "space-around" for space around each card */
 	}
 
