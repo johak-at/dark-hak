@@ -43,6 +43,13 @@
 {/if}
 {#if page === 2}
 	<div>
+		<h1>Was passiert jetzt?</h1>
+		<p>
+			Das "roach motel" funktioniert wie eine "Schabenfalle". Es ist verlockend hinein zu geraten,
+			aber man kommt nur sehr schwer wieder raus. Registieren/Anmelden ist wesentlich einfacher als
+			die Kündigung.
+		</p>
+
 		<label for="bestellung">Bestellungen</label>
 		<select name="bestellung" id="bestellung">
 			<option value="meineBestellungen">Meine Bestellungen</option>
@@ -52,17 +59,18 @@
 		<label for="zahlungen">Zahlungen</label>
 		<select name="zahlungen" id="zahlungen">
 			<option value="zahlungenUndTransaktionen">Zahlungen und Transaktionen</option>
-			<option value="GeschenkgutscheinGuthabenVerwalten"
+			<option value="geschenkgutscheinGuthabenVerwalten"
 				>Geschenkgutschein-Guthaben verwalten</option
 			>
+			<option value="einkaufenMitPunkten">Einkaufen mit Punkten</option>
+			<option value="kontoAufladen">Konto aufladen</option>
 		</select>
 
-		<h1>Was passiert jetzt?</h1>
-		<p>
-			Das "roach motel" funktioniert wie eine "Schabenfalle". Es ist verlockend hinein zu geraten,
-			aber man kommt nur sehr schwer wieder raus. Registieren/Anmelden ist wesentlich einfacher als
-			die Kündigung.
-		</p>
+		<label for="kundenservice">Kundenservice</label>
+		<select name="kundenservice" id="kundenservice">
+			<option value="meineBestellungen">Meine Bestellungen</option>
+			<option value="sparAboArtikel">Spar-Abo-Artikel</option>
+		</select>
 	</div>
 {/if}
 
