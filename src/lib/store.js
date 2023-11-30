@@ -67,4 +67,17 @@ patterns.subscribe((value) => {
     if (browser)
         localStorage.patterns = JSON.stringify(value);
 });
+let savedTheme = null;
+// lesen aus dem localStorage:
+if (browser) {
+    savedTheme = localStorage.theme
+        ? JSON.parse(localStorage.theme)
+        : null;
+}
+export const theme = writable(savedTheme || "synthwave");
+
+theme.subscribe(value => {
+    if (browser)
+        localStorage.theme = JSON.stringify(value);
+})
 
