@@ -16,7 +16,7 @@
 
 	function animateFlag() {
 		setInterval(() => {
-			$: flagStyle = {
+			flagStyle = {
 				...flagStyle,
 				top: `${Math.random() * 100}%`,
 				left: `${Math.random() * 100}%`
