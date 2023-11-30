@@ -134,6 +134,7 @@
 	.boxes {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		/* or use "space-around" for space around each card */
 	}
 
