@@ -67,7 +67,7 @@
 	<div class="camera" />
 
 	<div class="display">
-		<div class="artboard artboard-demo phone-1">
+		<div class="artboard artboard-demo phone-1 handybg">
 			<div class="chat chat-start">
 				<div class="chat-image avatar">
 					<div class="w-10 rounded-full">
@@ -101,5 +101,9 @@
 <style>
 	.italy:hover::after {
 		content: '🤮🤮🤮';
+	}
+	.handybg {
+		background-image: url('img/tower.jpg');
+		background-size: 100%;
 	}
 </style>
