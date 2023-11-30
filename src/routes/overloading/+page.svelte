@@ -91,7 +91,7 @@
 					Nikolus aus Caorle
 					<time class="text-xs opacity-50">12:46</time>
 				</div>
-				<div class="chat-bubble">Ich will auch ein Mann von Welt sein</div>
+				<div class="chat-bubble">Ich will auch ein Mann von Welt sein!!</div>
 				<div class="chat-footer opacity-50">Seen just now</div>
 			</div>
 		</div>
