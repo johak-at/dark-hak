@@ -15,7 +15,7 @@
 </script>
 
 {#if page === 1}
-	<div>
+	<div class="mx-28">
 		<h1>Registrieren</h1>
 		<p>Erstelle hier deinen Account!</p>
 
@@ -42,52 +42,113 @@
 	</div>
 {/if}
 {#if page === 2}
-	<div>
+	<div class="mx-28">
 		<h1>Was passiert jetzt?</h1>
-		<p>
+		<p class="py-10">
 			Das "roach motel" funktioniert wie eine "Schabenfalle". Es ist verlockend hinein zu geraten,
 			aber man kommt nur sehr schwer wieder raus. Registieren/Anmelden ist wesentlich einfacher als
 			die Kündigung.
 		</p>
 
-		<label for="bestellung">Bestellungen</label>
-		<select name="bestellung" id="bestellung">
-			<option value="meineBestellungen">Meine Bestellungen</option>
-			<option value="sparAboArtikel">Spar-Abo-Artikel</option>
-		</select>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" checked="checked" />
+			<div class="collapse-title text-xl font-medium">Bestellungen</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Meine Bestellungen</a></li>
+					<li class="py-2"><a>Spar-Abo-Artikel</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Zahlungen</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Zahlungen und Transaktionen</a></li>
+					<li class="py-2"><a>Geschenkgutschein-Guthaben verwalten</a></li>
+					<li class="py-2"><a>Einkaufen mit Punkten</a></li>
+					<li class="py-2"><a>Konto aufladen</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Kundenservice</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Kontaktieren Sie uns</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Kontoeinstellungen</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Anmeldung und Sicherheit</a></li>
+					<li class="py-2"><a>Kostenloses Unternehmenskonto erstellen</a></li>
+					<li class="py-2"><a>1-Click-Einstellungen</a></li>
+					<li class="py-2"><a>Inhalt und Geräte</a></li>
+					<li class="py-2"><a>Meine öffentlichen Profile verwalten</a></li>
+					<li class="py-2"><a>Digitale Lieferung verwalten</a></li>
+					<li class="py-2"><a>Adressen</a></li>
+					<li class="py-2"><a>Meine Mitgliedschaften</a></li>
+					<li class="py-2"><a>Kürzlich angesehen</a></li>
+					<li class="py-2" on:click={() => (page = 3)}><a>Sonstiges</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Message Center</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Nachrichten</a></li>
+					<li class="py-2"><a>Kommunikationseinstellungen</a></li>
+					<li class="py-2"><a>Angebotsbenachrichtigungen</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Personalisierung</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Ihr öffentliches Profil</a></li>
+					<li class="py-2"><a>Meine Empfehlungen</a></li>
+					<li class="py-2"><a>Meine Interessen</a></li>
+				</ul>
+			</div>
+		</div>
 
-		<label for="zahlungen">Zahlungen</label>
-		<select name="zahlungen" id="zahlungen">
-			<option value="zahlungenUndTransaktionen">Zahlungen und Transaktionen</option>
-			<option value="geschenkgutscheinGuthabenVerwalten"
-				>Geschenkgutschein-Guthaben verwalten</option
-			>
-			<option value="einkaufenMitPunkten">Einkaufen mit Punkten</option>
-			<option value="kontoAufladen">Konto aufladen</option>
-		</select>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">App-Einstellungen</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Cookie-Einstellungen</a></li>
+					<li class="py-2"><a>Einstellungen für Werbung</a></li>
+				</ul>
+			</div>
+		</div>
 
-		<label for="kundenservice">Kundenservice</label>
-		<select name="kundenservice" id="kundenservice">
-			<option value="meineBestellungen">Meine Bestellungen</option>
-			<option value="sparAboArtikel">Spar-Abo-Artikel</option>
-		</select>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Daten und Datenschutz</div>
+			<div class="collapse-content">
+				<ul>
+					<li class="py-2"><a>Datenschutzerklärung</a></li>
+					<li class="py-2"><a>Meine Informationen anfordern</a></li>
+					<li class="py-2"><a>Empfehlungseinstellungen</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 {/if}
-
+{#if page === 3}
+{/if}
 <style>
-	div {
-		font-family: Arial, Helvetica, sans-serif;
-		margin: 0% 8% 0% 8%;
-	}
-
-	form {
-		width: 100%;
-		margin: 0;
-		border-radius: 5px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
 	label {
 		display: block;
 		margin-bottom: 10px;
