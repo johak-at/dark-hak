@@ -75,7 +75,7 @@
 					</div>
 				</div>
 				<div class="chat-header">
-					Stephanie aus Frankreich
+					Stéphanie de France
 					<time class="text-xs opacity-50">12:45</time>
 				</div>
 				<div class="chat-bubble">Französisch ist eine WELTSPRACHE🌏</div>
@@ -103,7 +103,6 @@
 		content: '🤮🤮🤮';
 	}
 	.handybg {
-		background-image: url('img/tower.jpg');
-		background-size: 100%;
+		/* background-image: url('img/tower.jpg'); */
 	}
 </style>
