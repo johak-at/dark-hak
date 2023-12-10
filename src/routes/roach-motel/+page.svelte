@@ -16,29 +16,33 @@
 
 {#if page === 1}
 	<div class="mx-28">
-		<h1>Registrieren</h1>
-		<p>Erstelle hier deinen Account!</p>
-
+		<h1 class="text-7xl pb-5">Registrieren</h1>
+		<p class="text-xl">Erstelle hier deinen Account!</p>
 		<form on:submit|preventDefault={handleSubmit}>
-			<label for="name">Name:</label>
-			<input type="text" id="name" bind:value={name} />
+			<label class="my-2 block" for="name">Name:</label>
+			<input
+				class="p-2 w-3/12 mb-4 box-border border-solid rounded outline-1 outline-white"
+				type="text"
+				id="name"
+				bind:value={name}
+			/>
 
-			<label for="email">E-Mail:</label>
-			<input type="email" id="email" bind:value={email} />
+			<label class="my-2 block" for="email">E-Mail:</label>
+			<input class="p-2 w-3/12 mb-4 box-border border-solid rounded outline-1 outline-white" type="email" id="email" bind:value={email} />
 
-			<label for="password">Passwort:</label>
-			<input type="password" id="password" bind:value={password} />
+			<label class="my-2 block" for="password">Passwort:</label>
+			<input class="p-2 w-3/12 mb-4 box-border border-solid rounded outline-1 outline-white" type="password" id="password" bind:value={password} />
 			<br />
+
+			<p class="text-xl">
+				Wir schätzen Ihre Mitgliedschaft bei uns. Wenn Sie jemals das Bedürfnis verspüren, ihren
+				Account zu löschen, können Sie dies jederzeit tun. Wir werden Ihre Daten dann umgehend
+				löschen.
+			</p>
+
+			<h2 class="text-3xl pb-1 pt-20">Ihre Zufriedenheit steht an erster Stelle</h2>
+			<button on:click={() => (page = 2)} class="btn btn-success mt-2">Registrieren</button>
 		</form>
-
-		<p>
-			Wir schätzen Ihre Mitgliedschaft bei uns. Wenn Sie jemals das Bedürfnis verspüren, ihren
-			Account zu löschen, können Sie dies jederzeit tun. Wir werden Ihre Daten dann umgehend
-			löschen.
-		</p>
-
-		<h2>Ihre Zufriedenheit steht an erster Stelle</h2>
-		<button on:click={() => (page = 2)}>Registrieren</button>
 	</div>
 {/if}
 {#if page === 2}
@@ -146,52 +150,4 @@
 		</div>
 	</div>
 {/if}
-{#if page === 3}
-{/if}
-<style>
-	label {
-		display: block;
-		margin-bottom: 10px;
-		margin-top: 5px;
-	}
-
-	input {
-		width: 30%;
-		padding: 8px;
-		margin-bottom: 16px;
-		box-sizing: border-box;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-	}
-
-	button {
-		background-color: #4caf50;
-		color: white;
-		padding: 10px 15px;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
-		margin-top: 10px;
-	}
-
-	h1 {
-		text-align: left;
-		font-size: 70px;
-	}
-
-	p {
-		text-align: left;
-		font-size: 20px;
-		max-width: 80%;
-	}
-
-	h2 {
-		text-align: left;
-		padding-top: 4%;
-		font-size: 30px;
-	}
-
-	button:hover {
-		background-color: #45a049;
-	}
-</style>
+{#if page === 3}{/if}
