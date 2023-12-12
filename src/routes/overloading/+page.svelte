@@ -67,7 +67,7 @@
 	<div class="camera" />
 
 	<div class="display">
-		<div class="artboard artboard-demo phone-1">
+		<div class="artboard artboard-demo phone-1 handybg">
 			<div class="chat chat-start">
 				<div class="chat-image avatar">
 					<div class="w-10 rounded-full">
@@ -75,7 +75,7 @@
 					</div>
 				</div>
 				<div class="chat-header">
-					Stephanie aus Frankreich
+					Stéphanie de France
 					<time class="text-xs opacity-50">12:45</time>
 				</div>
 				<div class="chat-bubble">Französisch ist eine WELTSPRACHE🌏</div>
@@ -101,5 +101,8 @@
 <style>
 	.italy:hover::after {
 		content: '🤮🤮🤮';
+	}
+	.handybg {
+		/* background-image: url('img/tower.jpg'); */
 	}
 </style>
