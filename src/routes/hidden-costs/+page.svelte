@@ -1,7 +1,4 @@
 <script>
-<<<<<<< HEAD
-	/** @type {import('./$types').PageData} */
-=======
 	import Icon from '@iconify/svelte';
 	let currentPage = 'product';
 
@@ -21,7 +18,6 @@
 		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 3.0 },
 		{ id: 4, name: 'Gesamtpreis', price: '8,50' }
 	];
->>>>>>> 290239403bd46a164a24bc01594bf9b898c35235
 </script>
 
 <div class="mockup-browser border bg-base-300 max-w-[90%] bg-fixed">

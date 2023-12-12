@@ -9,11 +9,10 @@
 	<h1 class="prose">Bait and Switch</h1>
 	<div class="hero min-h-screen bg-base-200">
 		<div class="hero-content flex-col lg:flex-row-reverse">
-<<<<<<< HEAD
 			<img src="fake-offer.jpg" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
-=======
+
 			<img src="img/first-offer.png" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
->>>>>>> 290239403bd46a164a24bc01594bf9b898c35235
+
 			<div>
 				<h1 class="text-5xl font-bold">Spiderman Stiefel - Schwinge stilvoll durch die Stadt</h1>
 				<p class="py-6">
@@ -54,11 +53,10 @@
 	<!-- NEUES ANGEBOT -->
 	<div class="hero min-h-screen bg-base-200">
 		<div class="hero-content flex-col lg:flex-row-reverse">
-<<<<<<< HEAD
 			<img src="real-offer.jpg" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
-=======
+
 			<img src="img/second-offer.png" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
->>>>>>> 290239403bd46a164a24bc01594bf9b898c35235
+
 			<div>
 				<h1 class="text-5xl font-bold">Unsere Unsere Exklusive Cowboy-Kollektion erwartet dich:</h1>
 				<p class="py-6" />
@@ -71,7 +69,6 @@
 {/if}
 
 {#if page === 4}
-<<<<<<< HEAD
 	<h1 class="prose">Bait and Switch</h1>
 	<p>
 		Die Bait-and-Switch-Methode ist eine solche Strategie, bei der Konsumenten durch das Ködern mit
@@ -96,7 +93,7 @@
 		vertrauensbildende Marketingmethoden setzen, um langfristige Kundenbeziehungen aufzubauen und
 		einen nachhaltigen Geschäftserfolg zu gewährleisten.
 	</p>
-=======
+
 	<div class="prose">
 		<h1>Bait and Switch</h1>
 		<p>
@@ -123,5 +120,5 @@
 			und einen nachhaltigen Geschäftserfolg zu gewährleisten.
 		</p>
 	</div>
->>>>>>> 290239403bd46a164a24bc01594bf9b898c35235
+	>>>>>>> 290239403bd46a164a24bc01594bf9b898c35235
 {/if}

@@ -79,8 +79,8 @@
 			<h2 class="card-title">Virenschutz abgelaufen</h2>
 			<p>Wollen Sie jetzt sicher weiter arbeiten?</p>
 			<div class="card-actions justify-end">
-				<button class="btn" onclick="my_modal_6.showModal()" onclick="example.close()">Risiko eingehen</button>
-				<button class="btn" onclick="my_modal_5.close()" onclick="example.close()">Vertrag verlängern</button>
+				<button class="btn" onclick="my_modal_6.showModal()">Risiko eingehen</button>
+				<button class="btn" onclick="my_modal_5.close()">Vertrag verlängern</button>
 			</div>
 		</div>
 
