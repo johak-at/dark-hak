@@ -75,47 +75,59 @@
 		</div>
 
 		<div class="hero min-h-screen bg-base-200">
-	
 			<div class="hero-content text-center">
 				<div>
-					
-					<br>
+					<br />
 					<div class="flex justify-center">
-						<p class="py-6">
-
-							<div class="card w-[300px] bg-base-100 shadow-xl">
-								<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-								<div class="card-body">
-							 	 <h2 class="card-title">Shoes!</h2>
-							 	 <p>If a dog chews shoes whose shoes does he choose?</p>
-							 	 <div class="card-actions justify-end">
+						<p class="py-6" />
+						<div class="card w-[300px] bg-base-100 shadow-xl">
+							<figure>
+								<img
+									src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+									alt="Shoes"
+								/>
+							</figure>
+							<div class="card-body">
+								<h2 class="card-title">Shoes!</h2>
+								<p>If a dog chews shoes whose shoes does he choose?</p>
+								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
-							  	</div>
 								</div>
-						  	</div>
+							</div>
+						</div>
 
-						 	 <div class="card w-[300px] bg-base-100 shadow-xl">
-								<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-								<div class="card-body">
-								  <h2 class="card-title">Shoes!</h2>
-								  <p>If a dog chews shoes whose shoes does he choose?</p>
-								  <div class="card-actions justify-end">
+						<div class="card w-[300px] bg-base-100 shadow-xl">
+							<figure>
+								<img
+									src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+									alt="Shoes"
+								/>
+							</figure>
+							<div class="card-body">
+								<h2 class="card-title">Shoes!</h2>
+								<p>If a dog chews shoes whose shoes does he choose?</p>
+								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
-							 	 </div>
 								</div>
-						  	</div>
+							</div>
+						</div>
 
-						 	 <div class="card w-[300px] bg-base-100 shadow-xl">
-								<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-								<div class="card-body">
-								  <h2 class="card-title">Shoes!</h2>
-								  <p>If a dog chews shoes whose shoes does he choose?</p>
-								  <div class="card-actions justify-end">
+						<div class="card w-[300px] bg-base-100 shadow-xl">
+							<figure>
+								<img
+									src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+									alt="Shoes"
+								/>
+							</figure>
+							<div class="card-body">
+								<h2 class="card-title">Shoes!</h2>
+								<p>If a dog chews shoes whose shoes does he choose?</p>
+								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
-								  </div>
 								</div>
-						 	 </div>
-						</div>	  	
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -283,10 +295,8 @@
 		transform: translate(-50%, -50%);
 		z-index: 0;
 	}
-	
-	
-        .mockup-browser .card {
-            margin: 2rem; 
-            
-        }
-</style>	
+
+	.mockup-browser .card {
+		margin: 2rem;
+	}
+</style>
