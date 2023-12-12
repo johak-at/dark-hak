@@ -8,7 +8,7 @@
 
 <button class="btn" onclick="description">Erklärung Confirmshaming</button>
 
-<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+<dialog id="my_modal_x" class="modal modal-bottom sm:modal-middle">
 	<div class="card w-96 glass">
 		<figure>
 			<img src="img/confirmshaming2.png" alt="book" />
