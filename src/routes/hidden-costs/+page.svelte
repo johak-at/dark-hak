@@ -21,49 +21,58 @@
 			<p>Wir sind ein Unternehmen aus Österreich und verkaufen Süßigkeiten aus der ganzen Welt.</p>
 			<div>Wir sind zwar erst am Anfang, doch wollen in Zukunft groß hinaus.</div>
 
-			<div class="flex justify-center px-64 py-64 bg-base-800">
-				<button class="btn btn-info">Produkte</button>
-				<button class="btn btn-error">Error</button>
+			<div class="flex justify-center px-64 py-64 bg-base-800" >
+				<div on:click={switchPage}>
+					<button class="btn btn-info">
+						Warenkorb
+						<Icon icon="typcn:shopping-cart" />
+					</button>
+				</div>
 			</div>
 		</div>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
-		<div on:click={switchPage}>
-			<Icon icon="typcn:shopping-cart" />
-		</div>
+
+<!-- Das sind die Produkte, mit der Bezeichnung und Preisen -->
+
 	{/if}
 	{#if currentPage === 'checkout'}
-		<div class="flex justify-center px-64 py-64 bg-base-800">Mein Warenkorb</div>
+		<div class="flex justify-center px-64 py-64 bg-base-800">
+			<img src="img/LogoHiddenCosts.png" alt="Logo"  style="border-radius:1500px"/>
+		</div>
 
-		<div class="grid grid-cols-1 gap-x-3 gap-y-5 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-5">
-			<a href="1" class="group">
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg bg-gray-100">
+		<div class="grid grid-cols-3 gap-x-3 gap-y-5 lg:grid-cols-1 xl:grid-cols-1 xl:gap-x-5">
+			<a href="1" class="group" >
+				<div class="aspect-h-0.1 aspect-w-0.1 w-full overflow-hidden rounded-lg ">
 					<img
 						src="https://64ce14de7ce972b09bc4-112e2f65dc15f65f089f4c9770786a52.ssl.cf3.rackcdn.com/00-325231-468372748-OLIUvU_q.jpg"
 						alt="sweet"
-						class="group-hover:opacity-75"
+						class="group-hover:opacity-90"
+						style="width: 25%; height: auto;"
 					/>
 				</div>
 				<h3 class="mt-4 text-sm text-gray-700">Cheetos Crunhos Sweet Chilli</h3>
 				<p class="mt-1 text-lg font-medium text-gray-900">2,50€</p>
 			</a>
 			<a href="2" class="group">
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg bg-gray-100">
+				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg ">
 					<img
 						src="https://img.fruugo.com/product/1/17/866239171_max.jpg"
 						alt="sweet"
-						class="group-hover:opacity-75"
+						class="group-hover:opacity-90"
+						style="width: 25%; height: auto;"
 					/>
 				</div>
 				<h3 class="mt-4 text-sm text-gray-700">Nerds Rainbow Edition</h3>
 				<p class="mt-1 text-lg font-medium text-gray-900">3,00€</p>
 			</a>
 			<a href="3" class="group">
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg bg-gray-100">
+				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg">
 					<img
 						src="https://m.media-amazon.com/images/I/71s8Uyy1FCL.jpg"
 						alt="sweet"
-						class="group-hover:opacity-75"
+						class="group-hover:opacity-90"
+						style="width: 25%; height: auto;"
 					/>
 				</div>
 				<h3 class="mt-4 text-sm text-gray-700">Hersheys Pretzels Special Edition</h3>
