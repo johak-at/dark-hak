@@ -23,18 +23,43 @@
 			};
 		}, 500);
 	}
+
+	function showPhone() {
+		const phone = document.querySelector('.mockup-phone');
+		if (phone !== null) {
+			phone.classList.remove('hidden');
+		}
+		const modal = document.querySelector('#my_modal_3');
+		if (modal !== null) {
+			modal.showModal();
+		}
+	}
+
+	function hidePhone() {
+		const phone = document.querySelector('.mockup-phone');
+		if (phone !== null) {
+			phone.classList.add('hidden');
+		}
+	}
+
+	const myTimeOut = setTimeout(() => {
+		showUnterricht();
+	}, 10000);
+
+	function showUnterricht() {
+		const unterricht = document.querySelector('.card');
+		if (unterricht !== null) {
+			unterricht.classList.remove('hidden');
+		}
+	}
 </script>
 
 <div class="navbar bg-gradient-to-r from-blue-500 via-white to-red-500 text-black test" />
 <div>
-	<img
-		src="https://www.johak.at/wp-content/uploads/2020/08/business-plus-hak-pos.svg"
-		alt="blogo"
-	/>
 	<div
 		style="position: {flagStyle.position}; top: {flagStyle.top}; left: {flagStyle.left}; transform: {flagStyle.transform}; width: {flagStyle.width}; height: {flagStyle.height}"
 	>
-		<img src="img/french.svg" alt="French Flag" />
+		<img src="img/french.svg" alt="French Flag" class="z-10" />
 	</div>
 	<h1 class="h-12 text-4xl pb-10">Wähle deine Fremdsprache</h1>
 	<div class="bg-cyan-500 rounded-3xl flex w-96 p-10">
@@ -42,19 +67,32 @@
 			<form>
 				<div class="grid w-96 h-20 rounded bg-red-500 text-primary-content place-content-center">
 					<li class="text-black text-3xl font-bold">
-						<input type="radio" name="radio" class="radio radio-error align-middle" checked /> FRANZÖSISCH
+						<input
+							type="radio"
+							name="radio"
+							id="french"
+							class="radio radio-error align-middle"
+							checked
+							on:click={hidePhone}
+						/>
+						<label for="french">FRANZÖSISCH</label>
 					</li>
 				</div>
 
 				<div class="grid w-96 h-20 rounded bg-white text-accent-content place-content-center">
 					<li class="text-gray-300 hover:line-through">
-						<input type="radio" name="radio" class="radio align-middle" /> spanisch
+						<input type="radio" name="radio" class="radio align-middle" on:click={showPhone} /> spanisch
 					</li>
 				</div>
 
 				<div class="grid w-96 h-20 rounded bg-blue-400 text-secondary-content place-content-center">
 					<li class="text-gray-500 italy">
-						<input type="radio" name="radio" class="radio align-middle hover: line-through" />
+						<input
+							type="radio"
+							name="radio"
+							class="radio align-middle hover: line-through"
+							on:click={showPhone}
+						/>
 						italienisch
 					</li>
 				</div>
@@ -63,7 +101,7 @@
 	</div>
 </div>
 
-<div class="mockup-phone border-primary z-50">
+<div class="mockup-phone border-primary absolute left-10 hidden">
 	<div class="camera" />
 
 	<div class="display">
@@ -98,11 +136,30 @@
 	</div>
 </div>
 
+<dialog id="my_modal_3" class="modal">
+	<div class="modal-box bg-gradient-to-r from-blue-500 via-white to-red-500">
+		<form method="dialog">
+			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+		</form>
+		<h3 class="font-bold text-lg">Bonjour!</h3>
+		<p class="py-4">
+			Wähl eine andere Sprache, wenn du willst, dass ich dir antworte. Ich spreche nur Französisch.
+		</p>
+	</div>
+</dialog>
+
+<div class="card w-96 bg-base-100 shadow-xl hidden absolute right-10 top-20">
+	<figure>
+		<img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+	</figure>
+	<div class="card-body">
+		<h2 class="card-title">Französischunterricht!</h2>
+		<p>Die Französischlehrerin "Crème de la Crème" ist nur deux kilomètres von dir entfernt</p>
+	</div>
+</div>
+
 <style>
 	.italy:hover::after {
 		content: '🤮🤮🤮';
-	}
-	.handybg {
-		/* background-image: url('img/tower.jpg'); */
 	}
 </style>
