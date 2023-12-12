@@ -69,31 +69,6 @@
 {/if}
 
 {#if page === 4}
-	<h1 class="prose">Bait and Switch</h1>
-	<p>
-		Die Bait-and-Switch-Methode ist eine solche Strategie, bei der Konsumenten durch das Ködern mit
-		einem vermeintlich günstigen Produkt angelockt werden, nur um dann zu erfahren, dass dieses
-		Produkt nicht verfügbar ist oder nicht den Erwartungen entspricht. Der eigentliche Zweck dieser
-		Taktik besteht darin, die Aufmerksamkeit der Kunden zu gewinnen und sie dazu zu bringen, ein
-		teureres Produkt zu kaufen, das möglicherweise nie die Absicht war, zu verkaufen. Das Ködern,
-		oder "Bait", beinhaltet die bewusste Werbung für ein Produkt zu einem unschlagbar niedrigen
-		Preis oder mit besonders attraktiven Merkmalen. Dies zieht potenzielle Käufer an, die von dem
-		vermeintlichen Schnäppchen angelockt werden. Sobald die Kunden jedoch Interesse zeigen oder auf
-		das Angebot klicken, wird der "Switch" vorgenommen – das beworbene Produkt ist entweder nicht
-		verfügbar oder erfüllt nicht die Erwartungen. In diesem Moment wird den Kunden dann ein teureres
-		Produkt vorgestellt, das angeblich besser ist oder ihren Bedürfnissen entspricht. Die Taktik
-		basiert auf psychologischen Mechanismen, bei denen die anfängliche Euphorie über das
-		vermeintliche Schnäppchen Kunden dazu motiviert, die höherpreisige Option zu akzeptieren. Die
-		Bait-and-Switch-Methode ist nicht nur ethisch fragwürdig, sondern kann auch rechtliche
-		Konsequenzen nach sich ziehen, da sie in vielen Ländern als irreführende Werbung gilt.
-		Unternehmen, die Kunden auf diese Weise täuschen, riskieren nicht nur ihren Ruf, sondern auch
-		rechtliche Konsequenzen. In einer Zeit, in der Verbraucher verstärkt Wert auf Transparenz und
-		Ehrlichkeit legen, ist die Bait-and-Switch-Methode eine riskante Strategie, die langfristig mehr
-		Schaden als Nutzen bringen kann. Unternehmen sollten stattdessen auf ehrliche und
-		vertrauensbildende Marketingmethoden setzen, um langfristige Kundenbeziehungen aufzubauen und
-		einen nachhaltigen Geschäftserfolg zu gewährleisten.
-	</p>
-
 	<div class="prose">
 		<h1>Bait and Switch</h1>
 		<p>
@@ -120,5 +95,4 @@
 			und einen nachhaltigen Geschäftserfolg zu gewährleisten.
 		</p>
 	</div>
-	>>>>>>> 290239403bd46a164a24bc01594bf9b898c35235
 {/if}
