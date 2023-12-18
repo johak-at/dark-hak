@@ -154,4 +154,13 @@
 	  </div>
 	{/if}
   </div>
+
+  //schreibe einen countdown, der von 2 tag, 5 stunden, 30 minuten und 0 sekunden runterzählt
+
+  function countdown() {
+	const [days, setDays] = useState(2);
+	const [hours, setHours] = useState(5);
+	const [minutes, setMinutes] = useState(30);
+	const [seconds, setSeconds] = useState(0);
+  }
   
