@@ -1,3 +1,8 @@
+<!-- on:click ={() => {
+	$patterns[7].done = true,
+	window.location.replace("/");
+}} -->
+
 <script>
 	import { createEventDispatcher } from "svelte";
   
@@ -148,6 +153,9 @@
 			<br>
 
 			<p>Zusammenfassend nutzt die simulierte Dringlichkeit als Dark Pattern die menschliche Psychologie aus, um überstürzte Entscheidungen herbeizuführen. Designer und Unternehmen sollten transparente und ethische Benutzererfahrungen priorisieren, um Vertrauen aufzubauen und sicherzustellen, dass Nutzer informierte Entscheidungen treffen können, ohne sich von irreführenden Taktiken unter Druck gesetzt zu fühlen.</p>
+			<br>
+
+			<p><em>--ChatGPT</em></p>
 			
 			
 		<button on:click={closeDialog}>Schließen</button>
@@ -155,12 +163,5 @@
 	{/if}
   </div>
 
-  //schreibe einen countdown, der von 2 tag, 5 stunden, 30 minuten und 0 sekunden runterzählt
 
-  function countdown() {
-	const [days, setDays] = useState(2);
-	const [hours, setHours] = useState(5);
-	const [minutes, setMinutes] = useState(30);
-	const [seconds, setSeconds] = useState(0);
-  }
-  
+ 
