@@ -9,7 +9,10 @@
 	<h1 class="prose">Bait and Switch</h1>
 	<div class="hero min-h-screen bg-base-200">
 		<div class="hero-content flex-col lg:flex-row-reverse">
+			<img src="fake-offer.jpg" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
+
 			<img src="img/first-offer.png" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
+
 			<div>
 				<h1 class="text-5xl font-bold">Spiderman Stiefel - Schwinge stilvoll durch die Stadt</h1>
 				<p class="py-6">
@@ -50,7 +53,10 @@
 	<!-- NEUES ANGEBOT -->
 	<div class="hero min-h-screen bg-base-200">
 		<div class="hero-content flex-col lg:flex-row-reverse">
+			<img src="real-offer.jpg" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
+
 			<img src="img/second-offer.png" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
+
 			<div>
 				<h1 class="text-5xl font-bold">Unsere Unsere Exklusive Cowboy-Kollektion erwartet dich:</h1>
 				<p class="py-6" />
