@@ -118,12 +118,16 @@
 			class="max-w-sm rounded-lg shadow-2xl"
 			style="display: flex; margin: auto"
 		/>
+		<p>
+			<button
+				class="btn btn-primary"
+				style="display: flex; margin: auto"
+				on:click={() => {
+					($patterns[0].done = true), window.location.replace('/');
+				}}>Aufgabe erldedigt</button
+			>
+		</p>
 
-		<button
-			on:click={() => {
-				($patterns[0].done = true), window.location.replace('/');
-			}}>Aufgabe erldedigt</button
-		>
 		<aside id="quellen" class="prose">
 			<h2>Zusätzliche Quellen</h2>
 			<ul>
