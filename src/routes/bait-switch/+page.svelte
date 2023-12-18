@@ -1,5 +1,6 @@
 <script>
 	import { updated } from '$app/stores';
+	import { patterns } from '$lib/store';
 
 	let page = 1;
 </script>
@@ -9,6 +10,7 @@
 	<!-- <div class="prose">
         <h1>Bait and Switch</h1>
     </div> -->
+
 	<div class="hero min-h-screen bg-base-200">
 		<div class="hero-content flex-col lg:flex-row-reverse">
 			<img src="img/first-offer.png" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
@@ -116,6 +118,16 @@
 			class="max-w-sm rounded-lg shadow-2xl"
 			style="display: flex; margin: auto"
 		/>
+		<p>
+			<button
+				class="btn btn-primary"
+				style="display: flex; margin: auto"
+				on:click={() => {
+					($patterns[0].done = true), window.location.replace('/');
+				}}>Aufgabe erldedigt</button
+			>
+		</p>
+
 		<aside id="quellen" class="prose">
 			<h2>Zusätzliche Quellen</h2>
 			<ul>

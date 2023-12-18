@@ -4,6 +4,11 @@
 	function clearProgress() {
 		$patterns = defaultValue;
 	}
+
+	function close() {
+		$patterns[1].done = true;
+		window.location.replace('/');
+	}
 </script>
 
 <button class="btn" onclick="description.showModal()">Erklärung Confirmshaming</button>
@@ -11,18 +16,6 @@
 <dialog id="description" class="modal">
 	<div class="modal-box prose">
 		<img src="img/confirmshaming2.png" alt="book" class="m-auto" />
-
-		<h2>Erklärung</h2>
-
-		<h2>Einleitung:</h2>
-		<p>
-			Das Internet hat unser tägliches Leben in vielerlei Hinsicht bereichert, ermöglicht aber auch
-			die Verbreitung von fragwürdigen Praktiken, die oft unbemerkt bleiben. Eine solche fragwürdige
-			Methode, die in den letzten Jahren verstärkt an Bedeutung gewonnen hat, ist das sogenannte
-			"Confirmshaming". Dabei handelt es sich um eine manipulative Technik, die in die Kategorie der
-			Dark Patterns fällt, also Gestaltungsmuster, die Nutzer zu Handlungen verleiten, die sie
-			vielleicht nicht bewusst oder freiwillig durchführen würden.
-		</p>
 
 		<h2>Erklärung von Confirmshaming:</h2>
 		<p>
@@ -94,11 +87,11 @@
 
 <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
 	<div class="modal-box">
-		<h3 class="font-bold text-lg">Sind Sie sich sicher?</h3>
+		<h1 class="font-bold text-lg">Sind Sie sich sicher?</h1>
 		<img src="img/virus2.jpg" alt="car!" class="m-auto" />
 		<div class="modal-action">
 			<form method="dialog">
-				<button class="btn" onclick="my_modal_6.close(); my_modal_5.close()"
+				<button class="btn" onclick="my_modal_6.close(); my_modal_5.close();" on:click={close}
 					>Ja, ich will es riskieren</button
 				>
 
