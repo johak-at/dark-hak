@@ -14,7 +14,7 @@
       dispatch("close");
     }
     const countdown= { days: 10, hours: 5, minutes: 30, seconds: 0 };
-
+    //fortnite
     const products = [
       { name: "Geforce RTX 3060", description: "1.320 MHz, 12 GB GDDR6, 12,7 TFLOPS", pic: "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3060Ti/GAMING-X/KV-3060-Ti-GAMING.png" },
       { name: "Geforce RTX 3080", description: "1.440 MHz, 10 GB GDDR6X, 29,8 TFLOPS", pic: "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3090/RTX3090_Ti_gamingTrio/3090-ti-vga-body.png",  },
