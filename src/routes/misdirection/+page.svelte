@@ -88,7 +88,7 @@
 								/>
 							</figure>
 							<div class="card-body">
-								<h2 class="card-title">Shoes!</h2>
+								<h2 class="card-title">Basic Subscription</h2>
 								<p>If a dog chews shoes whose shoes does he choose?</p>
 								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
@@ -104,7 +104,7 @@
 								/>
 							</figure>
 							<div class="card-body">
-								<h2 class="card-title">Shoes!</h2>
+								<h2 class="card-title">Gold Subscription</h2>
 								<p>If a dog chews shoes whose shoes does he choose?</p>
 								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
@@ -120,7 +120,7 @@
 								/>
 							</figure>
 							<div class="card-body">
-								<h2 class="card-title">Shoes!</h2>
+								<h2 class="card-title">Platin Subscription</h2>
 								<p>If a dog chews shoes whose shoes does he choose?</p>
 								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
