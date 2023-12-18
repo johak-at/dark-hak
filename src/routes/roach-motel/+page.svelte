@@ -240,12 +240,9 @@
 				Hier gibt's mehr Details zu deinen Account-Einstellungen. Entdecke hilfreiche Tipps, wie du deinen
 				Account personalisieren und anpassen kannst. Wir möchten sicherstellen, dass du alles verstehst
 				und das Beste aus deiner Erfahrung herausholst.
-				<br />
-				<br />
 				Falls du Fragen hast oder Unterstützung brauchst, kannst du dich gerne an unseren Kundensupport
 				wenden. Wir sind hier, um sicherzustellen, dass alles reibungslos läuft und du dich in deinen
 				Account-Einstellungen gut zurechtfindest.
-				<br />
 				<br />
 				Danke, dass du Teil unserer Community bist! Genieße die zusätzlichen Infos und mache das Beste
 				aus deinem Konto.
@@ -259,7 +256,10 @@
 				löschen kann. Es wird vermieden, konkret auf diese Möglichkeit einzugehen und stattdessen Vertrauen
 				und Zugehörigkeit hervorzuheben.
 			</p>
-			<p class="transition-all hover:underline cursor-pointer">Mehr</p>
+			<p class="transition-all hover:underline cursor-pointer" on:click={() => (page = 2)}>Mehr</p>
 		</div>
+	{/if}
+	{#if page === 4}
+	<p class="text-gray-400"><a on:click={() => (page = 2)} class="text-lg transition-all hover:underline cursor-pointer">Kontoeinstellungen</a> > <a>Sonstiges</a></p>
 	{/if}
 </div>
