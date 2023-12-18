@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { patterns } from '$lib/store.js';
 
 	let flagStyle = {
 		position: 'fixed',
@@ -52,6 +53,10 @@
 			unterricht.classList.remove('hidden');
 		}
 	}
+
+	function checkOverloading() {
+		$patterns[4].done = true;
+	}
 </script>
 
 <div class="navbar bg-gradient-to-r from-blue-500 via-white to-red-500 text-black test" />
@@ -62,10 +67,10 @@
 		<img src="img/french.svg" alt="French Flag" class="z-10" />
 	</div>
 	<h1 class="h-12 text-4xl pb-10">Wähle deine Fremdsprache</h1>
-	<div class="bg-cyan-500 rounded-3xl flex w-96 p-10">
+	<div class="flex flex-col">
 		<ul>
-			<form>
-				<div class="grid w-96 h-20 rounded bg-red-500 text-primary-content place-content-center">
+			<form class="border">
+				<div class="grid h-20 rounded-t bg-red-500 text-primary-content place-content-center">
 					<li class="text-black text-3xl font-bold">
 						<input
 							type="radio"
@@ -79,13 +84,13 @@
 					</li>
 				</div>
 
-				<div class="grid w-96 h-20 rounded bg-white text-accent-content place-content-center">
+				<div class="grid h-20 bg-white text-accent-content place-content-center">
 					<li class="text-gray-300 hover:line-through">
 						<input type="radio" name="radio" class="radio align-middle" on:click={showPhone} /> spanisch
 					</li>
 				</div>
 
-				<div class="grid w-96 h-20 rounded bg-blue-400 text-secondary-content place-content-center">
+				<div class="grid h-20 rounded-b bg-blue-400 text-secondary-content place-content-center">
 					<li class="text-gray-500 italy">
 						<input
 							type="radio"
@@ -98,6 +103,11 @@
 				</div>
 			</form>
 		</ul>
+		<button
+			on:click={checkOverloading}
+			class="bg-gradient-to-r from-blue-500 via-white to-red-500 text-3xl font-bold p-5 rounded-2xl mt-5 color-black"
+			>Submit</button
+		>
 	</div>
 </div>
 
@@ -109,11 +119,11 @@
 			<div class="chat chat-start">
 				<div class="chat-image avatar">
 					<div class="w-10 rounded-full">
-						<img alt="Tailwind CSS chat bubble component" src="img/franzose.jpg" />
+						<img alt="Tailwind CSS chat bubble component" src="img/franzose2.png" />
 					</div>
 				</div>
 				<div class="chat-header">
-					Stéphanie de France
+					Michél de France
 					<time class="text-xs opacity-50">12:45</time>
 				</div>
 				<div class="chat-bubble">Französisch ist eine WELTSPRACHE🌏</div>
@@ -141,8 +151,8 @@
 		<form method="dialog">
 			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
 		</form>
-		<h3 class="font-bold text-lg">Bonjour!</h3>
-		<p class="py-4">
+		<h3 class="font-bold text-lg text-black">Bonjour!</h3>
+		<p class="py-4 text-black">
 			Wähl eine andere Sprache, wenn du willst, dass ich dir antworte. Ich spreche nur Französisch.
 		</p>
 	</div>
@@ -150,7 +160,7 @@
 
 <div class="card w-96 bg-base-100 shadow-xl hidden absolute right-10 top-20">
 	<figure>
-		<img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+		<img src="img/peter.png" alt="Shoes" />
 	</figure>
 	<div class="card-body">
 		<h2 class="card-title">Französischunterricht!</h2>
