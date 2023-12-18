@@ -73,14 +73,14 @@
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
 	<div class="card w-96 glass">
 		<figure>
-			<img src="img/confirmshaming.png" alt="car!" />
+			<img src="img/confirmshaming.png" alt="car!" class="p-5" />
 		</figure>
-		<div class="card-body">
+		<div class="card-body justify-center">
 			<h2 class="card-title">Virenschutz abgelaufen</h2>
 			<p>Wollen Sie jetzt sicher weiter arbeiten?</p>
-			<div class="card-actions justify-end">
-				<button class="btn" onclick="my_modal_6.showModal()" onclick="example.close()">Risiko eingehen</button>
-				<button class="btn" onclick="my_modal_5.close()" onclick="example.close()">Vertrag verlängern</button>
+			<div class="card-actions justify-center">
+				<button class="btn" onclick="my_modal_6.showModal()">Risiko eingehen</button>
+				<button class="btn" onclick="my_modal_5.close()">Vertrag verlängern</button>
 			</div>
 		</div>
 
@@ -95,10 +95,13 @@
 <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
 	<div class="modal-box">
 		<h3 class="font-bold text-lg">Sind Sie sich sicher?</h3>
-		<p class="py-4">This is another popup</p>
+		<img src="img/virus2.jpg" alt="car!" class="m-auto" />
 		<div class="modal-action">
 			<form method="dialog">
-				<button class="btn" onclick="my_modal_6.showModal()">Ja, ich will es riskieren</button>
+				<button class="btn" onclick="my_modal_6.close(); my_modal_5.close()"
+					>Ja, ich will es riskieren</button
+				>
+
 				<button class="btn" onclick="my_modal_6.close()">Nein, ich gehe doch lieber sicher</button>
 			</form>
 		</div>
