@@ -3,7 +3,7 @@
 	"name": "dark-hak",
 	"icons": [
 		{
-			"src": "/favicon.png",
+			"src": "/img/favicon.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}

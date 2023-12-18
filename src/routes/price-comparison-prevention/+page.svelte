@@ -84,14 +84,57 @@
 			<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
 		</figure>
 		<div class="card-body">
-			<h2 class="card-title">Standard Abo</h2>
-			<p>bla bla bla</p>
+			<h2 class="card-title">Standard ABO</h2>
+			<p>*Ab Abo-Start 5 Monate*</p>
+			<ul class="ulstandard">
+				<li>Inklusive Probeabo</li>
+				<li>Jederzeit kündbar*</li>
+				<li>Neue Features entdecken</li>
+				<li>Werbefrei</li>
+				<li>Inkl. Treuepunkt im Austausch mit Coins</li>
+			</ul>
 
 			<div class="collapse bg-base-100x">
 				<input type="checkbox" />
 				<div class="collapse-title text-s font-medium-light">Show more!</div>
 				<div class="collapse-content">
-					<p>hello</p>
+					<ul class="ulmore">
+						<li>
+							<strong>Laufzeit des Abonnements:</strong>
+							Die Laufzeit dieses Abonnements erstreckt sich über einen Zeitraum von 5 Monaten, beginnend
+							ab dem Datum der Anmeldung. Während dieser Periode ist eine vorzeitige Kündigung nicht
+							möglich.
+						</li>
+
+						<li>
+							Kosten nach Ablauf des Abonnements: Nach Ablauf des Abonnements behält sich der
+							Anbieter das Recht vor, die Kosten für die Nutzung der Dienste zu überprüfen und
+							gegebenenfalls anzupassen. Jegliche Änderungen werden dem Abonnenten rechtzeitig
+							mitgeteilt.
+						</li>
+
+						<li>
+							Finanzielle Verantwortlichkeit des Abonnenten: Der Abonnent übernimmt die volle
+							finanzielle Verantwortung für das Abonnement. Im Falle unvollständiger Zahlungen und
+							nach wiederholten Mahnungen behält sich der Anbieter das Recht vor, angemessene
+							Maßnahmen zu ergreifen, einschließlich der Aussetzung des Zugangs zu den Diensten.
+						</li>
+
+						<li>
+							Konsequenzen bei Zahlungsverzug: Sollte es zu Zahlungsschwierigkeiten kommen, obliegt
+							es dem Abonnenten, unverzüglich mit dem Anbieter in Kontakt zu treten, um eine Lösung
+							zu finden. Der Anbieter behält sich das Recht vor, bei ausstehenden Zahlungen
+							angemessene Schritte zu unternehmen, um die finanzielle Integrität des
+							Abonnementdienstes aufrechtzuerhalten.
+						</li>
+
+						<li>
+							Fortsetzung der Dienstleistungen: Die Fortsetzung der Dienstleistungen nach Ablauf des
+							Abonnements erfolgt auf Basis der zu diesem Zeitpunkt geltenden Konditionen. Der
+							Abonnent wird über etwaige Änderungen informiert und hat das Recht, das Abonnement zu
+							kündigen, wenn er mit den neuen Bedingungen nicht einverstanden ist.
+						</li>
+					</ul>
 				</div>
 			</div>
 
@@ -144,5 +187,15 @@
 
 	.collapse-title {
 		display: flex;
+	}
+
+	@media screen and (max-width: 600px) {
+		.card {
+			width: 100%; /* Adjusted card width for smaller screens */
+		}
+
+		.boxes {
+			display: grid;
+		}
 	}
 </style>
