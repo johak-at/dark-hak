@@ -22,37 +22,49 @@
 		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 2.5 + '$' },
 		{ id: 2, name: 'Nerds Rainbow Edition', price: 3.5 + '$' },
 		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 3.5 + '$' },
-		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' }
+		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' },
 	];
+
+	let hiddenData = [
+		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 2.5 + '$' },
+		{ id: 2, name: 'Nerds Rainbow Edition', price: 3.5 + '$' },
+		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 3.5 + '$' },
+		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' },
+		{ id: 5, name: 'Versandgebühren', price: 5 + '$' },
+		{ id: 6, name: 'Bearbeitungsgebühren', price: 2 + '$' },
+		{ id: 7, name: 'Verpackungsgebühren', price: 1 + '$' },
+		{ id: 8, name: 'Zollgebühren', price: 3 + '$'},
+		{ id: 9, name: 'Gesamtpreis', price: 20.5 + '$'}
+	]
 </script>
 
 <!-- <p>on:click={() => {$patterns[2].done = true,
 	window.location.replace("/");}}'</p> -->
-<div class="mockup-browser border bg-base-300 max-w-[90%] bg-fixed">
+<div
+	class="mockup-browser border bg-base-300 w-[90%] bg-fixed p-10 flex flex-col justify-center items-center gap-4"
+>
 	<div class="mockup-browser-toolbar">
 		<div class="input">https://sicherlichecht.shop</div>
 	</div>
 
 	{#if currentPage === 'product'}
-		<div>
-			<div>Willkommen bei Sicherlich echt!</div>
-			<p>Wir sind ein Unternehmen aus Österreich und verkaufen Süßigkeiten aus der ganzen Welt.</p>
-			<div>Wir sind zwar erst am Anfang, doch wollen in Zukunft groß hinaus.</div>
-			<div class="flex justify-center px-64 py-64 bg-base-800">
-				<div class="checkout" on:click={switchPage}>
-					<button class="btn btn-info">
-						Warenkorb
-						<Icon icon="typcn:shopping-cart" />
-					</button>
-				</div>
-			</div>
-
-			<div on:click={switchPageToExplain}>
-				<button>Erklärung Hidden Cost</button>
+		<div>Willkommen bei Sicherlich echt!</div>
+		<p>Wir sind ein Unternehmen aus Österreich und verkaufen Süßigkeiten aus der ganzen Welt.</p>
+		<div>Wir sind zwar erst am Anfang, doch wollen in Zukunft groß hinaus.</div>
+		<div class="flex flex-col justify-center bg-base-800">
+			<div class="checkout" on:click={switchPage}>
+				<button class="btn btn-info">
+					Warenkorb
+					<Icon icon="typcn:shopping-cart" />
+				</button>
 			</div>
 		</div>
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<!-- svelte-ignore a11y-no-static-element-interactions -->
+
+		<div on:click={switchPageToExplain}>
+			<button class="btn btn-warning">
+				Erklärung Hidden Costs <Icon icon="material-symbols:book" />
+			</button>
+		</div>
 
 		<!-- Das sind die Produkte, mit der Bezeichnung und Preisen -->
 	{/if}
@@ -100,12 +112,12 @@
 			</a>
 		</div>
 		<div>
-			<button class="checkout-button" on:click={switchPageToCheckout}>Zur Kasse</button>
+			<button class="btn btn-outline" on:click={switchPageToCheckout}>Zur Kasse</button>
 		</div>
 	{/if}
 
 	{#if currentPage === 'switchPage'}
-		<div class="flex justify-center px-64 py-64 bg-base-800">
+		<div class="flex flex-col justify-center px-64 py-64 bg-base-800 gap-4">
 			<table>
 				<thead>
 					<tr><th>ID</th> <th>Name</th> <th>Preis</th> </tr>
@@ -116,13 +128,15 @@
 					{/each}
 				</tbody>
 			</table>
+			
+			<button class="btn btn-accent" on:click={switchPageToAGB}>AGB</button>
 
-			<button class="AGB" on:click={switchPageToAGB}>AGB</button>
-			<button class="price" on:click={switchPageToPrice}>Preis</button>
+			<button class="btn btn-active btn-default" on:click={switchPageToPrice}>Checkout</button>
 		</div>
 	{/if}
 
 	{#if currentPage === 'AGB'}
+		<button class="switchPage" on:click={switchPageToCheckout}>Zur Kasse</button>
 		<div class="flex flex-col justify-center px-64 py-64 bg-base-800">
 			<div class="prose">
 				<h2>1. Geltungsbereich</h2>
@@ -196,6 +210,21 @@
 			</div>
 		</div>
 	{/if}
+
+	{#if currentPage === 'price'}
+		<div class="flex flex-col justify-center px-64 py-64 bg-base-800 gap-4">
+			<table>
+				<thead>
+					<tr><th>ID</th> <th>Name</th> <th>Preis</th> </tr>
+				</thead>
+				<tbody>
+					{#each hiddenData as item (item.id)}
+						<tr> <td>{item.id}</td> <td>{item.name}</td> <td>{item.price}</td> <td></td></tr>
+					{/each}
+				</tbody>
+			</table>
+		</div>
+					{/if}
 </div>
 
 <style>

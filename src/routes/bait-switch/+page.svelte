@@ -55,7 +55,9 @@
 				>Ups, da ist etwas schief gelaufen!! Leider ist das Produkt, das du dir ausgesucht hast,
 				nicht mehr verfügbar.
 			</span>
-			<button class="btn btn-primary" on:click={() => (page = 3)}> Unser neues Angebot! </button>
+			<button class="btn btn-primary" on:click={() => (page = 3)}>
+				Hier unser neues Angebot!
+			</button>
 		</div>
 	</div>
 {/if}
@@ -68,9 +70,11 @@
 			<img src="img/second-offer.png" alt="Fake Offer" class="max-w-sm rounded-lg shadow-2xl" />
 			<div>
 				<h1 class="text-5xl font-bold">
-					Unsere Unsere Exklusive Cowboy-Kollektion erwartet dich! 🌟
+					Howdy! Unsere Exklusive Cowboy-Kollektion erwartet dich! 🌟
 				</h1>
-				<p class="py-6">Hol dir jetzt deine Cowboystiefel zu einem unschlagbaren Preis!</p>
+				<p class="py-6">
+					Sichere dir jetzt ein Paar hochwertige Cowboystiefel zu einem unschlagbaren Preis!
+				</p>
 				<button class="btn btn-primary" on:click={() => (page = 4)}
 					>Nur für <em>99,99 €</em>! <button />
 				</button>
@@ -98,7 +102,7 @@
 			<p>
 				Die Strategie nutzt psychologische Mechanismen, indem anfängliche Begeisterung über ein
 				vermeintliches Schnäppchen Kunden dazu verleitet, die teurere Option zu wählen.
-				<em>Bait-and-Switch</em>ist ethisch fragwürdig und kann rechtliche Konsequenzen haben, da es
+				<em>Bait-and-Switch</em> ist ethisch fragwürdig und kann rechtliche Konsequenzen haben, da es
 				in vielen Ländern als irreführende Werbung betrachtet wird.
 			</p>
 			<p>
