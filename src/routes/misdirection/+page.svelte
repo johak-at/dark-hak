@@ -30,6 +30,8 @@
 						<li><a>Portfolio</a></li>
 						<!-- svelte-ignore a11y-missing-attribute -->
 						<li><a>About</a></li>
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<li><a>Account Settings</a></li>
 					</ul>
 				</div>
 			</div>
@@ -120,7 +122,7 @@
 								/>
 							</figure>
 							<div class="card-body">
-								<h2 class="card-title">Platin Subscription</h2>
+								<h2 class="card-title">Platinum Subscription</h2>
 								<p>If a dog chews shoes whose shoes does he choose?</p>
 								<div class="card-actions justify-end">
 									<button class="btn btn-primary">Buy Now</button>
