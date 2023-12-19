@@ -98,7 +98,7 @@
 			<p>
 				Die Strategie nutzt psychologische Mechanismen, indem anfängliche Begeisterung über ein
 				vermeintliches Schnäppchen Kunden dazu verleitet, die teurere Option zu wählen.
-				<em>Bait-and-Switch</em>ist ethisch fragwürdig und kann rechtliche Konsequenzen haben, da es
+				<em>Bait-and-Switch</em> ist ethisch fragwürdig und kann rechtliche Konsequenzen haben, da es
 				in vielen Ländern als irreführende Werbung betrachtet wird.
 			</p>
 			<p>
