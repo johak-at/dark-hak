@@ -15,6 +15,8 @@
 		animateFlag();
 	});
 
+	let selectedLanguage = 'french';
+
 	function animateFlag() {
 		setInterval(() => {
 			flagStyle = {
@@ -55,7 +57,13 @@
 	}
 
 	function checkOverloading() {
-		$patterns[4].done = true;
+		if (selectedLanguage !== 'french') {
+			$patterns[4].done = true;
+			const french = document.querySelector('.french');
+			if (french !== null) {
+				french.classList.add('hidden');
+			}
+		}
 	}
 </script>
 
@@ -69,12 +77,13 @@
 	<h1 class="h-12 text-4xl pb-10">Wähle deine Fremdsprache</h1>
 	<div class="flex flex-col">
 		<ul>
-			<form class="border">
+			<form class="border" id="radioButtons">
 				<div class="grid h-20 rounded-t bg-red-500 text-primary-content place-content-center">
 					<li class="text-black text-3xl font-bold">
 						<input
 							type="radio"
-							name="radio"
+							bind:group={selectedLanguage}
+							value="french"
 							id="french"
 							class="radio radio-error align-middle"
 							checked
@@ -86,7 +95,13 @@
 
 				<div class="grid h-20 bg-white text-accent-content place-content-center">
 					<li class="text-gray-300 hover:line-through">
-						<input type="radio" name="radio" class="radio align-middle" on:click={showPhone} /> spanisch
+						<input
+							type="radio"
+							bind:group={selectedLanguage}
+							value="spanish"
+							class="radio align-middle"
+							on:click={showPhone}
+						/> spanisch
 					</li>
 				</div>
 
@@ -94,7 +109,8 @@
 					<li class="text-gray-500 italy">
 						<input
 							type="radio"
-							name="radio"
+							bind:group={selectedLanguage}
+							value="italian"
 							class="radio align-middle hover: line-through"
 							on:click={showPhone}
 						/>
@@ -106,8 +122,14 @@
 		<button
 			on:click={checkOverloading}
 			class="bg-gradient-to-r from-blue-500 via-white to-red-500 text-3xl font-bold p-5 rounded-2xl mt-5 color-black"
-			>Submit</button
 		>
+			<button type="button" class="text-black" disabled>
+				{#if selectedLanguage !== 'french'}
+					<span class="loader loading loading-spinner loading-md text-black" />
+				{/if}
+				<span class="submit pl-2 text-black">Submit</span></button
+			>
+		</button>
 	</div>
 </div>
 
@@ -167,6 +189,10 @@
 		<p>Die Französischlehrerin "Crème de la Crème" ist nur deux kilomètres von dir entfernt</p>
 	</div>
 </div>
+
+<!-- <div class="text w-screen h-screen absolute bg-lime-400">
+	<p>Text folgt</p>
+</div> -->
 
 <style>
 	.italy:hover::after {

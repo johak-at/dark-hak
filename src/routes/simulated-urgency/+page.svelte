@@ -5,7 +5,8 @@
 }} -->
 
 <script>
-    import { createEventDispatcher } from "svelte";
+	import { text } from "@sveltejs/kit";
+    import { createEventDispatcher, onMount } from "svelte";
    
  
     const dispatch = createEventDispatcher();
@@ -20,13 +21,42 @@
       dispatch("close");
     }
 
-    const countdown= { days: 10, hours: 5, minutes: 30, seconds: 0 };
+    const countdown= { days: 0, hours: 3, minutes: 10, seconds: 30 };
 
     const products = [
       { name: "Geforce RTX 3060", description: "1.320 MHz, 12 GB GDDR6, 12,7 TFLOPS", pic: "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3060Ti/GAMING-X/KV-3060-Ti-GAMING.png" },
       { name: "Geforce RTX 3080", description: "1.440 MHz, 10 GB GDDR6X, 29,8 TFLOPS", pic: "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3090/RTX3090_Ti_gamingTrio/3090-ti-vga-body.png",  },
       { name: "Geforce RTX 3090 ti", description: "1.560 MHz, 24 GB GDDR6X, 59,5 TFLOPS", pic: "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3090/RTX3090_Ti_gamingTrio/3090-ti-vga-body.png" },
     ];
+    function count() { 
+      if (countdown.seconds > 0) {
+        countdown.seconds--;
+      } else {
+        countdown.seconds = 59;
+        if (countdown.minutes > 0) {
+          countdown.minutes--;
+        } else {
+          countdown.minutes = 59;
+          if (countdown.hours > 0) {
+            countdown.hours--;
+          } else {
+            countdown.hours = 23;
+            if (countdown.days > 0) {
+              countdown.days--;
+            } else {
+              countdown.days = 0;
+              countdown.hours = 0;
+              countdown.minutes = 0;
+              countdown.seconds = 0;
+            }
+          }
+        }
+      }
+}
+
+onMount(() => {
+  setInterval(count, 1000);}
+  );
    
   </script>
  
@@ -89,7 +119,7 @@
   </style>
  
   <div class="button-container">
-    <button class="open-popup-button" on:click={openDialog}>Open Popup</button>
+    <button class="open-popup-button" on:click={openDialog}>Erklärung</button>
   </div>
  
   <div class="boxes">
@@ -132,11 +162,14 @@
             </div>
           {/if}
           <!-- timer end -->
+
+          
           <div class="card-actions justify-end">
             <button class="btn btn-primary">Kaufen </button>
           </div>
         </div>
       </div>
+      
     {/each}
  
     {#if showDialog}
