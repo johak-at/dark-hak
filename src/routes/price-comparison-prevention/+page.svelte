@@ -20,19 +20,13 @@
 			<div class="card-body">
 				<h2 class="card-title">BASIC ABO</h2>
 				<h3>5,99€ pro Woche</h3>
+				<p class="small">Steuern und Gebühren nicht inkludiert</p>
 				<ul class="ulstandard">
-					<li>Zugang zu unserer stetig wachsenden Spielebibliothek</li>
-					<li>
-						Erleben Sie eine einzigartige Mischung aus minimalistischem Chaos und maximalem Spaß.
-					</li>
-					<li>
-						Mit unserem Abo erhalten Sie eine begrenzte Anzahl von Werbeunterbrechungen – oder
-						vielleicht auch nicht.
-					</li>
-					<li>
-						Wer braucht schon klare Informationen, wenn Sie das aufregende Gefühl der Ungewissheit
-						haben können?
-					</li>
+					<li>Zugang zur stetig wachsenden Spielebibliothek</li>
+					<li>Jederzeit kündbar</li>
+
+					<li>Begrenzte Anzahl von Werbeunterbrechungen</li>
+					<li>Sammle Treuepunkte!</li>
 				</ul>
 
 				<div class="collapse bg-base-100x">
@@ -82,17 +76,18 @@
 			</div>
 		</div>
 
-		<div class="card w-96 bg-base-100 shadow-xl1">
+		<div class="card w-96 bg-base-100 shadow-xl two">
 			<figure>
 				<p>some cool picture</p>
 				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
 			</figure>
 			<div class="card-body">
-				<h2 class="card-title">Standard ABO</h2>
-				<p>*Ab Abo-Start 5 Monate*</p>
+				<h2 class="card-title">PLUS ABO</h2>
+				<p>12,99€ *Ab Abo-Start 5 Monate*</p>
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
 					<li>Jederzeit kündbar*</li>
+					<li>Steuern und Gebühren inklusive</li>
 					<li>Neue Features entdecken</li>
 					<li>Werbefrei</li>
 					<li>Inkl. Treuepunkt im Austausch mit Coins</li>
@@ -111,32 +106,34 @@
 							</li>
 
 							<li>
-								Kosten nach Ablauf des Abonnements: Nach Ablauf des Abonnements behält sich der
-								Anbieter das Recht vor, die Kosten für die Nutzung der Dienste zu überprüfen und
-								gegebenenfalls anzupassen. Jegliche Änderungen werden dem Abonnenten rechtzeitig
-								mitgeteilt.
+								<strong>Kosten nach Ablauf des Abonnements: </strong>Nach Ablauf des Abonnements
+								behält sich der Anbieter das Recht vor, die Kosten für die Nutzung der Dienste zu
+								überprüfen und gegebenenfalls anzupassen. Jegliche Änderungen werden dem Abonnenten
+								rechtzeitig mitgeteilt.
 							</li>
 
 							<li>
-								Finanzielle Verantwortlichkeit des Abonnenten: Der Abonnent übernimmt die volle
-								finanzielle Verantwortung für das Abonnement. Im Falle unvollständiger Zahlungen und
-								nach wiederholten Mahnungen behält sich der Anbieter das Recht vor, angemessene
-								Maßnahmen zu ergreifen, einschließlich der Aussetzung des Zugangs zu den Diensten.
+								<strong>Finanzielle Verantwortlichkeit des Abonnenten: </strong>Der Abonnent
+								übernimmt die volle finanzielle Verantwortung für das Abonnement. Im Falle
+								unvollständiger Zahlungen und nach wiederholten Mahnungen behält sich der Anbieter
+								das Recht vor, angemessene Maßnahmen zu ergreifen, einschließlich der Aussetzung des
+								Zugangs zu den Diensten.
 							</li>
 
 							<li>
-								Konsequenzen bei Zahlungsverzug: Sollte es zu Zahlungsschwierigkeiten kommen,
-								obliegt es dem Abonnenten, unverzüglich mit dem Anbieter in Kontakt zu treten, um
-								eine Lösung zu finden. Der Anbieter behält sich das Recht vor, bei ausstehenden
-								Zahlungen angemessene Schritte zu unternehmen, um die finanzielle Integrität des
-								Abonnementdienstes aufrechtzuerhalten.
+								<strong>Konsequenzen bei Zahlungsverzug: </strong>Sollte es zu
+								Zahlungsschwierigkeiten kommen, obliegt es dem Abonnenten, unverzüglich mit dem
+								Anbieter in Kontakt zu treten, um eine Lösung zu finden. Der Anbieter behält sich
+								das Recht vor, bei ausstehenden Zahlungen angemessene Schritte zu unternehmen, um
+								die finanzielle Integrität des Abonnementdienstes aufrechtzuerhalten.
 							</li>
 
 							<li>
-								Fortsetzung der Dienstleistungen: Die Fortsetzung der Dienstleistungen nach Ablauf
-								des Abonnements erfolgt auf Basis der zu diesem Zeitpunkt geltenden Konditionen. Der
-								Abonnent wird über etwaige Änderungen informiert und hat das Recht, das Abonnement
-								zu kündigen, wenn er mit den neuen Bedingungen nicht einverstanden ist.
+								<strong>Fortsetzung der Dienstleistungen: </strong>Die Fortsetzung der
+								Dienstleistungen nach Ablauf des Abonnements erfolgt auf Basis der zu diesem
+								Zeitpunkt geltenden Konditionen. Der Abonnent wird über etwaige Änderungen
+								informiert und hat das Recht, das Abonnement zu kündigen, wenn er mit den neuen
+								Bedingungen nicht einverstanden ist.
 							</li>
 						</ul>
 					</div>
@@ -148,28 +145,51 @@
 			</div>
 		</div>
 
-		<div class="card w-96 bg-base-100 shadow-xl2">
+		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
 				<p>some cool picture</p>
 				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
 			</figure>
 			<div class="card-body">
-				<h2 class="card-title">ABO PLUS</h2>
-				<p>bla bla bla</p>
+				<h2 class="card-title">PREMIUM ABO</h2>
+				<p>60€ pro Jahr (Ab Abo Start 1,5 Jahre)</p>
 
-				<ul>
-					<li>pure Spielfreude ohne Werbeunterbrechen</li>
-					<li />
+				<ul class="ulstandard">
+					<li>Inklusive Probeabo</li>
+					<li>Neue und verschlüsselte Features freischalten</li>
+					<li>Werbefrei</li>
+					<li>Inkl. Treuepunkt in Austausch mit Coins und EXTRA-Speed</li>
 				</ul>
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
 					<div class="collapse-title text-s font-medium-light">Show more!</div>
 					<div class="collapse-content">
-						<p>hello</p>
+						<ul class="ulmore">
+							<p>
+								<strong>Vertragslaufzeit und Beendigung:</strong>
+
+								Die festgelegte Laufzeit des Abonnements erstreckt sich über einen Zeitraum von
+								einem Jahr, beginnend ab dem Datum der Anmeldung. Während dieser Zeitspanne ist eine
+								frühzeitige Kündigung nicht möglich. Nach Ablauf des Abonnements behält sich der
+								Anbieter das Recht vor, die anfallenden Kosten für die Nutzung der Dienste zu
+								evaluieren und gegebenenfalls anzupassen. Jegliche Änderungen werden dem Abonnenten
+								zeitnah mitgeteilt. Der Abonnent trägt die volle finanzielle Verantwortung für das
+								Abonnement. Im Falle von unvollständigen Zahlungen und nach wiederholten Mahnungen
+								behält sich der Anbieter das Recht vor, angemessene Maßnahmen zu ergreifen, darunter
+								auch die vorübergehende Aussetzung des Zugangs zu den Diensten. Bei
+								Zahlungsschwierigkeiten obliegt es dem Abonnenten, unverzüglich Kontakt mit dem
+								Anbieter aufzunehmen, um gemeinsam eine Lösung zu finden. Der Anbieter behält sich
+								das Recht vor, bei ausbleibenden Zahlungen angemessene Schritte zu unternehmen, um
+								die finanzielle Integrität des Abonnementdienstes zu wahren. Die Fortsetzung der
+								Dienstleistungen nach Ablauf des Abonnements erfolgt gemäß den zu diesem Zeitpunkt
+								gültigen Bedingungen. Der Abonnent wird über mögliche Änderungen informiert und hat
+								das Recht, das Abonnement zu kündigen, sofern er den neuen Bedingungen nicht
+								zustimmt.
+							</p>
+						</ul>
 					</div>
 				</div>
-
 				<div class="card-actions justify-end">
 					<button class="btn btn-primary" on:click={() => (page = 4)}>Choose the abo!</button>
 				</div>
@@ -199,11 +219,6 @@
 			Denke daran, im Bereich der Preisvergleichsvermeidung bist du immer einen Schritt voraus
 			gegenüber der Entscheidungsmüdigkeit.
 		</p>
-		<p>
-			Wenn du jedoch entschlossen bist, Preise zu vergleichen, findest du deinen Weg zurück <a
-				href="https://deinehauptwebsite.com">hier</a
-			>.
-		</p>
 	</div>
 {/if}
 
@@ -211,8 +226,16 @@
 	.boxes {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: flex-end;
 		/* or use "space-around" for space around each card */
+	}
+
+	.card {
+		margin-right: 50px;
+	}
+
+	.small {
+		font-size: xx-small;
 	}
 
 	.ulstandard li {
