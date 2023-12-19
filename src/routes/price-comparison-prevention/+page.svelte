@@ -14,13 +14,12 @@
 	<div class="boxes">
 		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
-				<p>some cool picture</p>
-				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
+				<img src="img/prevention1.jpg" alt="cars" />
 			</figure>
 			<div class="card-body">
 				<h2 class="card-title">BASIC ABO</h2>
 				<h3>5,99€ pro Woche</h3>
-				<p class="small">Steuern und Gebühren nicht inkludiert</p>
+				<!-- <p class="small">Steuern und Gebühren nicht inkludiert</p> -->
 				<ul class="ulstandard">
 					<li>Zugang zur stetig wachsenden Spielebibliothek</li>
 					<li>Jederzeit kündbar</li>
@@ -78,8 +77,7 @@
 
 		<div class="card w-96 bg-base-100 shadow-xl two">
 			<figure>
-				<p>some cool picture</p>
-				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
+				<img src="img/prevention2.jpg" alt="cars" />
 			</figure>
 			<div class="card-body">
 				<h2 class="card-title">PLUS ABO</h2>
@@ -147,8 +145,7 @@
 
 		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
-				<p>some cool picture</p>
-				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
+				<img src="img/prevention3.jpg" alt="cars" />
 			</figure>
 			<div class="card-body">
 				<h2 class="card-title">PREMIUM ABO</h2>
@@ -226,17 +223,17 @@
 	.boxes {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: flex-start;
 		/* or use "space-around" for space around each card */
 	}
 
 	.card {
-		margin-right: 50px;
+		margin-right: 30px;
 	}
 
-	.small {
+	/* .small {
 		font-size: xx-small;
-	}
+	} */
 
 	.ulstandard li {
 		list-style-type: disc;
