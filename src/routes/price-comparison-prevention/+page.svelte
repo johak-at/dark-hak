@@ -20,19 +20,13 @@
 			<div class="card-body">
 				<h2 class="card-title">BASIC ABO</h2>
 				<h3>5,99€ pro Woche</h3>
+				<p class="small">Steuern und Gebühren nicht inkludiert</p>
 				<ul class="ulstandard">
-					<li>Zugang zu unserer stetig wachsenden Spielebibliothek</li>
-					<li>
-						Erleben Sie eine einzigartige Mischung aus minimalistischem Chaos und maximalem Spaß.
-					</li>
-					<li>
-						Mit unserem Abo erhalten Sie eine begrenzte Anzahl von Werbeunterbrechungen – oder
-						vielleicht auch nicht.
-					</li>
-					<li>
-						Wer braucht schon klare Informationen, wenn Sie das aufregende Gefühl der Ungewissheit
-						haben können?
-					</li>
+					<li>Zugang zur stetig wachsenden Spielebibliothek</li>
+					<li>Jederzeit kündbar</li>
+
+					<li>Begrenzte Anzahl von Werbeunterbrechungen</li>
+					<li>Sammle Treuepunkte!</li>
 				</ul>
 
 				<div class="collapse bg-base-100x">
@@ -82,7 +76,7 @@
 			</div>
 		</div>
 
-		<div class="card w-96 bg-base-100 shadow-xl1">
+		<div class="card w-96 bg-base-100 shadow-xl two">
 			<figure>
 				<p>some cool picture</p>
 				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
@@ -93,6 +87,7 @@
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
 					<li>Jederzeit kündbar*</li>
+					<li>Steuern und Gebühren inklusive</li>
 					<li>Neue Features entdecken</li>
 					<li>Werbefrei</li>
 					<li>Inkl. Treuepunkt im Austausch mit Coins</li>
@@ -150,7 +145,7 @@
 			</div>
 		</div>
 
-		<div class="card w-96 bg-base-100 shadow-xl2">
+		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
 				<p>some cool picture</p>
 				<!-- <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /> -->
@@ -161,11 +156,8 @@
 
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
-					<li />
 					<li>Neue und verschlüsselte Features freischalten</li>
-					<li />
 					<li>Werbefrei</li>
-					<li />
 					<li>Inkl. Treuepunkt in Austausch mit Coins und EXTRA-Speed</li>
 				</ul>
 
@@ -195,12 +187,11 @@
 								das Recht, das Abonnement zu kündigen, sofern er den neuen Bedingungen nicht
 								zustimmt.
 							</p>
-
-							<div class="card-actions justify-end">
-								<button class="btn btn-primary">Choose the abo!</button>
-							</div>
 						</ul>
 					</div>
+				</div>
+				<div class="card-actions justify-end">
+					<button class="btn btn-primary" on:click={() => (page = 4)}>Choose the abo!</button>
 				</div>
 			</div>
 		</div>
@@ -228,11 +219,6 @@
 			Denke daran, im Bereich der Preisvergleichsvermeidung bist du immer einen Schritt voraus
 			gegenüber der Entscheidungsmüdigkeit.
 		</p>
-		<p>
-			Wenn du jedoch entschlossen bist, Preise zu vergleichen, findest du deinen Weg zurück <a
-				href="https://deinehauptwebsite.com">hier</a
-			>.
-		</p>
 	</div>
 {/if}
 
@@ -240,8 +226,16 @@
 	.boxes {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: flex-end;
 		/* or use "space-around" for space around each card */
+	}
+
+	.card {
+		margin-right: 50px;
+	}
+
+	.small {
+		font-size: xx-small;
 	}
 
 	.ulstandard li {
