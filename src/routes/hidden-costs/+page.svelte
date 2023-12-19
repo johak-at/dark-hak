@@ -1,7 +1,12 @@
 <script>
+// @ts-nocheck
+import { patterns, defaultValue } from '$lib/store';
 	import Icon from '@iconify/svelte';
 	let currentPage = 'product';
-
+	
+	function goBackPage(){
+		currentPage = 'product';
+	}
 	function switchPage() {
 		currentPage = 'checkout';
 	}
@@ -22,7 +27,7 @@
 		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 2.5 + '$' },
 		{ id: 2, name: 'Nerds Rainbow Edition', price: 3.5 + '$' },
 		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 3.5 + '$' },
-		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' },
+		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' }
 	];
 
 	let hiddenData = [
@@ -33,9 +38,9 @@
 		{ id: 5, name: 'Versandgebühren', price: 5 + '$' },
 		{ id: 6, name: 'Bearbeitungsgebühren', price: 2 + '$' },
 		{ id: 7, name: 'Verpackungsgebühren', price: 1 + '$' },
-		{ id: 8, name: 'Zollgebühren', price: 3 + '$'},
-		{ id: 9, name: 'Gesamtpreis', price: 20.5 + '$'}
-	]
+		{ id: 8, name: 'Zollgebühren', price: 3 + '$' },
+		{ id: 9, name: 'Gesamtpreis', price: 20.5 + '$' }
+	];
 </script>
 
 <!-- <p>on:click={() => {$patterns[2].done = true,
@@ -67,6 +72,83 @@
 		</div>
 
 		<!-- Das sind die Produkte, mit der Bezeichnung und Preisen -->
+	{/if}
+
+	{#if currentPage === 'explain'}
+		<div class="prose">
+			<h1>Erklärung</h1>
+			<p>
+				Hidden Costs ist ein dark Pattern, welches vor allem bei Online-Shops auftritt.
+				Grundsätzlich sind „Hidden Costs“ (Versteckte Kosten), wie der Name schon sagt, Kosten
+				welche versteckt auftreten bzw. nicht von Anfang an ersichtlich sind und den Käufer mehr
+				bezahlen lassen als er eigentlich bezahlen möchte.
+			</p>
+			<h2>Es gibt verschiedene Arten von Hidden Costs.</h2>
+			Einige haben sind hier aufgelistet und werden im Folgenden beschreiben und es wird erklärt, was
+			dies mit den Käufern macht.
+			<ol>1. Versandkosten</ol>
+			<ol>2. EU und Zoll</ol>
+			<ol>3. Ratenzahlung</ol>
+			<ol>4. Freiwillige Spenden</ol>
+			<ol>5. Bearbeitungsgebühr</ol>
+			<ol>6. Abonnement-Falle</ol>
+
+			<h2>Versandkosten, EU und Zoll</h2>
+
+			<p>
+				Versandkosten sind Kosten, welche erst am Ende einer Bestellung angezeigt werden und die
+				Paket und Lieferkosten enthalten. Mann kann bei den meisten Shops versandkostenfrei
+				Bestellen, aber man muss für einen gewissen Wert einkaufen. Viele Menschen legen deshalb
+				noch ein Produkt mehr in den Warenkorb obwohl sie es gar nicht kaufen wollen.
+			</p>
+
+			<p>
+				Innerhalb der EU muss man keinen Zoll zahlen. Wenn man aber allerdings von einem Onlineshop
+				aus den USA bestellt, welcher keinen Standort in der EU hat, werden am Ende der Bestellung
+				ähnlich wie bei Versandkosten eine Gebühr für den Zoll verrechnet. Ein Beispiel dafür wäre,
+				wenn man zum Beispiel Gewand von einem kleineren amerikanischen Händler bestellt.
+			</p>
+
+			<h2>Ratenzahlung</h2>
+
+			<p>
+				Bei Bestellungen mit größerem Wert, kann man oftmals die Option auf Raten kaufen wählen.
+				Dadurch sieht der Produktpreis nach weniger aus als er eigentlich ist und eigentlich zahlt
+				man mehr für das Produkt, wie wenn man es direkt mit dem Vollpreis bestellt. Typische
+				Beispiele für einen Ratenkauf sind Möbel, Küchen oder auch elektronische Geräte.
+			</p>
+
+			<h2>Freiwillige Spenden</h2>
+
+			<p>
+				Freiwillige Spenden. Viele kleine Unternehmen mit einem Onlineshop werben mit Freiwilligen
+				spenden am ende des Checkouts. Es werden immer gewisse Beträge (1€-5€) vorgeschlagen was man
+				zu seiner Bestellung dazu spenden kann. Es wird damit geworben, Gewinnspiele mit dem
+				gespendeten Geld zu veranstalten und oder öfters größere Rabatte anbieten zu können. Dies
+				verleitet den Menschen dazu eine Kleinigkeit zu spenden, da ein oder zwei Euro für die
+				Meisten Menschen verkraftbar ist, für dass was man anscheinend zurückbekommt.
+			</p>
+
+			<h2>Bearbeitungsgebühr</h2>
+
+			<p>
+				Bearbeitungsgebühren treten häufig bei Angeboten über einen 3. Händler auf. Zum Beispiel
+				beim reselling von Konzertkarten oder von Karten für Fußballspiele die eigentlich schon
+				ausverkauft sind. Meistens wird der Preis angezeigt und erst bei der letzten Page
+				verrechnet. Bearbeitungsgebühren kosten meistens zwischen 5 und 25 € pro Karte.
+			</p>
+
+			<h2>Abonnement Falle</h2>
+
+			<p>
+				Diese Fall wird vor allem bei Amazon benutzt. Durch ein Abo werden im Beispiel von Amazon
+				monatlich oder jährlich ein gewisser Betrag abgebucht und dadurch hat man keine
+				Versandkosten mehr oder man bekommt eine vermeintlich schnellere Lieferung. Für Leute die
+				viel und häufig bestellen lohnt sich so ein Abo vermutlich aber meistens bezahlt man durch
+				ein Abo mehr wie wenn man ab und zu Versandkosten bezahlen muss.
+			</p>
+			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
+		</div>
 	{/if}
 	{#if currentPage === 'checkout'}
 		<div class="flex justify-center px-64 py-64 bg-base-800">
@@ -113,6 +195,7 @@
 		</div>
 		<div>
 			<button class="btn btn-outline" on:click={switchPageToCheckout}>Zur Kasse</button>
+			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
 		</div>
 	{/if}
 
@@ -128,10 +211,11 @@
 					{/each}
 				</tbody>
 			</table>
-			
+
 			<button class="btn btn-accent" on:click={switchPageToAGB}>AGB</button>
 
 			<button class="btn btn-active btn-default" on:click={switchPageToPrice}>Checkout</button>
+			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
 		</div>
 	{/if}
 
@@ -207,6 +291,7 @@
 				Hinweis: Die AGB sollten an die spezifischen Gegebenheiten und Anforderungen Ihres Onlineshops
 				angepasst werden. Es wird empfohlen, rechtlichen Rat einzuholen, um sicherzustellen, dass die
 				AGB den aktuellen rechtlichen Anforderungen entsprechen.
+				<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
 			</div>
 		</div>
 	{/if}
@@ -219,12 +304,19 @@
 				</thead>
 				<tbody>
 					{#each hiddenData as item (item.id)}
-						<tr> <td>{item.id}</td> <td>{item.name}</td> <td>{item.price}</td> <td></td></tr>
+						<tr> <td>{item.id}</td> <td>{item.name}</td> <td>{item.price}</td> <td /></tr>
 					{/each}
 				</tbody>
 			</table>
+			<button
+                on:click={() => {
+                    ($patterns[2].done = true), window.location.replace('/');
+                }}
+                class="btn">Aufgabe abschließen</button
+            >
+			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
 		</div>
-					{/if}
+	{/if}
 </div>
 
 <style>
