@@ -76,7 +76,7 @@
 					Sichere dir jetzt ein Paar hochwertige Cowboystiefel zu einem unschlagbaren Preis!
 				</p>
 				<button class="btn btn-primary" on:click={() => (page = 4)}
-					>Nur für <em>99,99 €</em>! <button />
+					>Nur für <em>99,99 Euro</em>! <button />
 				</button>
 			</div>
 		</div>
