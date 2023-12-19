@@ -12,7 +12,7 @@
 {#if page === 1}
 	<h1>Choose your abo</h1>
 	<div class="boxes">
-		<div class="card w-96 bg-base-100 shadow-xl m-[20px]">
+		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
 				<img src="img/prevention1.jpg" alt="cars" />
 			</figure>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 
-		<div class="card w-96 bg-base-100 shadow-xl m-[20px]">
+		<div class="card w-96 bg-base-100 shadow-xl two">
 			<figure>
 				<img src="img/prevention2.jpg" alt="cars" />
 			</figure>
@@ -143,7 +143,7 @@
 			</div>
 		</div>
 
-		<div class="card w-96 bg-base-100 shadow-xl m-[20px]">
+		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
 				<img src="img/prevention3.jpg" alt="cars" />
 			</figure>
@@ -223,13 +223,13 @@
 	.boxes {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		/* or use "space-around" for space around each card */
 	}
 
-	/* .card {
+	.card {
 		margin-right: 30px;
-	} */
+	}
 
 	/* .small {
 		font-size: xx-small;
