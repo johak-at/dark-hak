@@ -5,6 +5,7 @@
 }} -->
 
 <script>
+	import { text } from "@sveltejs/kit";
     import { createEventDispatcher, onMount } from "svelte";
    
  
@@ -118,7 +119,7 @@ onMount(() => {
   </style>
  
   <div class="button-container">
-    <button class="open-popup-button" on:click={openDialog}>Open Popup</button>
+    <button class="open-popup-button" on:click={openDialog}>Erklärung</button>
   </div>
  
   <div class="boxes">
@@ -168,6 +169,7 @@ onMount(() => {
           </div>
         </div>
       </div>
+      
     {/each}
  
     {#if showDialog}
