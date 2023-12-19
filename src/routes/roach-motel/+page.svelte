@@ -413,8 +413,7 @@
 			> <a class="text-lg">Mein Konto löschen</a>
 		</p>
 		<div class="mx-[7vw] self-start max-w-6xl">
-			<h1 class="py-5 text-4xl">Gratuliere!</h1>
-			<p class="pb-5 text-lg">Sie haben ihr Konto erfolgreich gelöscht</p>
+			<h1 class="py-5 text-4xl">Du hast es geschafft!</h1>
 
 			<button
 				on:click={() => {
@@ -433,14 +432,20 @@
 				dich aber plötzlich nicht direkt auf der Seite abmelden. Stattdessen musst du dich erst
 				durch die Einstellungen durchklicken und dich am Ende vielleicht sogar telefonisch abmelden.
 				Dabei musst du mehrmals bestätigen, dass du dich wirklich abmelden möchtest und dir der
-				Konsequenzen bewusst bist. Vermutlich musstest du dich auch bei unserem Beispiel
-				durchklicken, um den richtigen Weg zu "Mein Konto löschen" zu finden. Offensichtlich hast du
-				jedoch nicht aufgegeben und Zeit investiert. Das Anlegen bzw. Registrieren ging vermutlich
-				schneller. Genau das ist ein Dark Pattern, ein undurchsichtiges Muster – eine Grauzone.
-				Natürlich sollte es möglich sein, das eigene Konto zu löschen, aber wie einfach das sein
-				soll, ist nicht klar definiert. Es ist verständlich, dass Plattformen alles versuchen, um
-				gewonnene Benutzer nicht wieder gehen zu lassen. Es ist jedoch faszinierend, welche Tricks
-				und Verstecke genutzt werden, um Personen in eine bestimmte Richtung zu lenken.
+				Konsequenzen bewusst bist.
+				<br />
+				Vermutlich musstest du dich auch bei unserem Beispiel durchklicken, um den richtigen Weg zu "Mein
+				Konto löschen" zu finden. Offensichtlich hast du jedoch nicht aufgegeben und Zeit investiert,
+				auch wenn die Registrierung schneller ging. Genau das ist ein Dark Pattern, ein undurchsichtiges
+				Muster – eine Grauzone. Natürlich sollte es möglich sein, das eigene Konto zu löschen, aber wie
+				einfach das sein soll, ist nicht klar definiert. Es ist verständlich, dass Plattformen alles
+				versuchen, um gewonnene Benutzer nicht wieder gehen zu lassen. Es ist jedoch faszinierend, welche
+				Tricks und Verstecke genutzt werden, um Personen in eine bestimmte Richtung zu lenken.
+				<br />
+				<br />
+				Wir hoffen ihr wisst nun was "Roach Motel" ist und wie es funktioniert.
+				<br />
+				Wir stehen für KEINE Frage offen :)
 			</p>
 		</div>
 	{/if}

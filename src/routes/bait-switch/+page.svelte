@@ -21,7 +21,8 @@
 					Wandkletterers mit unseren exklusiven Spiderman-Stiefeln – jetzt zum unschlagbaren Preis!
 					Hol dir jetzt die Spiderman-Stiefel!
 				</p>
-				<button class="btn btn-primary" on:click={() => (page = 2)}>Nur <em>49,99</em> Euro!</button
+				<button class="btn btn-primary" on:click={() => (page = 2)}
+					>Nur für <em>49,99</em> Euro!</button
 				>
 			</div>
 		</div>
@@ -76,7 +77,7 @@
 					Sichere dir jetzt ein Paar hochwertige Cowboystiefel zu einem unschlagbaren Preis!
 				</p>
 				<button class="btn btn-primary" on:click={() => (page = 4)}
-					>Nur für <em>99,99 Euro</em>! <button />
+					>Nur für <em>99,99</em> Euro! <button />
 				</button>
 			</div>
 		</div>
