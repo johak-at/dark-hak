@@ -7,6 +7,12 @@
 	function toggleDetails() {
 		showMore = !showMore;
 	}
+
+	let my_modal_5;
+
+	function openModal() {
+		my_modal_5.showModal();
+	}
 </script>
 
 {#if page === 1}
@@ -30,7 +36,7 @@
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
-					<div class="collapse-title text-s font-medium-light">Show more!</div>
+					<div class="collapse-title text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
@@ -196,27 +202,20 @@
 {/if}
 
 {#if page === 2}
-	<div>
-		<h1>DANKE DAS SIE EINEN ABO ENTSPRECHEND IHREN KONTOSTAND GEWÄHLT HABEN!</h1>
-		<p>
-			Herzlichen Glückwunsch! Du bist erfolgreich auf unseren cleveren Trick hereingefallen. Anstatt
-			in die Welt der Preisvergleiche einzutauchen, bist du im Bereich der Preisvergleichsvermeidung
-			gelandet.
-		</p>
-		<p>
-			Hier sind wir darauf spezialisiert, dich vor dem endlosen Irrgarten des Preisvergleichs zu
-			retten. Denn wer braucht schon Auswahl, wenn man die entzückende Überraschung haben kann,
-			überhaupt keine Entscheidungen treffen zu müssen?
-		</p>
-		<p>
-			Erkunde frei unsere nicht vorhandene Produktauswahl und genieße den Ruhm, zwischen unzähligen
-			Angeboten keine Wahl treffen zu müssen. Wir versprechen, es ist eine befreiende Erfahrung!
-		</p>
-		<p>
-			Denke daran, im Bereich der Preisvergleichsvermeidung bist du immer einen Schritt voraus
-			gegenüber der Entscheidungsmüdigkeit.
-		</p>
-	</div>
+	<!-- Open the modal using ID.showModal() method -->
+	<button class="btn" on:click={openModal}>open modal</button>
+	<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box">
+			<h3 class="font-bold text-lg">Hello!</h3>
+			<p class="py-4">Press ESC key or click the button below to close</p>
+			<div class="modal-action">
+				<form method="dialog">
+					<!-- if there is a button in the form, it will close the modal -->
+					<button class="btn">Close</button>
+				</form>
+			</div>
+		</div>
+	</dialog>
 {/if}
 
 <style>
@@ -229,6 +228,7 @@
 
 	.card {
 		margin-right: 30px;
+		margin-bottom: 20px;
 	}
 
 	/* .small {
