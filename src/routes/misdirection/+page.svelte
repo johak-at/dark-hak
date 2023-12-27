@@ -4,16 +4,7 @@
 
 	let page = 1;
 
-	let check = document.getElementById('terms');
-	let contBtn = document.getElementById('continueBTN');
-
-	// function checkCheckbox(){
-	// 	if(check.checked){
-	// 		contBtn.disabled = false;
-	// 	} else {
-	// 		contBtn.disabled = true;
-	// 	}
-	// }
+	let yes = false;
 	
 </script>
 
@@ -1016,8 +1007,16 @@
 							
 							Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
 					  </div>
-					  <input type="checkbox" id="terms" name="terms" value="terms"><span class="agree">I agreee with the terms and conditions</span>
+					  <label>
+						<input type="checkbox" bind:checked={yes} /><span>I agreee with the terms and conditions</span>
+					  </label>
+					  {#if yes}
+					  <button id="continueBtnActive" on:click={() => (page = 7)}>Continue</button>
+					  {:else}
 					  <button id="continueBtn" disabled>Continue</button>
+					  {/if}
+					  
+					  
 					</div>
 				  </div>
 			</div>
@@ -1085,6 +1084,9 @@
 </div>
 {/if}
 
+{#if page===7}
+hello
+{/if}
 
 <style>
 	.mockup-browser {
@@ -1160,22 +1162,29 @@
   margin-bottom: 15px;
 }
 
-button {
-  display: block;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+#continueBtn{
+	  background-color: #9a9a9a;
+  border: 1px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+#continueBtnActive{
+	  background-color: #4CAF50;
+  border: 1px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.agree{
-	margin-left: 5px;
-}
+
 </style>
