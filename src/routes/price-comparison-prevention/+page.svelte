@@ -3,6 +3,7 @@
 
 	let page = 1;
 	let showMore = false;
+	let isConfirmationModalVisible = false;
 
 	function toggleDetails() {
 		showMore = !showMore;
@@ -12,6 +13,21 @@
 
 	function openModal() {
 		my_modal_5.showModal();
+	}
+
+	function handleConfirmation(choice) {
+		if (choice === 'JA') {
+			// Show another confirmation modal
+			isConfirmationModalVisible = true;
+			openModal();
+		} else if (choice === 'NEIN') {
+			// Redirect to another site with an explanation
+			page = 6;
+		}
+	}
+
+	function closeConfirmationModal() {
+		isConfirmationModalVisible = false;
 	}
 </script>
 
@@ -76,7 +92,7 @@
 					</div>
 				</div>
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 2)}>Choose the abo!</button>
+					<button class="btn btn-primary" on:click={() => (page = 2)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -99,7 +115,7 @@
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
-					<div class="collapse-title text-s font-medium-light">Show more!</div>
+					<div class="collapse-title text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
@@ -144,7 +160,7 @@
 				</div>
 
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 3)}>Choose the abo!</button>
+					<button class="btn btn-primary" on:click={() => (page = 3)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -166,7 +182,7 @@
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
-					<div class="collapse-title text-s font-medium-light">Show more!</div>
+					<div class="collapse-title text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<p>
@@ -194,7 +210,7 @@
 					</div>
 				</div>
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 4)}>Choose the abo!</button>
+					<button class="btn btn-primary" on:click={() => (page = 4)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -202,20 +218,25 @@
 {/if}
 
 {#if page === 2}
-	<!-- Open the modal using ID.showModal() method -->
-	<button class="btn" on:click={openModal}>open modal</button>
-	<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
-		<div class="modal-box">
-			<h3 class="font-bold text-lg">Hello!</h3>
-			<p class="py-4">Press ESC key or click the button below to close</p>
-			<div class="modal-action">
-				<form method="dialog">
-					<!-- if there is a button in the form, it will close the modal -->
-					<button class="btn">Close</button>
-				</form>
+	<div class="areyousure">WEISST DU WIRKLICH WIE VIEL DU ZAHLEN MUSST?</div>
+	<button class="btn" on:click={() => (page = 6)}>NEIN</button>
+	<button class="btn" on:click={() => handleConfirmation('JA')}>JA</button>
+
+	<!-- First confirmation modal -->
+	{#if isConfirmationModalVisible}
+		<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
+			<div class="modal-box">
+				<h3 class="font-bold text-lg">Bist du dir wirklich sicher?</h3>
+				<p class="py-4">Wir wissen beide das stimmt nicht. Gehe zurück und klicke NEIN!</p>
+				<div class="modal-action">
+					<form method="dialog">
+						<!-- Close the first confirmation modal -->
+						<button class="btn" on:click={closeConfirmationModal}>Zurück</button>
+					</form>
+				</div>
 			</div>
-		</div>
-	</dialog>
+		</dialog>
+	{/if}
 {/if}
 
 <style>
