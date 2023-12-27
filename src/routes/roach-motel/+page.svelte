@@ -69,7 +69,7 @@
 				<br />
 
 				<p class="text-xl prose">
-					Wir schätzen Ihre Mitgliedschaft bei uns. Wenn Sie jemals das Bedürfnis verspüren, ihren
+					Wir freuen uns über Ihre Mitgliedschaft. Sollten Sie jemals das Bedürfnis haben, Ihren
 					Account zu löschen, können Sie dies jederzeit tun. Wir werden Ihre Daten dann umgehend
 					löschen.
 				</p>
@@ -90,19 +90,19 @@
 			<h1 class="text-5xl py-5">Herzlich Willkommen {name}!</h1>
 
 			<p class="pb-5">
-				Alle Infos zu deinem Konto findest du hier. Schau dich um und entdecke, was du suchst. Wir
-				freuen uns, dass du dabei bist!
+				Hier findest du alle Informationen zu deinem Konto. Schau dich um und finde, was du suchst.
+				Wir freuen uns, dass du dabei bist!
 			</p>
 
 			<p class="pt-5 pb-10">
-				Dieses dark pattern beschreibt Services, für die man sich leicht anmelden kann, die eine
-				Abmeldung jedoch sehr schwer machen. Alle, die mal ihren Account löschen wollten, wissen: Es
+				Dieses dark pattern beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung aber
+				sehr schwierig ist. Jeder, der schon einmal seinen Account löschen wollte, weiß das: Es
 				werden einem Steine in den Weg gelegt und vergräbt die Option tief in den Einstellungen.
 				<br />
 				<br />
-				Du hast dich erfolgreich angemeldet beziehungsweise einen neuen Account erstellt. Nun steht die
-				Herausforderung bevor, deinen Account zu löschen. Der Weg zur Löschung des Accounts mag zwar
-				anspruchsvoll und komplex sein, aber wir wünschen dir viel Vergnügen dabei, dich zu befreien!
+				Du hast dich erfolgreich angemeldet oder ein neues Konto erstellt. Nun steht dir die Herausforderung
+				bevor, deinen Account zu löschen. Der Weg zum Löschen deines Accounts ist anspruchsvoll und komplex,
+				aber wir wünschen dir viel Spaß beim Löschen!
 			</p>
 
 			<div class="collapse collapse-arrow bg-base-200">
@@ -182,7 +182,7 @@
 						</li>
 						<li
 							on:click={() => (page = 3)}
-							class="py-2 transition-all hover:underline cursor-pointer"
+							class="py-2 text-lg transition-all hover:underline cursor-pointer"
 						>
 							Sonstiges
 						</li>
@@ -271,11 +271,11 @@
 				Willkommen in den zusätzlichen Informationen!
 				<br />
 				<br />
-				Hier gibt's mehr Details zu deinen Account-Einstellungen. Entdecke hilfreiche Tipps, wie du deinen
-				Account personalisieren und anpassen kannst. Wir möchten sicherstellen, dass du alles verstehst
-				und das Beste aus deiner Erfahrung herausholst. Falls du Fragen hast oder Unterstützung brauchst,
-				kannst du dich gerne an unseren Kundensupport wenden. Wir sind hier, um sicherzustellen, dass
-				alles reibungslos läuft und du dich in deinen Account-Einstellungen gut zurechtfindest.
+				Hier erfährst du mehr über die Einstellungen deines Kontos. Entdecke hilfreiche Tipps, wie du
+				deinen Account personalisieren und anpassen kannst. Wir wollen sicherstellen, dass du alles verstehst
+				und das Beste aus deiner Erfahrung machst. Wenn du Fragen hast oder Hilfe benötigst, wende dich
+				bitte an unseren Kundensupport. Wir sorgen dafür, dass alles reibungslos läuft und du dich in
+				deinem Konto zurechtfindest.
 				<br />
 				Danke, dass du Teil unserer Community bist! Genieße die zusätzlichen Infos und mache das Beste
 				aus deinem Konto.
@@ -287,11 +287,11 @@
 			<h1 class="text-2xl">Weitere Erklärung:</h1>
 			<p>
 				<br />
-				Es wird angestrebt, den Nutzerinnen und Nutzern das Gefühl zu vermitteln, dass sie Teil einer
-				Gemeinschaft sind und zu einem Team gehören. Dabei wird betont, dass sich die Kunden sicher fühlen
-				können, ohne jedoch die Option zu nennen, den Account zu löschen oder zu erklären, wie man ihn
-				löschen kann. Es wird vermieden, konkret auf diese Möglichkeit einzugehen und stattdessen Vertrauen
-				und Zugehörigkeit hervorzuheben.
+				Ziel ist es, den NutzerInnen das Gefühl zu geben, Teil einer Gemeinschaft zu sein und zu einem
+				Team zu gehören. Gemeinschaft und Teil eines Teams zu sein. Es wird betont, dass sich die Kundinnen
+				und Kunden sicher fühlen können. Ohne jedoch die Möglichkeit zu erwähnen, den Account zu löschen
+				oder zu erklären, wie man ihn löschen kann. Es wird vermieden, konkret auf diese Möglichkeit
+				einzugehen und stattdessen Vertrauen und Zugehörigkeit betont.
 			</p>
 		</div>
 	{/if}
@@ -424,23 +424,23 @@
 
 			<p class="text-2xl pt-16">Was lernen wir daraus?</p>
 			<p class="text-lg py-5">
-				Dieses "Dark Pattern" beschreibt Services, bei denen die Anmeldung einfach ist, die
-				Abmeldung jedoch erschwert wird. Jeder, der jemals versucht hat, seinen Account zu löschen,
-				weiß: Es werden einem hier Hürden in den Weg gelegt, und die entsprechenden Optionen sind
-				tief in den Einstellungen vergraben. Viele Services machen die Abmeldung nahezu unmöglich.
-				Stell dir vor, du meldest dich in wenigen Minuten online für ein Streaming-Abo an, kannst
-				dich aber plötzlich nicht direkt auf der Seite abmelden. Stattdessen musst du dich erst
-				durch die Einstellungen durchklicken und dich am Ende vielleicht sogar telefonisch abmelden.
-				Dabei musst du mehrmals bestätigen, dass du dich wirklich abmelden möchtest und dir der
+				Dieses "Dark Pattern" beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung
+				jedoch schwierig ist. Jeder, der schon einmal versucht hat, seinen Account zu löschen, weiß:
+				Hier werden einem Hürden in den Weg gestellt und die entsprechenden Optionen tief in den
+				Einstellungen vergraben. Viele Dienste machen das Abmelden fast unmöglich. Man stelle sich
+				vor, man meldet sich in wenigen Minuten online für ein Streaming-Abo an, kann dich aber
+				plötzlich nicht mehr direkt auf der Seite abmelden. Stattdessen musst du dich erst
+				Einstellungen durchklicken und dich am Ende vielleicht sogar telefonisch abmelden. Dabei
+				musst du mehrmals bestätigen, dass du dich wirklich abmelden willst und dir über die
 				Konsequenzen bewusst bist.
 				<br />
-				Vermutlich musstest du dich auch bei unserem Beispiel durchklicken, um den richtigen Weg zu "Mein
-				Konto löschen" zu finden. Offensichtlich hast du jedoch nicht aufgegeben und Zeit investiert,
-				auch wenn die Registrierung schneller ging. Genau das ist ein Dark Pattern, ein undurchsichtiges
-				Muster – eine Grauzone. Natürlich sollte es möglich sein, das eigene Konto zu löschen, aber wie
+				Wahrscheinlich musstest du dich auch in unserem Beispiel durchklicken, um den richtigen Weg zu
+				"Mein Konto löschen" zu finden. Aber offensichtlich hast du nicht aufgegeben und Zeit investiert,
+				obwohl die Registrierung schneller ging. Genau das ist ein Dark Pattern, ein undurchsichtiges
+				Muster - eine Grauzone. Natürlich sollte es möglich sein, seinen Account zu löschen, aber wie
 				einfach das sein soll, ist nicht klar definiert. Es ist verständlich, dass Plattformen alles
-				versuchen, um gewonnene Benutzer nicht wieder gehen zu lassen. Es ist jedoch faszinierend, welche
-				Tricks und Verstecke genutzt werden, um Personen in eine bestimmte Richtung zu lenken.
+				versuchen, einmal gewonnene Nutzer nicht wieder gehen zu lassen. Es ist jedoch faszinierend,
+				welche Tricks und Verstecke genutzt werden, um Menschen in eine bestimmte Richtung zu lenken.
 				<br />
 				<br />
 				Wir hoffen ihr wisst nun was "Roach Motel" ist und wie es funktioniert.

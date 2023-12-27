@@ -2,6 +2,15 @@
 	import { updated } from '$app/stores';
 
 	let page = 1;
+
+	let check = document.getElementById('terms');
+	let contBtn = document.getElementById('continueBTN');
+	// if(check.checked){
+	// 	contBtn.disabled = false;
+	// }
+	// else{
+	// 	contBtn.disabled = true;
+	// }
 </script>
 
 	<link rel="stylesheet" href="./scroll-to-accept.css" />
@@ -783,7 +792,7 @@
 			</div>
 			<div class="navbar-center">
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<a class="btn btn-ghost text-xl">Manage SUbscription</a>
+				<a class="btn btn-ghost text-xl">Manage Subscription</a>
 			</div>
 			<div class="navbar-end">
 				<button class="btn btn-ghost btn-circle">
@@ -989,14 +998,20 @@
 
 		<div class="hero min-h-screen bg-base-200">
 			<div class="hero-content text-center">
+				<div class="container">
+					<div class="content">
+					  <h1>Terms and Conditions</h1>
+					  <div class="terms">
+						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
-					<div class="wrapper">
-						<div class="terms-and-conditions">
-						  <h1>Terms and Conditions</h1>
-						  
-						</div>
-						<button class="accept">Accept</button>
+							Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+							
+							Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
 					  </div>
+					  <input type="checkbox" id="terms" name="terms" value="terms"><span class="agree">I agreee with the terms and conditions</span>
+					  <button id="continueBtn" disabled>Continue</button>
+					</div>
+				  </div>
 			</div>
 		</div>
 
@@ -1115,4 +1130,44 @@
 	.description {
 		text-align: left;
 	}
+
+	.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.terms {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.agree{
+	margin-left: 5px;
+}
 </style>
