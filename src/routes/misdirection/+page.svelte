@@ -6,6 +6,14 @@
 
 	let check = document.getElementById('terms');
 	let contBtn = document.getElementById('continueBTN');
+
+	// function checkCheckbox(){
+	// 	if(check.checked){
+	// 		contBtn.disabled = false;
+	// 	} else {
+	// 		contBtn.disabled = true;
+	// 	}
+	// }
 	
 </script>
 
