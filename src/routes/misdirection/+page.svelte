@@ -1,17 +1,17 @@
 <script src="js-scroll-to-accept-master/scroll-to-accept.js">
+	// @ts-ignore
 	import { updated } from '$app/stores';
 
 	let page = 1;
 
 	let check = document.getElementById('terms');
 	let contBtn = document.getElementById('continueBTN');
-	// if(check.checked){
-	// 	contBtn.disabled = false;
-	// }
-	// else{
-	// 	contBtn.disabled = true;
-	// }
+	
 </script>
+
+
+
+
 
 	<link rel="stylesheet" href="./scroll-to-accept.css" />
 
