@@ -1,5 +1,10 @@
 <script>
 	// @ts-nocheck
+	// TO DO LIST🧮
+	// 1. Bilder größe ändern
+	// 2. browser Fenster größe ändern
+	// styling von den Buttons noch schöner
+
 	import { patterns, defaultValue } from '$lib/store';
 	import Icon from '@iconify/svelte';
 	let currentPage = 'product';
@@ -64,14 +69,6 @@
 				</button>
 			</div>
 		</div>
-
-		<div on:click={switchPageToExplain}>
-			<button class="btn btn-warning">
-				Erklärung Hidden Costs <Icon icon="material-symbols:book" />
-			</button>
-		</div>
-
-		<!-- Das sind die Produkte, mit der Bezeichnung und Preisen -->
 	{/if}
 
 	{#if currentPage === 'explain'}
@@ -151,11 +148,12 @@
 				ein Abo mehr, als wenn man ab und zu Versandkosten bezahlen muss.
 			</p>
 			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
+			<button class="btn btn-sucess" on:click={switchPageToPrice}>Zurück</button>
 		</div>
 	{/if}
 	{#if currentPage === 'checkout'}
 		<div class="flex justify-center px-64 py-64 bg-base-800">
-			<img src="img/LogoHiddenCosts.png" alt="Logo" style="border-radius:1500px" />
+			<img src="img/LogoHiddenCosts.png" alt="Logo" style="border-radius:500px" />
 		</div>
 
 		<div class="grid grid-cols-3 gap-x-3 gap-y-5 lg:grid-cols-1 xl:grid-cols-1 xl:gap-x-5">
@@ -317,6 +315,13 @@
 				}}
 				class="btn">Aufgabe abschließen</button
 			>
+
+			<div on:click={switchPageToExplain}>
+				<button class="btn btn-warning">
+					Erklärung Hidden Costs <Icon icon="material-symbols:book" />
+				</button>
+			</div>
+
 			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
 		</div>
 	{/if}
