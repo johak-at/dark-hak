@@ -2,27 +2,26 @@
 	import { updated } from '$app/stores';
 
 	let page = 1;
-	let showMore = false;
+	// let showMore = false;
 	let isConfirmationModalVisible = false;
 
-	function toggleDetails() {
-		showMore = !showMore;
-	}
+	// function toggleDetails() {
+	// 	showMore = !showMore;
+	// }
 
-	let my_modal_5;
+	let mymodal;
 
 	function openModal() {
-		my_modal_5.showModal();
+		mymodal.showModal();
 	}
 
 	function handleConfirmation(choice) {
 		if (choice === 'JA') {
-			// Show another confirmation modal
 			isConfirmationModalVisible = true;
 			openModal();
 		} else if (choice === 'NEIN') {
 			// Redirect to another site with an explanation
-			page = 6;
+			page === 6;
 		}
 	}
 
@@ -160,7 +159,7 @@
 				</div>
 
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 3)}>ABO AUSWÄHLEN</button>
+					<button class="btn btn-primary" on:click={() => (page = 2)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -210,7 +209,7 @@
 					</div>
 				</div>
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 4)}>ABO AUSWÄHLEN</button>
+					<button class="btn btn-primary" on:click={() => (page = 2)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -219,12 +218,12 @@
 
 {#if page === 2}
 	<div class="areyousure">WEISST DU WIRKLICH WIE VIEL DU ZAHLEN MUSST?</div>
-	<button class="btn" on:click={() => (page = 6)}>NEIN</button>
 	<button class="btn" on:click={() => handleConfirmation('JA')}>JA</button>
+	<button class="btn" on:click={() => (page = 6)}>NEIN</button>
 
 	<!-- First confirmation modal -->
-	{#if isConfirmationModalVisible}
-		<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
+	{#if isConfirmationModalVisible === true}
+		<dialog bind:this={mymodal} class="modal modal-bottom sm:modal-middle">
 			<div class="modal-box">
 				<h3 class="font-bold text-lg">Bist du dir wirklich sicher?</h3>
 				<p class="py-4">Wir wissen beide das stimmt nicht. Gehe zurück und klicke NEIN!</p>
