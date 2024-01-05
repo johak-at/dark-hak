@@ -1,5 +1,6 @@
 <script>
 	import { updated } from '$app/stores';
+	import { patterns } from '$lib/store.js';
 
 	let page = 1;
 	// let showMore = false;
@@ -9,10 +10,10 @@
 	// 	showMore = !showMore;
 	// }
 
-	let mymodal;
+	let my_modal_5;
 
 	function openModal() {
-		mymodal.showModal();
+		my_modal_5.showModal();
 	}
 
 	function handleConfirmation(choice) {
@@ -21,7 +22,7 @@
 			openModal();
 		} else if (choice === 'NEIN') {
 			// Redirect to another site with an explanation
-			page === 6;
+			page === 3;
 		}
 	}
 
@@ -31,7 +32,7 @@
 </script>
 
 {#if page === 1}
-	<h1>Choose your abo</h1>
+	<h1 class="text-lg">WÄHLE DEIN ABO:</h1>
 	<div class="boxes">
 		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
@@ -219,17 +220,18 @@
 {#if page === 2}
 	<div class="areyousure">WEISST DU WIRKLICH WIE VIEL DU ZAHLEN MUSST?</div>
 	<button class="btn" on:click={() => handleConfirmation('JA')}>JA</button>
-	<button class="btn" on:click={() => (page = 6)}>NEIN</button>
+	<button class="btn" on:click={() => (page = 3)}>NEIN</button>
+
+	<!-- Open the modal using ID.showModal() method -->
 
 	<!-- First confirmation modal -->
-	{#if isConfirmationModalVisible === true}
-		<dialog bind:this={mymodal} class="modal modal-bottom sm:modal-middle">
+	{#if isConfirmationModalVisible}
+		<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
 			<div class="modal-box">
 				<h3 class="font-bold text-lg">Bist du dir wirklich sicher?</h3>
 				<p class="py-4">Wir wissen beide das stimmt nicht. Gehe zurück und klicke NEIN!</p>
 				<div class="modal-action">
 					<form method="dialog">
-						<!-- Close the first confirmation modal -->
 						<button class="btn" on:click={closeConfirmationModal}>Zurück</button>
 					</form>
 				</div>
@@ -238,12 +240,55 @@
 	{/if}
 {/if}
 
+{#if page === 3}
+	<div class="w-2/5">
+		<h1 class="pb-14 text-3xl"><strong>Price Comparison Prevention</strong></h1>
+		<div class="text-base">
+			<p class="pb-5">
+				bezieht sich auf eine Praxis, bei der Unternehmen versuchen, Verbraucher daran zu hindern,
+				Preise von Produkten oder Dienstleistungen mit Konkurrenten oder zwischen Produkten selbst
+				zu vergleichen. Dies wird oft durch verschiedene Methoden erreicht, die sich darauf
+				fokussieren, die Entscheidung der Verbraucher zu manipulieren. Hier sind einige von
+				bekanntesten Techniken:
+			</p>
+
+			<li>
+				Unklare Produktbezeichnungen: Unternehmen verwenden möglicherweise unterschiedliche
+				Bezeichnungen für dasselbe Produkt auf verschiedenen Plattformen, um den direkten Vergleich
+				zu erschweren.
+			</li>
+
+			<li>
+				Zusätzliche Gebühren: Versteckte Gebühren oder zusätzliche Kosten können absichtlich erst
+				später in "Kleintext" eingesetzt werden, denn es besteht meistens eine große
+				Wahrscheinlichkeit, dass die Verbraucher die langen Texten sowieso nicht lesen werden.
+			</li>
+
+			<li>
+				Komplexe Rabattstrukturen: Unternehmen können komplizierte Rabattstrukturen einführen, bei
+				denen Vergleiche zwischen Produkten schwierig sind, insbesondere wenn unterschiedliche
+				Rabattmodelle auf verschiedene Produkte angewendet werden.
+			</li>
+
+			<li>
+				Versteckte Bedingungen: Unternehmen können spezielle Bedingungen für Rabatte oder
+				Sonderangebote einführen, die ziemlich schwierig zu finden sind, um den Nutzer zu binden,
+				auch wenn der angezeigte Preis zunächst attraktiv erscheint.
+			</li>
+
+			Diese Praxis ist oft ethisch fragwürdig, da sie die Transparenz und Fairness im Markt
+			beeinträchtigen kann. Verbraucher sollten sich bewusst sein und nach Möglichkeiten suchen,
+			solche Taktiken zu umgehen, indem sie sorgfältig die Details und Bedingungen von Angeboten
+			prüfen.
+		</div>
+	</div>
+{/if}
+
 <style>
 	.boxes {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		/* or use "space-around" for space around each card */
 	}
 
 	.card {
