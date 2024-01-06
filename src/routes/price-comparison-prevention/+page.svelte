@@ -246,8 +246,6 @@
 	<button class="btn" on:click={() => handleConfirmation('JA')}>JA</button>
 	<button class="btn" on:click={() => (page = 3)}>NEIN</button>
 
-	<!-- Open the modal using ID.showModal() method -->
-
 	<!-- First confirmation modal -->
 	{#if isConfirmationModalVisible}
 		<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
@@ -267,13 +265,13 @@
 {#if page === 3}
 	<div class="w-2/5">
 		<h1 class="pb-14 text-4xl"><strong>Price Comparison Prevention</strong></h1>
-		<div class="text-base pb-14">
+		<div class="text-lg pb-14">
 			<p class="pb-5">
-				bezieht sich auf eine Praxis, bei der Unternehmen versuchen, Verbraucher daran zu hindern,
-				Preise von Produkten oder Dienstleistungen mit Konkurrenten oder zwischen Produkten selbst
-				zu vergleichen. Dies wird oft durch verschiedene Methoden erreicht, die sich darauf
-				fokussieren, die Entscheidung der Verbraucher zu manipulieren. Hier sind einige von
-				bekanntesten Techniken:
+				Die Price Comparison Prevention bezieht sich auf eine Praxis, bei der Unternehmen versuchen,
+				Verbraucher daran zu hindern, Preise von Produkten oder Dienstleistungen mit Konkurrenten
+				oder zwischen Produkten selbst zu vergleichen. Dies wird oft durch verschiedene Methoden
+				erreicht, die sich darauf fokussieren, die Entscheidung der Verbraucher zu manipulieren.
+				Hier sind einige von bekanntesten Techniken:
 			</p>
 			<ul class="pb-5">
 				<li>
@@ -338,10 +336,6 @@
 		margin-bottom: 20px;
 	}
 
-	/* .small {
-		font-size: xx-small;
-	} */
-
 	.ulstandard li {
 		list-style-type: disc;
 	}
@@ -352,7 +346,7 @@
 
 	@media screen and (max-width: 600px) {
 		.card {
-			width: 100%; /* Adjusted card width for smaller screens */
+			width: 100%; /* angepasste breite für kleinere bildschirme */
 		}
 
 		.boxes {
