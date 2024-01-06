@@ -56,21 +56,21 @@
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
-								<strong>Festlegung des Preises: </strong> Der Preis für das Abonnement auf dieser fiktionalen
-								Seite wird durch den Anbieter einseitig festgelegt und kann von Zeit zu Zeit angepasst
-								werden. Änderungen werden dem Abonnenten angemessen im Voraus mitgeteilt.
+								<strong>Festlegung des Preises: </strong> Der Preis für das BASIC Abonnement wird durch
+								den Anbieter einseitig festgelegt und kann von Zeit zu Zeit angepasst werden. Änderungen
+								werden dem Abonnenten angemessen im Nachhinein mitgeteilt.
 							</li>
 							<li>
 								<strong>Zahlungsverpflichtung:</strong> Der Abonnent verpflichtet sich, den festgelegten
 								Preis für das Abonnement gemäß den vereinbarten Zahlungsbedingungen zu entrichten.
 							</li>
 							<li>
-								<strong> über Preisänderungen: </strong> Der Anbieter behält sich das Recht vor, den
-								Preis für das Abonnement nach eigenem Ermessen zu ändern. Solche Änderungen werden dem
-								Abonnenten per E-Mail oder durch andere geeignete Mittel mitgeteilt. Der Abonnent hat
-								das Recht, das Abonnement zu kündigen, wenn er mit einer Preisänderung nicht einverstanden
-								ist, jedoch unterliegt die fortgesetzte Nutzung der Dienste nach der Mitteilung einer
-								Preisänderung der Zustimmung zu dieser Änderung.
+								<strong>Preisänderungen: </strong> Der Anbieter behält sich das Recht vor, den Preis
+								für das Abonnement nach eigenem Ermessen zu ändern. Solche Änderungen werden dem Abonnenten
+								per E-Mail oder durch andere geeignete Mittel mitgeteilt. Der Abonnent hat das Recht,
+								das Abonnement zu kündigen, wenn er mit einer Preisänderung nicht einverstanden ist,
+								jedoch unterliegt die fortgesetzte Nutzung der Dienste nach der Mitteilung einer Preisänderung
+								der Zustimmung zu dieser Änderung.
 							</li>
 							<li>
 								<strong>Steuerliche Anpassungen</strong>: Der festgelegte Preis für das Abonnement
@@ -106,7 +106,7 @@
 				<p>12,99€ *Ab Abo-Start 5 Monate*</p>
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
-					<li>Jederzeit kündbar*</li>
+					<li>Jederzeit kündbar**</li>
 					<li>Steuern und Gebühren inklusive</li>
 					<li>Neue Features entdecken</li>
 					<li>Werbefrei</li>
@@ -119,10 +119,9 @@
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
-								<strong>Laufzeit des Abonnements:</strong>
-								Die Laufzeit dieses Abonnements erstreckt sich über einen Zeitraum von 5 Monaten, beginnend
-								ab dem Datum der Anmeldung. Während dieser Periode ist eine vorzeitige Kündigung nicht
-								möglich.
+								<strong>Festlegung und Anpassung des Preises:</strong> Der Anbieter behält sich das Recht
+								vor, den Preis für das PLUS Abonnement einseitig festzulegen und kann diesen unangekündigt
+								verändern. Änderungen werden dem Abonnenten im Nachhinein mitgeteilt.
 							</li>
 
 							<li>
@@ -141,19 +140,25 @@
 							</li>
 
 							<li>
-								<strong>Konsequenzen bei Zahlungsverzug: </strong>Sollte es zu
-								Zahlungsschwierigkeiten kommen, obliegt es dem Abonnenten, unverzüglich mit dem
-								Anbieter in Kontakt zu treten, um eine Lösung zu finden. Der Anbieter behält sich
-								das Recht vor, bei ausstehenden Zahlungen angemessene Schritte zu unternehmen, um
-								die finanzielle Integrität des Abonnementdienstes aufrechtzuerhalten.
-							</li>
-
-							<li>
 								<strong>Fortsetzung der Dienstleistungen: </strong>Die Fortsetzung der
 								Dienstleistungen nach Ablauf des Abonnements erfolgt auf Basis der zu diesem
 								Zeitpunkt geltenden Konditionen. Der Abonnent wird über etwaige Änderungen
 								informiert und hat das Recht, das Abonnement zu kündigen, wenn er mit den neuen
 								Bedingungen nicht einverstanden ist.
+							</li>
+
+							<li>
+								<strong>*Laufzeit des Abonnements:</strong>
+								Die Laufzeit dieses Abonnements erstreckt sich über einen Zeitraum von 5 Monaten, beginnend
+								ab dem Datum der Anmeldung. Während dieser Periode ist eine vorzeitige Kündigung nicht
+								möglich.
+							</li>
+							<li>
+								<strong>**Monatsabrechnung:</strong>
+								Das wöchentliches Abonnement folgt einem monatlichen Abrechnungszyklus. Wenn sich der
+								Abonnent entscheidet, sein Abonnement in der laufenden Woche zu kündigen, wird ihn der
+								Service für den gesamten Monat in Rechnung gestellt, um sicherzustellen, dass der Abonnent
+								während dieser Zeit weiterhin uneingeschränkten Zugang genießen können.
 							</li>
 						</ul>
 					</div>
@@ -218,7 +223,7 @@
 {/if}
 
 {#if page === 2}
-	<div class="areyousure">WEISST DU WIRKLICH WIE VIEL DU ZAHLEN MUSST?</div>
+	<div class="areyousure">WEISST DU WELCHES ANGEBOT AM GÜNSTIGSTEN IST?</div>
 	<button class="btn" on:click={() => handleConfirmation('JA')}>JA</button>
 	<button class="btn" on:click={() => (page = 3)}>NEIN</button>
 
