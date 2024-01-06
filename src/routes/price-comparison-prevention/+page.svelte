@@ -10,12 +10,18 @@
 	// 	showMore = !showMore;
 	// }
 
+	/**
+	 * @type {HTMLDialogElement}
+	 */
 	let my_modal_5;
 
 	function openModal() {
 		my_modal_5.showModal();
 	}
 
+	/**
+	 * @param {string} choice
+	 */
 	function handleConfirmation(choice) {
 		if (choice === 'JA') {
 			isConfirmationModalVisible = true;
@@ -176,7 +182,7 @@
 			</figure>
 			<div class="card-body">
 				<h2 class="card-title">PREMIUM ABO</h2>
-				<p>60€ pro Jahr (Ab Abo Start 1,5 Jahre)</p>
+				<p>60€ pro Jahr *Ab Abo Start 2,5 Jahre*</p>
 
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
@@ -190,27 +196,40 @@
 					<div class="collapse-title text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
-							<p>
-								<strong>Vertragslaufzeit und Beendigung:</strong>
+							<li>
+								<strong>Zahlungsverpflichtung:</strong> Der Abonnent verpflichtet sich, den festgelegten
+								Preis für das Abonnement gemäß den vereinbarten Zahlungsbedingungen zu entrichten.
+							</li>
 
-								Die festgelegte Laufzeit des Abonnements erstreckt sich über einen Zeitraum von
-								einem Jahr, beginnend ab dem Datum der Anmeldung. Während dieser Zeitspanne ist eine
-								frühzeitige Kündigung nicht möglich. Nach Ablauf des Abonnements behält sich der
-								Anbieter das Recht vor, die anfallenden Kosten für die Nutzung der Dienste zu
-								evaluieren und gegebenenfalls anzupassen. Jegliche Änderungen werden dem Abonnenten
-								zeitnah mitgeteilt. Der Abonnent trägt die volle finanzielle Verantwortung für das
-								Abonnement. Im Falle von unvollständigen Zahlungen und nach wiederholten Mahnungen
-								behält sich der Anbieter das Recht vor, angemessene Maßnahmen zu ergreifen, darunter
-								auch die vorübergehende Aussetzung des Zugangs zu den Diensten. Bei
-								Zahlungsschwierigkeiten obliegt es dem Abonnenten, unverzüglich Kontakt mit dem
-								Anbieter aufzunehmen, um gemeinsam eine Lösung zu finden. Der Anbieter behält sich
-								das Recht vor, bei ausbleibenden Zahlungen angemessene Schritte zu unternehmen, um
-								die finanzielle Integrität des Abonnementdienstes zu wahren. Die Fortsetzung der
+							<li>
+								<strong>Festlegung und Anpassung des Preises:</strong> Der Anbieter behält sich das Recht
+								vor, den Preis für das PREMIUM Abonnement einseitig festzulegen und kann diesen unangekündigt
+								verändern. Änderungen werden dem Abonnenten im Nachhinein mitgeteilt.
+							</li>
+
+							<li>
+								<strong>Vertragslaufzeit:</strong>
+								Die festgelegte Laufzeit des Abonnements erstreckt sich über einen Zeitraum von 2,5 Jahren,
+								beginnend ab dem Datum der Anmeldung. Während dieser Zeitspanne ist eine frühzeitige
+								Kündigung nicht möglich. Nach Ablauf des Abonnements behält sich der Anbieter das Recht
+								vor, die anfallenden Kosten für die restlichen 6 Monaten des Jahres in Rechnung zu stellen.
+								Jegliche Änderungen werden dem Abonnenten zeitnah mitgeteilt.
+							</li>
+
+							<li>
+								<strong>Steuerliche Anpassungen</strong>: Der festgelegte Preis für das Abonnement
+								kann zusätzliche Steuern oder Abgaben enthalten oder von diesen betroffen sein. Der
+								Abonnent ist verantwortlich für alle geltenden Steuern, die im Zusammenhang mit dem
+								Abonnement anfallen.
+							</li>
+
+							<li>
+								<strong>Fortsetzung der Dienstleistungen: </strong>Die Fortsetzung der
 								Dienstleistungen nach Ablauf des Abonnements erfolgt gemäß den zu diesem Zeitpunkt
 								gültigen Bedingungen. Der Abonnent wird über mögliche Änderungen informiert und hat
 								das Recht, das Abonnement zu kündigen, sofern er den neuen Bedingungen nicht
 								zustimmt.
-							</p>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -247,8 +266,8 @@
 
 {#if page === 3}
 	<div class="w-2/5">
-		<h1 class="pb-14 text-3xl"><strong>Price Comparison Prevention</strong></h1>
-		<div class="text-base">
+		<h1 class="pb-14 text-4xl"><strong>Price Comparison Prevention</strong></h1>
+		<div class="text-base pb-14">
 			<p class="pb-5">
 				bezieht sich auf eine Praxis, bei der Unternehmen versuchen, Verbraucher daran zu hindern,
 				Preise von Produkten oder Dienstleistungen mit Konkurrenten oder zwischen Produkten selbst
@@ -256,35 +275,53 @@
 				fokussieren, die Entscheidung der Verbraucher zu manipulieren. Hier sind einige von
 				bekanntesten Techniken:
 			</p>
+			<ul class="pb-5">
+				<li>
+					<strong>Unklare Produktbezeichnungen:</strong> Unternehmen verwenden möglicherweise unterschiedliche
+					Bezeichnungen für dasselbe Produkt auf verschiedenen Plattformen, um den direkten Vergleich
+					zu erschweren.
+				</li>
 
-			<li>
-				Unklare Produktbezeichnungen: Unternehmen verwenden möglicherweise unterschiedliche
-				Bezeichnungen für dasselbe Produkt auf verschiedenen Plattformen, um den direkten Vergleich
-				zu erschweren.
-			</li>
+				<li>
+					<strong>Zusätzliche Gebühren:</strong> Versteckte Gebühren oder zusätzliche Kosten können absichtlich
+					erst später in "Kleintext" eingesetzt werden, denn es besteht meistens eine große Wahrscheinlichkeit,
+					dass die Verbraucher die langen Texten sowieso nicht lesen werden.
+				</li>
 
-			<li>
-				Zusätzliche Gebühren: Versteckte Gebühren oder zusätzliche Kosten können absichtlich erst
-				später in "Kleintext" eingesetzt werden, denn es besteht meistens eine große
-				Wahrscheinlichkeit, dass die Verbraucher die langen Texten sowieso nicht lesen werden.
-			</li>
+				<li>
+					<strong>Komplexe Rabattstrukturen:</strong> Unternehmen können komplizierte Rabattstrukturen
+					einführen, bei denen Vergleiche zwischen Produkten schwierig sind, insbesondere wenn unterschiedliche
+					Rabattmodelle auf verschiedene Produkte angewendet werden.
+				</li>
 
-			<li>
-				Komplexe Rabattstrukturen: Unternehmen können komplizierte Rabattstrukturen einführen, bei
-				denen Vergleiche zwischen Produkten schwierig sind, insbesondere wenn unterschiedliche
-				Rabattmodelle auf verschiedene Produkte angewendet werden.
-			</li>
-
-			<li>
-				Versteckte Bedingungen: Unternehmen können spezielle Bedingungen für Rabatte oder
-				Sonderangebote einführen, die ziemlich schwierig zu finden sind, um den Nutzer zu binden,
-				auch wenn der angezeigte Preis zunächst attraktiv erscheint.
-			</li>
+				<li>
+					<strong>Versteckte Bedingungen:</strong> Unternehmen können spezielle Bedingungen für Rabatte
+					oder Sonderangebote einführen, die ziemlich schwierig zu finden sind, um den Nutzer zu binden,
+					auch wenn der angezeigte Preis zunächst attraktiv erscheint.
+				</li>
+			</ul>
 
 			Diese Praxis ist oft ethisch fragwürdig, da sie die Transparenz und Fairness im Markt
 			beeinträchtigen kann. Verbraucher sollten sich bewusst sein und nach Möglichkeiten suchen,
-			solche Taktiken zu umgehen, indem sie sorgfältig die Details und Bedingungen von Angeboten
+			solche Taktiken zu umgehen, indem sie die Details und Bedingungen von Angeboten vorsichtig
 			prüfen.
+		</div>
+		<p class="pb-8 text-xl text-center">Welches Angebot ist am günstigsten?</p>
+		<div class="flex justify-between">
+			<div class="tooltip" data-tip="falsch">
+				<button class="btn">BASIC</button>
+			</div>
+			<div class="tooltip" data-tip="falsch">
+				<button class="btn">PLUS</button>
+			</div>
+			<div class="tooltip" data-tip="richtig">
+				<button
+					class="btn"
+					on:click={() => {
+						($patterns[5].done = true), window.location.replace('/');
+					}}>PREMIUM</button
+				>
+			</div>
 		</div>
 	</div>
 {/if}
