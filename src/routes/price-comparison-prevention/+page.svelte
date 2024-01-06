@@ -304,7 +304,8 @@
 			solche Taktiken zu umgehen, indem sie die Details und Bedingungen von Angeboten vorsichtig
 			prüfen.
 		</div>
-		<p class="pb-8 text-xl text-center">Welches Angebot ist am günstigsten?</p>
+
+		<p class="pb-12 text-xl text-center">Welches Angebot ist am günstigsten?</p>
 		<div class="flex justify-between">
 			<div class="tooltip" data-tip="falsch">
 				<button class="btn">BASIC</button>
@@ -322,6 +323,9 @@
 			</div>
 		</div>
 	</div>
+	<p class="mt-44 text-sm">
+		Die Bilder wurden mit <a href="https://leonardo.ai/">Leonardo Ai</a> generiert.
+	</p>
 {/if}
 
 <style>
