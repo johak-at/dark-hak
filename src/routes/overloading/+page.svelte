@@ -229,6 +229,69 @@
 				<p>hello</p>
 			</div>
 		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="radio" name="my-accordion-2" />
+			<div class="collapse-title text-xl font-medium">Quellen</div>
+			<div class="collapse-content">
+				<p>hello</p>
+			</div>
+		</div>
+
+		<div class="collapse bg-base-200 mt-10">
+			<input type="checkbox" class="peer" />
+			<div
+				class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
+			>
+				Unser Projekt
+			</div>
+			<div
+				class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
+			>
+				<p>
+					Unser Projekt spielt auf einer Fake-Johak Seite und soll den Benutzer animieren,
+					Französisch als Fremdsprache zu wählen. Dies kann sehr gut beobachtet werden, wenn man auf
+					die Auswahlfelder achtet und ihre Anordnung, bei der Französisch als erstes aufgelistet
+					wird und automatisch angewählt ist. Weiters kann man beobachten, dass eine französische
+					Flagge stets durch den Bildschirm fliegt, die man nicht entfernen oder ausblenden kann.
+					Der Benutzer soll hier von den anderen Optionen „spanisch“ und „italienisch“ möglichst gut
+					abgelenkt werden und so die Fremdsprache „französisch“ wählen. Zusätzlich zu den bereits
+					vorhandenen Ablenkungen werden nach geringer Zeit auch einige Pop-Up Fenster zum Vorschein
+					kommen, die mit einem Timer oder on:Click event automatisch gesteuert werden. Eines der
+					Pop-Ups hat das Erscheinungsbild eines Handys, auf dem geschrieben wird: „Michel de France
+					ruft an“. Die zwei Hauptziele dieses Pop-Ups sind den Benutzer abzulenken und seine
+					Gedanken zu manipulieren, da der Name und das Bild am Telefon einen französischen
+					Landsmann verkörpern. Mit diesem Trick wird der Nutzer im Unterbewusstsein daraufhin
+					gesteuert, die Fremdsprache „französisch“ zu wählen. Ein anderes Pop-Up wiederum tritt
+					erst in Erscheinung, wenn eine andere Fremdsprache ausgewählt wird. Dieses Pop-Up wird
+					manipulativ eingesetzt, um den Nutzer zu verunsichern und die Entscheidung zu
+					hinterfragen. Bei der Sprache italienisch beispielsweise, werden nach dem Anklicken des
+					Kästchens drei Übelkeitsemojis angezeigt. Mit der Aussage im Pop-Up Fenster “wähle eine
+					andere Sprache, ich kann nur französisch” wird suggeriert, dass französisch die bessere
+					Wahl wäre und dass es ein Fehler wäre eine andere Option zu wählen. Beachtlich auf der
+					Website sind auch die Color-Patterns rot, weiß und blau, die offensichtlich in der
+					französischen Flagge enthalten sind und so wie alles andere darauf abzielt die Sprache
+					“französisch” zu wählen. Die repetitive Verwendung dieser Farben sorgt im Unterbewusstsein
+					dafür, die Entscheidung in eine gewisse Richtung zu lenken. Zusätzlich werden der linke
+					und der rechte Bildschirmrand der Website mit der Zeit immer voller von Pop-Up Fenstern
+					werden, die alle ein französisches Thema und französische Wörter enthalten dies passiert,
+					jedoch nur wenn man “italienisch” oder “spanisch” wählt. Wird jedoch “französisch”
+					ausgewählt verschwinden diese Pop-Up Fenster wieder. Ein anderes Pop-Up wiederum tritt
+					erst in Erscheinung, wenn eine andere Fremdsprache ausgewählt wird. Dieses Pop-Up wird
+					manipulativ eingesetzt, um den Nutzer zu verunsichern und die Entscheidung zu
+					hinterfragen. Mit der Aussage im Pop-Up Fenster wird suggeriert, dass französisch die
+					bessere Wahl wäre und dass es ein Fehler wäre eine andere Option zu wählen. Mit dem Pop-Up
+					Fenster „Französischunterricht!“ wird ein Tinder-ähnliches Fenster aufgerufen, in dem eine
+					attraktive Französischlehrerin angeblich nur zwei Kilometer vom Standort des Benutzers
+					entfernt ist und bereit sei, französisch mit dem glücklichen Kursteilnehmer zu lernen.
+					Zusätzlich ist der Name dieser Frau ebenfalls Französisch, so wie die Kilometerangabe.
+					Andere Arten von Overloading-Patterns sind unter anderem im großen „Submit“ button
+					versteckt. Wenn man gut darauf achtet, kann man erkennen, dass sich der Button nur klicken
+					lässt, wenn die Sprache „französisch“ angewählt ist. Ist das nicht der Fall so ist der
+					Button zwar immer noch da, aber hat eine unendliche Ladeanimation, welche in diesem Fall
+					mithilfe eines Ladekreises dargestellt wird.
+				</p>
+			</div>
+		</div>
 	</div>
 {:else if mastered === 'bad'}
 	<div class="card w-96 bg-base-100 shadow-xl image-full">
