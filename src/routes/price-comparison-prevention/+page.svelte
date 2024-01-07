@@ -3,12 +3,8 @@
 	import { patterns } from '$lib/store.js';
 
 	let page = 1;
-	// let showMore = false;
-	let isConfirmationModalVisible = false;
 
-	// function toggleDetails() {
-	// 	showMore = !showMore;
-	// }
+	let isConfirmationModalVisible = false;
 
 	/**
 	 * @type {HTMLDialogElement}
@@ -27,7 +23,6 @@
 			isConfirmationModalVisible = true;
 			openModal();
 		} else if (choice === 'NEIN') {
-			// Redirect to another site with an explanation
 			page === 3;
 		}
 	}
@@ -39,7 +34,12 @@
 
 {#if page === 1}
 	<h1 class="text-lg">WÄHLE DEIN ABO:</h1>
-	<div class="boxes">
+	<div
+		class="boxes"
+		style="display: flex;
+	justify-content: space-between;
+	align-items: flex-start;"
+	>
 		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
 				<img src="img/prevention1.jpg" alt="cars" />
@@ -193,7 +193,7 @@
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
-					<div class="collapse-title text-s font-medium-light">Mehr</div>
+					<div class="collapse-title flex text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
@@ -263,7 +263,7 @@
 {/if}
 
 {#if page === 3}
-	<div class="w-2/5">
+	<div class="end w-2/5">
 		<h1 class="pb-14 text-4xl"><strong>Price Comparison Prevention</strong></h1>
 		<div class="text-lg pb-14">
 			<p class="pb-5">
@@ -329,12 +329,6 @@
 {/if}
 
 <style>
-	.boxes {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
 	.card {
 		margin-right: 30px;
 		margin-bottom: 20px;
@@ -344,10 +338,6 @@
 		list-style-type: disc;
 	}
 
-	.collapse-title {
-		display: flex;
-	}
-
 	@media screen and (max-width: 600px) {
 		.card {
 			width: 100%; /* angepasste breite für kleinere bildschirme */
@@ -355,6 +345,12 @@
 
 		.boxes {
 			display: grid;
+		}
+
+		.end {
+			padding: 10px;
+			justify-content: center;
+			width: 100%;
 		}
 	}
 </style>
