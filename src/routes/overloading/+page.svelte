@@ -206,12 +206,17 @@
 			<div class="collapse-title text-xl font-medium">Begriffserklärung</div>
 			<div class="collapse-content">
 				<p>
-					Unter dem Dark Pattern <strong>Overloading</strong> versteht man eine exogene Reizüberflutung,
-					die im Rahmen von unzähligen Pop-Up Fenstern oder anderen Auffälligkeiten wie grellen Farben
-					oder viel Text beim Benutzer auftaucht. Die betroffene Person wird überfordert, will den Reizen
-					entfliehen und trifft dadurch eine manipulierte, unüberlegte und voreilige Entscheidung. Man
-					wird förmlich “zubombardiert” und dies verhilft den Unternehmen oftmals zu Daten, welche der
-					Benutzer ansonsten nicht preisgegeben hätte.
+					Unter dem Dark Pattern <strong>Overloading</strong> versteht man eine exogene
+					Reizüberflutung, die im Rahmen von unzähligen Pop-Up Fenstern oder anderen Auffälligkeiten
+					wie grellen Farben oder viel Text beim Benutzer auftaucht. Die betroffene Person wird
+					überfordert, will den Reizen entfliehen und trifft dadurch eine manipulierte, unüberlegte
+					und voreilige Entscheidung. Man wird förmlich “zubombardiert” und dies verhilft den
+					Unternehmen oftmals zu Daten, welche der Benutzer ansonsten nicht preisgegeben hätte.
+					<br />
+					Es bezieht sich auf die problematische Nutzung von dunklen (irreführenden oder manipulativen)
+					Design-Praktiken in digitalen Schnittstellen, um Nutzer zu überlasten oder zu täuschen. Diese
+					Praktiken werden häufig von Websites oder Anwendungen eingesetzt, um bestimmte Verhaltensweisen
+					der Nutzer zu fördern, die oft nicht in deren Interesse liegen.
 				</p>
 			</div>
 		</div>
@@ -219,21 +224,30 @@
 			<input type="radio" name="my-accordion-2" />
 			<div class="collapse-title text-xl font-medium">Paradebeispiel</div>
 			<div class="collapse-content">
-				<p>hello</p>
+				<p>
+					Ein Paradebeispiel für Overloading, in Kombination mit verschiedensten Dark Patterns ist
+					der asiatische Onlineshop <strong>Shein</strong>.
+				</p>
 			</div>
 		</div>
 		<div class="collapse collapse-arrow bg-base-200">
 			<input type="radio" name="my-accordion-2" />
 			<div class="collapse-title text-xl font-medium">Problematik</div>
 			<div class="collapse-content">
-				<p>hello</p>
+				<p>
+					Diese Praktiken stehen im Widerspruch zu den Prinzipien einer transparenten, ethischen
+					Benutzererfahrung. Das Dark Pattern <strong>Overloading</strong> kann zu Frustration, Vertrauensverlust
+					und einem negativen Image für die betreffende Website oder Anwendung führen. Aus ethischer
+					Sicht ist es wichtig, dass digitale Schnittstellen die Integrität und Autonomie der Nutzer
+					respektieren, anstatt sie absichtlich zu überfordern oder zu täuschen.
+				</p>
 			</div>
 		</div>
 		<div class="collapse collapse-arrow bg-base-200">
 			<input type="radio" name="my-accordion-2" />
 			<div class="collapse-title text-xl font-medium">Quellen</div>
 			<div class="collapse-content">
-				<p>hello</p>
+				<p>ChatGPT, ...</p>
 			</div>
 		</div>
 
@@ -247,7 +261,17 @@
 			<div
 				class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
 			>
-				<p>...</p>
+				<p>
+					Unser Projekt soll den Benutzer dazu animieren, Französisch als Fremdsprache zu wählen.
+				</p>
+				<ul class="text-primary-content">
+					<li>Französisch = erste Option</li>
+					<li>Französisch = fettgedruckt + großgeschrieben</li>
+					<li>Französisch hat größere Schriftgröße</li>
+					<li>Italienisch & Spanisch = heller</li>
+					<li>Italienisch & Spanisch wird beim Hovern verändert</li>
+					<li>...</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -256,7 +280,7 @@
 		<figure><img src="img/french.svg" alt="french-flag" /></figure>
 		<div class="card-body">
 			<h2 class="card-title">VERLOREN!</h2>
-			<p>Jetzt musst du die französische Sprache lernen. Bedanke dich später</p>
+			<p>Jetzt musst du die französische Sprache lernen. Bedanke dich später!</p>
 			<div class="card-actions justify-end">
 				<button
 					class="btn bg-gradient-to-r from-blue-500 via-white to-red-500 text-black"
