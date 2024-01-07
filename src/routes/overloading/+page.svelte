@@ -206,12 +206,17 @@
 			<div class="collapse-title text-xl font-medium">Begriffserklärung</div>
 			<div class="collapse-content">
 				<p>
-					Unter dem Dark Pattern <strong>Overloading</strong> versteht man eine exogene Reizüberflutung,
-					die im Rahmen von unzähligen Pop-Up Fenstern oder anderen Auffälligkeiten wie grellen Farben
-					oder viel Text beim Benutzer auftaucht. Die betroffene Person wird überfordert, will den Reizen
-					entfliehen und trifft dadurch eine manipulierte, unüberlegte und voreilige Entscheidung. Man
-					wird förmlich “zubombardiert” und dies verhilft den Unternehmen oftmals zu Daten, welche der
-					Benutzer ansonsten nicht preisgegeben hätte.
+					Unter dem Dark Pattern <strong>Overloading</strong> versteht man eine exogene
+					Reizüberflutung, die im Rahmen von unzähligen Pop-Up Fenstern oder anderen Auffälligkeiten
+					wie grellen Farben oder viel Text beim Benutzer auftaucht. Die betroffene Person wird
+					überfordert, will den Reizen entfliehen und trifft dadurch eine manipulierte, unüberlegte
+					und voreilige Entscheidung. Man wird förmlich “zubombardiert” und dies verhilft den
+					Unternehmen oftmals zu Daten, welche der Benutzer ansonsten nicht preisgegeben hätte.
+					<br />
+					Es bezieht sich auf die problematische Nutzung von dunklen (irreführenden oder manipulativen)
+					Design-Praktiken in digitalen Schnittstellen, um Nutzer zu überlasten oder zu täuschen. Diese
+					Praktiken werden häufig von Websites oder Anwendungen eingesetzt, um bestimmte Verhaltensweisen
+					der Nutzer zu fördern, die oft nicht in deren Interesse liegen.
 				</p>
 			</div>
 		</div>
