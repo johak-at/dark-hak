@@ -34,12 +34,7 @@
 
 {#if page === 1}
 	<h1 class="text-lg">WÄHLE DEIN ABO:</h1>
-	<div
-		class="boxes"
-		style="display: flex;
-	justify-content: space-between;
-	align-items: flex-start;"
-	>
+	<div class="boxes">
 		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
 				<img src="img/prevention1.jpg" alt="cars" />
@@ -329,6 +324,11 @@
 {/if}
 
 <style>
+	.boxes {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
 	.card {
 		margin-right: 30px;
 		margin-bottom: 20px;
