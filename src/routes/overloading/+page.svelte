@@ -254,7 +254,7 @@
 					Unser Projekt soll den Benutzer dazu animieren, Französisch als Fremdsprache zu wählen.
 				</p>
 				<ul class="text-primary-content">
-					<li>französisch = erste Option</li>
+					<li>Französisch = erste Option</li>
 					<li>Französisch = fettgedruckt + großgeschrieben</li>
 					<li>Französisch hat größere Schriftgröße</li>
 					<li>Italienisch & Spanisch = heller</li>
