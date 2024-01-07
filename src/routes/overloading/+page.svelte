@@ -229,14 +229,20 @@
 			<input type="radio" name="my-accordion-2" />
 			<div class="collapse-title text-xl font-medium">Problematik</div>
 			<div class="collapse-content">
-				<p>hello</p>
+				<p>
+					Diese Praktiken stehen im Widerspruch zu den Prinzipien einer transparenten, ethischen
+					Benutzererfahrung. Das Dark Pattern <strong>Overloading</strong> kann zu Frustration, Vertrauensverlust
+					und einem negativen Image für die betreffende Website oder Anwendung führen. Aus ethischer
+					Sicht ist es wichtig, dass digitale Schnittstellen die Integrität und Autonomie der Nutzer
+					respektieren, anstatt sie absichtlich zu überfordern oder zu täuschen.
+				</p>
 			</div>
 		</div>
 		<div class="collapse collapse-arrow bg-base-200">
 			<input type="radio" name="my-accordion-2" />
 			<div class="collapse-title text-xl font-medium">Quellen</div>
 			<div class="collapse-content">
-				<p>hello</p>
+				<p>ChatGPT, ...</p>
 			</div>
 		</div>
 
@@ -259,7 +265,7 @@
 					<li>Französisch hat größere Schriftgröße</li>
 					<li>Italienisch & Spanisch = heller</li>
 					<li>Italienisch & Spanisch wird beim Hovern verändert</li>
-					<li>Italienisch & Spanisch</li>
+					<li>...</li>
 				</ul>
 			</div>
 		</div>
@@ -269,7 +275,7 @@
 		<figure><img src="img/french.svg" alt="french-flag" /></figure>
 		<div class="card-body">
 			<h2 class="card-title">VERLOREN!</h2>
-			<p>Jetzt musst du die französische Sprache lernen. Bedanke dich später</p>
+			<p>Jetzt musst du die französische Sprache lernen. Bedanke dich später!</p>
 			<div class="card-actions justify-end">
 				<button
 					class="btn bg-gradient-to-r from-blue-500 via-white to-red-500 text-black"
