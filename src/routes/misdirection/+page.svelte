@@ -1126,7 +1126,7 @@
 			</div>
 			<div class="navbar-center">
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<a class="btn btn-ghost text-xl">Shop</a>
+				<a class="btn btn-ghost text-xl">Cancel Subsciption</a>
 			</div>
 			<div class="navbar-end">
 				<button class="btn btn-ghost btn-circle">
@@ -1164,59 +1164,29 @@
 				</button>
 			</div>
 		</div>
-
+		
 		<div class="hero min-h-screen bg-base-200">
 			<div class="hero-content text-center">
 				<div>
 					<br />
 					<div class="flex justify-center">
 						<p class="py-6" />
-						<div class="card w-[300px] bg-base-100 shadow-xl">
-							<figure>
-								<img
-									src="https://farbtonkarte.de/wp-content/uploads/2020/05/Farbe-Gold-Bedeutung-1155x770.jpg?ezimgfmt=rs:618x412/rscb1/ngcb1/notWebP"
-									alt="Shoes"
-								/>
-							</figure>
-							<div class="card-body">
-								<h2 class="card-title"><bold>GOLD SUBSCRIPTION</bold></h2>
-								<p>Unlock exclusive content, ad-free browsing, and VIP perks—subscribe to Gold!</p>
-								<div class="card-actions justify-end">
-									<button class="btn btn-primary">Subscribe Now</button>
-								</div>
-							</div>
-						</div>
 
 						<div class="card w-[300px] bg-base-100 shadow-xl">
 							<figure>
 								<img
-									src="https://img.freepik.com/free-vector/silver-metal-background-1_78370-324.jpg"
+									src="https://raiffeisenzeitung.at/wp-content/uploads/2023/01/Check-Liste-Nachhaltigkeit-Symbolfoto-_Pixabay-696x392.png"
 									alt="Shoes"
 								/>
 							</figure>
 							<div class="card-body">
-								<h2 class="card-title"><bold>SILVER SUBSCRIPTION</bold></h2>	
-								<p>Explore exclusive content, elevate experience, join our community</p>
+								<h2 class="card-title"><bold>SUBSCRIPTION CANCELED</bold></h2>	
+								<p>We're sorry you canceled your subscription and would love to hear how we can improve. Write us a feedback e-mail to wescamyou@forsure.com!</p>
 								<div class="card-actions justify-end">
-									<button class="btn btn-primary">Subscribe Now</button>
+									<button class="btn btn-primary" on:click={() => (page = 1)}>Back to Homepage</button>
 								</div>
 							</div>
 						</div>
-
-						<div class="card w-[300px] bg-base-100 shadow-xl">
-							<figure>
-								<img
-									src="https://static9.depositphotos.com/1036506/1142/i/450/depositphotos_11424278-stock-photo-metal-background-bronze.jpg"
-									alt="Shoes"
-								/>
-							</figure>
-							<div class="card-body">
-								<h2 class="card-title"><bold>BRONZE SUBSCRIPTION</bold></h2>
-								<p>Experience the essenc of our platform with our best Bronze setup</p>
-								<div class="card-actions justify-end">
-									<button class="btn btn-primary">Subscribe Now</button>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -1282,7 +1252,7 @@
 			</nav>
 		</footer>
 	</div>
-</div>
+
 {/if}
 
 <style>
