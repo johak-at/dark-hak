@@ -219,7 +219,10 @@
 			<input type="radio" name="my-accordion-2" />
 			<div class="collapse-title text-xl font-medium">Paradebeispiel</div>
 			<div class="collapse-content">
-				<p>hello</p>
+				<p>
+					Ein Paradebeispiel für Overloading, in Kombination mit verschiedensten Dark Patterns ist
+					der asiatische Onlineshop <strong>Shein</strong>.
+				</p>
 			</div>
 		</div>
 		<div class="collapse collapse-arrow bg-base-200">
@@ -247,7 +250,17 @@
 			<div
 				class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
 			>
-				<p>...</p>
+				<p>
+					Unser Projekt soll den Benutzer dazu animieren, Französisch als Fremdsprache zu wählen.
+				</p>
+				<ul class="text-primary-content">
+					<li>französisch = erste Option</li>
+					<li>Französisch = fettgedruckt + großgeschrieben</li>
+					<li>Französisch hat größere Schriftgröße</li>
+					<li>Italienisch & Spanisch = heller</li>
+					<li>Italienisch & Spanisch wird beim Hovern verändert</li>
+					<li>Italienisch & Spanisch</li>
+				</ul>
 			</div>
 		</div>
 	</div>
