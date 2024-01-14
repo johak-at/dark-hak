@@ -266,9 +266,9 @@
 				Verbraucher daran zu hindern, Preise von Produkten oder Dienstleistungen mit Konkurrenten
 				oder zwischen Produkten selbst zu vergleichen. Dies wird oft durch verschiedene Methoden
 				erreicht, die sich darauf fokussieren, die Entscheidung der Verbraucher zu manipulieren.
-				Hier sind einige von bekanntesten Techniken:
+				Hier sind einige der bekanntesten Techniken:
 			</p>
-			<ul class="pb-5">
+			<ul class="pb-5 flex flex-col gap-4">
 				<li>
 					<strong>Unklare Produktbezeichnungen:</strong> Unternehmen verwenden möglicherweise unterschiedliche
 					Bezeichnungen für dasselbe Produkt auf verschiedenen Plattformen, um den direkten Vergleich
