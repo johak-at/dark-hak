@@ -129,7 +129,7 @@
 				style="display: flex; margin: auto"
 				on:click={() => {
 					($patterns[0].done = true), window.location.replace('/');
-				}}>Aufgabe erldedigt</button
+				}}>Aufgabe erledigt</button
 			>
 		</p>
 
