@@ -90,19 +90,19 @@
 			<h1 class="text-5xl py-5">Herzlich Willkommen {name}!</h1>
 
 			<p class="pb-5">
-				Hier findest du alle Informationen zu deinem Konto. Schau dich um und finde, was du suchst.
-				Wir freuen uns, dass du dabei bist!
+				Hier finden Sie alle Informationen zu ihrem Konto. Schauen Sie sich um und finde, was Sie
+				suchen. Wir freuen uns, dass Sie dabei bist!
 			</p>
 
 			<p class="pt-5 pb-10">
-				Dieses dark pattern beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung aber
+				Dieses Dark Pattern beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung aber
 				sehr schwierig ist. Jeder, der schon einmal seinen Account löschen wollte, weiß das: Es
 				werden einem Steine in den Weg gelegt und vergräbt die Option tief in den Einstellungen.
 				<br />
 				<br />
-				Du hast dich erfolgreich angemeldet oder ein neues Konto erstellt. Nun steht dir die Herausforderung
-				bevor, deinen Account zu löschen. Der Weg zum Löschen deines Accounts ist anspruchsvoll und komplex,
-				aber wir wünschen dir viel Spaß beim Löschen!
+				Sie haben sich erfolgreich angemeldet oder ein neues Konto erstellt. Nun steht Ihnen die Herausforderung
+				bevor, Ihren Account zu löschen. Der Weg zum Löschen IHres Accounts ist anspruchsvoll und komplex,
+				aber wir wünschen Ihnen viel Spaß beim Löschen!
 			</p>
 
 			<div class="collapse collapse-arrow bg-base-200">
@@ -271,14 +271,14 @@
 				Willkommen in den zusätzlichen Informationen!
 				<br />
 				<br />
-				Hier erfährst du mehr über die Einstellungen deines Kontos. Entdecke hilfreiche Tipps, wie du
-				deinen Account personalisieren und anpassen kannst. Wir wollen sicherstellen, dass du alles verstehst
-				und das Beste aus deiner Erfahrung machst. Wenn du Fragen hast oder Hilfe benötigst, wende dich
-				bitte an unseren Kundensupport. Wir sorgen dafür, dass alles reibungslos läuft und du dich in
-				deinem Konto zurechtfindest.
+				Hier erfähren Sie mehr über die Einstellungen Ihres Kontos. Entdecke hilfreiche Tipps, wie Sie
+				Ihren Account personalisieren und anpassen können. Unser Ziel ist es sicherzustellen, dass Sie
+				alles verstehen und das Beste aus Ihrer Erfahrung machen. Bei Fragen oder wenn Sie Hilfe benötigen,
+				wenden Sie sich bitte an unseren Kundensupport. Wir sind hier, um sicherzustellen, dass alles
+				reibungslos läuft und Sie sich in Ihrem Konto zurechtfindest.
 				<br />
-				Danke, dass du Teil unserer Community bist! Genieße die zusätzlichen Infos und mache das Beste
-				aus deinem Konto.
+				Danke, dass Sie Teil unserer Community sind! Genießen Sie zusätzliche Infos und machen Sie das
+				Beste aus Ihrem Konto.
 			</p>
 			<p on:click={() => (page = 4)} class="transition-all hover:underline cursor-pointer">Mehr</p>
 			<br />
@@ -287,11 +287,12 @@
 			<h1 class="text-2xl">Weitere Erklärung:</h1>
 			<p>
 				<br />
-				Ziel ist es, den NutzerInnen das Gefühl zu geben, Teil einer Gemeinschaft zu sein und zu einem
-				Team zu gehören. Gemeinschaft und Teil eines Teams zu sein. Es wird betont, dass sich die Kundinnen
-				und Kunden sicher fühlen können. Ohne jedoch die Möglichkeit zu erwähnen, den Account zu löschen
-				oder zu erklären, wie man ihn löschen kann. Es wird vermieden, konkret auf diese Möglichkeit
-				einzugehen und stattdessen Vertrauen und Zugehörigkeit betont.
+				Unser Ziel ist es, den Nutzerinnen und Nutzern das Gefühl zu vermitteln, Teil einer Gemeinschaft
+				und eines Teams zu sein. Wir legen großen Wert darauf, eine Atmosphäre von Gemeinschaft und Teamzugehörigkeit
+				zu schaffen. Dabei betonen wir, dass sich unsere Kundinnen und Kunden sicher fühlen können. In
+				unseren Botschaften liegt der Fokus auf Vertrauen und Zugehörigkeit, ohne jedoch explizit auf
+				die Möglichkeit einzugehen, den Account zu löschen oder zu erklären, wie dies gemacht werden
+				kann.
 			</p>
 		</div>
 	{/if}
@@ -324,10 +325,10 @@
 					<p class="text-lg py-5">
 						Eine Kontoschließung ist endgültig!
 						<br />
-						Bitte beachten Sie, dass die Kontoschließung dauerhaft erfolgt. Sobald Ihr Konto geschlossen
+						Bitte beachten Sie, dass die Kontoschließung endgültig ist. Sobald Ihr Konto geschlossen
 						wurde, steht es Ihnen nicht mehr zur Verfügung und kann nicht wiederhergestellt werden. Wenn
-						Sie sich später entscheiden, wieder Bestellungen bei uns aufzugeben, oder Produkte und Services
-						verwenden möchten, für die ein Konto erforderlich ist, müssen Sie ein neues Konto erstellen.
+						Sie sich später dazu entscheiden, wieder Bestellungen bei uns aufzugeben oder Produkte und
+						Services zu nutzen, für die ein Konto erforderlich ist, müssen Sie ein neues Konto erstellen.
 					</p>
 				</div>
 			</div>
@@ -375,7 +376,7 @@
 			<br />
 			<div class="flex gap-4 pb-5">
 				<input type="checkbox" bind:checked={check} class="checkbox" />
-				<div>Ja, ich möchte mein Amazon-Konto dauerhaft schließen und meine Daten löschen.</div>
+				<div>Ja, ich möchte mein Konto dauerhaft schließen und meine Daten löschen.</div>
 			</div>
 			{#if grundcheck && check}
 				<button class="btn" on:click={() => (page = 5)}>Mein Konto löschen</button>
@@ -384,15 +385,15 @@
 			{/if}
 
 			<p class="pt-10">
-				Nachdem Sie Ihr Konto geschlossen haben, beurteilen wir, welche Informationen erhalten
-				werden sollen. Wir entscheiden regelmäßig einige Daten im Einklang mit unseren rechtlichen
-				Pflichten, darunter auch das Handelsgesetzbuch, zur Geltendmachung, Ausübung oder
-				Verteidigung von Rechtsansprüchen und zur Betrugsprävention/Gewähr von Sicherheit, wie in
-				der DSGVO vorgesehen, zu erhalten. Daher speichern wir üblicherweise Transaktionsdaten im
-				Zusammenhang mit Kundenbestellungen von Produkten und Services, beispielsweise den Namen des
-				Kunden, das bestellte Produkt, das Bestelldatum, die Lieferadresse, die Zahlungsart, den
-				Preis und die USt. Wir können auch beschränkt personenbezogene Kontoinformationen nach der
-				Schließung des Kontos behalten, um diese Rechte und Pflichten auszuüben.
+				Nachdem Sie Ihr Konto geschlossen haben, prüfen wir, welche Informationen aufbewahrt werden
+				sollen. Wir treffen regelmäßig Entscheidungen im Einklang mit unseren rechtlichen
+				Verpflichtungen, einschließlich des Handelsgesetzbuches, zur Durchsetzung, Ausübung oder
+				Verteidigung von Rechtsansprüchen sowie zur Betrugsprävention und Sicherheitsgewährleistung
+				gemäß der DSGVO. Daher speichern wir in der Regel Transaktionsdaten im Zusammenhang mit
+				Kundenbestellungen von Produkten und Services, wie zum Beispiel den Namen des Kunden, das
+				bestellte Produkt, das Bestelldatum, die Lieferadresse, die Zahlungsart, den Preis und die
+				Umsatzsteuer. Es ist möglich, dass wir beschränkte personenbezogene Kontoinformationen nach
+				der Schließung des Kontos aufbewahren, um diese Rechte und Pflichten auszuüben.
 			</p>
 		</div>
 	{/if}
@@ -426,16 +427,16 @@
 			<p class="text-lg py-5">
 				Dieses "Dark Pattern" beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung
 				jedoch schwierig ist. Jeder, der schon einmal versucht hat, seinen Account zu löschen, weiß:
-				Hier werden einem Hürden in den Weg gestellt und die entsprechenden Optionen tief in den
-				Einstellungen vergraben. Viele Dienste machen das Abmelden fast unmöglich. Man stelle sich
-				vor, man meldet sich in wenigen Minuten online für ein Streaming-Abo an, kann dich aber
-				plötzlich nicht mehr direkt auf der Seite abmelden. Stattdessen musst du dich erst
-				Einstellungen durchklicken und dich am Ende vielleicht sogar telefonisch abmelden. Dabei
-				musst du mehrmals bestätigen, dass du dich wirklich abmelden willst und dir über die
-				Konsequenzen bewusst bist.
+				Hier werden einem Hürden in den Weg gestellt, und die entsprechenden Optionen sind tief in
+				den Einstellungen vergraben. Viele Dienste machen das Abmelden fast unmöglich. Stellen Sie
+				sich vor, Sie melden sich in wenigen Minuten online für ein Streaming-Abo an, können sich
+				aber plötzlich nicht mehr direkt auf der Seite abmelden. Stattdessen müssen Sie sich erst
+				durch die Einstellungen klicken und vielleicht sogar am Ende telefonisch abmelden. Dabei
+				müssen Sie mehrmals bestätigen, dass Sie sich wirklich abmelden möchten und sich über die
+				Konsequenzen im Klaren sind.
 				<br />
-				Wahrscheinlich musstest du dich auch in unserem Beispiel durchklicken, um den richtigen Weg zu
-				"Mein Konto löschen" zu finden. Aber offensichtlich hast du nicht aufgegeben und Zeit investiert,
+				Wahrscheinlich mussten Sie sich auch in unserem Beispiel durchklicken, um den richtigen Weg zu
+				"Mein Konto löschen" zu finden. Aber offensichtlich haben Sie nicht aufgegeben und Zeit investiert,
 				obwohl die Registrierung schneller ging. Genau das ist ein Dark Pattern, ein undurchsichtiges
 				Muster - eine Grauzone. Natürlich sollte es möglich sein, seinen Account zu löschen, aber wie
 				einfach das sein soll, ist nicht klar definiert. Es ist verständlich, dass Plattformen alles
@@ -443,7 +444,7 @@
 				welche Tricks und Verstecke genutzt werden, um Menschen in eine bestimmte Richtung zu lenken.
 				<br />
 				<br />
-				Wir hoffen ihr wisst nun was "Roach Motel" ist und wie es funktioniert.
+				Wir hoffen Sie wissen nun was das Dark Pattern "Roach Motel" ist und wie es funktioniert.
 				<br />
 				Wir stehen für KEINE Frage offen :)
 			</p>
