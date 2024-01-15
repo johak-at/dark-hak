@@ -33,7 +33,7 @@
 	{#if page === 1}
 		<div class="mx-[7vw] self-start">
 			<h1 class="text-7xl pb-5">Registrieren</h1>
-			<p class="text-xl">Erstelle hier deinen Account!</p>
+			<p class="text-xl">Erstellen Sie hier Ihren Account!</p>
 			<form on:submit|preventDefault={handleSubmit}>
 				<label class="my-2 block" for="name">Name:</label>
 				<input
@@ -90,18 +90,18 @@
 			<h1 class="text-5xl py-5">Herzlich Willkommen {name}!</h1>
 
 			<p class="pb-5">
-				Hier finden Sie alle Informationen zu ihrem Konto. Schauen Sie sich um und finde, was Sie
-				suchen. Wir freuen uns, dass Sie dabei bist!
+				Hier finden Sie alle Informationen zu Ihrem Konto. Schauen Sie sich um und finden Sie, was
+				Sie suchen. Wir freuen uns, dass Sie dabei sind!
 			</p>
 
 			<p class="pt-5 pb-10">
-				Dieses Dark Pattern beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung aber
-				sehr schwierig ist. Jeder, der schon einmal seinen Account löschen wollte, weiß das: Es
-				werden einem Steine in den Weg gelegt und vergräbt die Option tief in den Einstellungen.
+				Dieses Dark Pattern beschreibt Dienste, bei denen die Anmeldung einfach, die Abmeldung
+				jedoch sehr schwierig ist. Jeder, der schon einmal seinen Account löschen wollte, weiß das:
+				Es werden einem Steine in den Weg gelegt und die Option tief in den Einstellungen vergraben.
 				<br />
 				<br />
 				Sie haben sich erfolgreich angemeldet oder ein neues Konto erstellt. Nun steht Ihnen die Herausforderung
-				bevor, Ihren Account zu löschen. Der Weg zum Löschen IHres Accounts ist anspruchsvoll und komplex,
+				bevor, Ihren Account zu löschen. Der Weg zum Löschen Ihres Accounts ist anspruchsvoll und komplex,
 				aber wir wünschen Ihnen viel Spaß beim Löschen!
 			</p>
 
@@ -271,11 +271,13 @@
 				Willkommen in den zusätzlichen Informationen!
 				<br />
 				<br />
-				Hier erfähren Sie mehr über die Einstellungen Ihres Kontos. Entdecke hilfreiche Tipps, wie Sie
-				Ihren Account personalisieren und anpassen können. Unser Ziel ist es sicherzustellen, dass Sie
-				alles verstehen und das Beste aus Ihrer Erfahrung machen. Bei Fragen oder wenn Sie Hilfe benötigen,
-				wenden Sie sich bitte an unseren Kundensupport. Wir sind hier, um sicherzustellen, dass alles
-				reibungslos läuft und Sie sich in Ihrem Konto zurechtfindest.
+
+				Hier erfahren Sie mehr über die Einstellungen Ihres Kontos. Entdecken Sie hilfreiche Tipps,
+				wie Sie Ihren Account personalisieren und anpassen können. Unser Ziel ist es
+				sicherzustellen, dass Sie alles verstehen und das Beste aus Ihrer Erfahrung machen. Bei
+				Fragen oder wenn Sie Hilfe benötigen, wenden Sie sich bitte an unseren Kundensupport. Wir
+				sind hier, um sicherzustellen, dass alles reibungslos läuft und Sie sich in Ihrem Konto
+				zurechtfinden.
 				<br />
 				Danke, dass Sie Teil unserer Community sind! Genießen Sie zusätzliche Infos und machen Sie das
 				Beste aus Ihrem Konto.
@@ -414,7 +416,7 @@
 			> <a class="text-lg">Mein Konto löschen</a>
 		</p>
 		<div class="mx-[7vw] self-start max-w-6xl">
-			<h1 class="py-5 text-4xl">Du hast es geschafft!</h1>
+			<h1 class="py-5 text-4xl">Sie haben es geschafft!</h1>
 
 			<button
 				on:click={() => {
