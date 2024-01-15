@@ -4,14 +4,15 @@
 
 	let page = 1;
 
-	let isConfirmationModalVisible = false;
-
 	/**
 	 * @type {HTMLDialogElement}
 	 */
 	let my_modal_5;
 
-	function openModal() {
+	let isConfirmationModalVisible = false;
+
+	async function openModal() {
+		await Promise.resolve(); // Wait for the next tick
 		my_modal_5.showModal();
 	}
 
@@ -23,7 +24,7 @@
 			isConfirmationModalVisible = true;
 			openModal();
 		} else if (choice === 'NEIN') {
-			page === 3;
+			page = 3;
 		}
 	}
 
