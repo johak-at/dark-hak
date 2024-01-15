@@ -1,5 +1,8 @@
 <script>
 	// @ts-nocheck
+	// TO DO LIST🧮
+	// 2. browser Fenster größe ändern
+
 	import { patterns, defaultValue } from '$lib/store';
 	import Icon from '@iconify/svelte';
 	let currentPage = 'product';
@@ -43,8 +46,6 @@
 	];
 </script>
 
-<!-- <p>on:click={() => {$patterns[2].done = true,
-	window.location.replace("/");}}'</p> -->
 <div
 	class="mockup-browser border bg-base-300 w-[90%] bg-fixed p-10 flex flex-col justify-center items-center gap-4"
 >
@@ -64,14 +65,6 @@
 				</button>
 			</div>
 		</div>
-
-		<div on:click={switchPageToExplain}>
-			<button class="btn btn-warning">
-				Erklärung Hidden Costs <Icon icon="material-symbols:book" />
-			</button>
-		</div>
-
-		<!-- Das sind die Produkte, mit der Bezeichnung und Preisen -->
 	{/if}
 
 	{#if currentPage === 'explain'}
@@ -151,13 +144,10 @@
 				ein Abo mehr, als wenn man ab und zu Versandkosten bezahlen muss.
 			</p>
 			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
+			<button class="btn btn-sucess" on:click={switchPageToPrice}>Zurück</button>
 		</div>
 	{/if}
 	{#if currentPage === 'checkout'}
-		<div class="flex justify-center px-64 py-64 bg-base-800">
-			<img src="img/LogoHiddenCosts.png" alt="Logo" style="border-radius:1500px" />
-		</div>
-
 		<div class="grid grid-cols-3 gap-x-3 gap-y-5 lg:grid-cols-1 xl:grid-cols-1 xl:gap-x-5">
 			<a href="1" class="group">
 				<div class="aspect-h-0.1 aspect-w-0.1 w-full overflow-hidden rounded-lg">
@@ -197,8 +187,8 @@
 			</a>
 		</div>
 		<div>
-			<button class="btn btn-outline" on:click={switchPageToCheckout}>Zur Kasse</button>
-			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
+			<button class="btn btn-success" on:click={switchPageToCheckout}>Zur Kasse</button>
+			<button class="btn btn-outline" on:click={goBackPage}>Startseite</button>
 		</div>
 	{/if}
 
@@ -214,11 +204,9 @@
 					{/each}
 				</tbody>
 			</table>
-
-			<button class="btn btn-accent" on:click={switchPageToAGB}>AGB</button>
-
-			<button class="btn btn-active btn-default" on:click={switchPageToPrice}>Checkout</button>
-			<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
+			<button class="btn btn-success" on:click={switchPageToPrice}>Zahlungsbestätigung</button>
+			<button class="btn btn-default" on:click={switchPageToAGB}>AGB</button>
+			<button class="btn btn-accent" on:click={goBackPage}>Startseite</button>
 		</div>
 	{/if}
 
@@ -311,6 +299,11 @@
 					{/each}
 				</tbody>
 			</table>
+
+			<button on:click={switchPageToExplain} class="btn btn-accent">
+				<Icon icon="material-symbols:book" /> Erklärung Hidden Costs
+			</button>
+
 			<button
 				on:click={() => {
 					($patterns[2].done = true), window.location.replace('/');

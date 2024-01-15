@@ -1,22 +1,40 @@
 <script>
 	import { updated } from '$app/stores';
+	import { patterns } from '$lib/store.js';
 
 	let page = 1;
-	let showMore = false;
 
-	function toggleDetails() {
-		showMore = !showMore;
-	}
-
+	/**
+	 * @type {HTMLDialogElement}
+	 */
 	let my_modal_5;
 
-	function openModal() {
+	let isConfirmationModalVisible = false;
+
+	async function openModal() {
+		await Promise.resolve(); // Wait for the next tick
 		my_modal_5.showModal();
+	}
+
+	/**
+	 * @param {string} choice
+	 */
+	function handleConfirmation(choice) {
+		if (choice === 'JA') {
+			isConfirmationModalVisible = true;
+			openModal();
+		} else if (choice === 'NEIN') {
+			page = 3;
+		}
+	}
+
+	function closeConfirmationModal() {
+		isConfirmationModalVisible = false;
 	}
 </script>
 
 {#if page === 1}
-	<h1>Choose your abo</h1>
+	<h1 class="text-lg">WÄHLE DEIN ABO:</h1>
 	<div class="boxes">
 		<div class="card w-96 bg-base-100 shadow-xl">
 			<figure>
@@ -40,21 +58,21 @@
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
-								<strong>Festlegung des Preises: </strong> Der Preis für das Abonnement auf dieser fiktionalen
-								Seite wird durch den Anbieter einseitig festgelegt und kann von Zeit zu Zeit angepasst
-								werden. Änderungen werden dem Abonnenten angemessen im Voraus mitgeteilt.
+								<strong>Festlegung des Preises: </strong> Der Preis für das BASIC Abonnement wird durch
+								den Anbieter einseitig festgelegt und kann von Zeit zu Zeit angepasst werden. Änderungen
+								werden dem Abonnenten angemessen im Nachhinein mitgeteilt.
 							</li>
 							<li>
 								<strong>Zahlungsverpflichtung:</strong> Der Abonnent verpflichtet sich, den festgelegten
 								Preis für das Abonnement gemäß den vereinbarten Zahlungsbedingungen zu entrichten.
 							</li>
 							<li>
-								<strong> über Preisänderungen: </strong> Der Anbieter behält sich das Recht vor, den
-								Preis für das Abonnement nach eigenem Ermessen zu ändern. Solche Änderungen werden dem
-								Abonnenten per E-Mail oder durch andere geeignete Mittel mitgeteilt. Der Abonnent hat
-								das Recht, das Abonnement zu kündigen, wenn er mit einer Preisänderung nicht einverstanden
-								ist, jedoch unterliegt die fortgesetzte Nutzung der Dienste nach der Mitteilung einer
-								Preisänderung der Zustimmung zu dieser Änderung.
+								<strong>Preisänderungen: </strong> Der Anbieter behält sich das Recht vor, den Preis
+								für das Abonnement nach eigenem Ermessen zu ändern. Solche Änderungen werden dem Abonnenten
+								per E-Mail oder durch andere geeignete Mittel mitgeteilt. Der Abonnent hat das Recht,
+								das Abonnement zu kündigen, wenn er mit einer Preisänderung nicht einverstanden ist,
+								jedoch unterliegt die fortgesetzte Nutzung der Dienste nach der Mitteilung einer Preisänderung
+								der Zustimmung zu dieser Änderung.
 							</li>
 							<li>
 								<strong>Steuerliche Anpassungen</strong>: Der festgelegte Preis für das Abonnement
@@ -76,7 +94,7 @@
 					</div>
 				</div>
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 2)}>Choose the abo!</button>
+					<button class="btn btn-primary" on:click={() => (page = 2)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -90,7 +108,7 @@
 				<p>12,99€ *Ab Abo-Start 5 Monate*</p>
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
-					<li>Jederzeit kündbar*</li>
+					<li>Jederzeit kündbar**</li>
 					<li>Steuern und Gebühren inklusive</li>
 					<li>Neue Features entdecken</li>
 					<li>Werbefrei</li>
@@ -99,14 +117,13 @@
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
-					<div class="collapse-title text-s font-medium-light">Show more!</div>
+					<div class="collapse-title text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
 							<li>
-								<strong>Laufzeit des Abonnements:</strong>
-								Die Laufzeit dieses Abonnements erstreckt sich über einen Zeitraum von 5 Monaten, beginnend
-								ab dem Datum der Anmeldung. Während dieser Periode ist eine vorzeitige Kündigung nicht
-								möglich.
+								<strong>Festlegung und Anpassung des Preises:</strong> Der Anbieter behält sich das Recht
+								vor, den Preis für das PLUS Abonnement einseitig festzulegen und kann diesen unangekündigt
+								verändern. Änderungen werden dem Abonnenten im Nachhinein mitgeteilt.
 							</li>
 
 							<li>
@@ -125,26 +142,32 @@
 							</li>
 
 							<li>
-								<strong>Konsequenzen bei Zahlungsverzug: </strong>Sollte es zu
-								Zahlungsschwierigkeiten kommen, obliegt es dem Abonnenten, unverzüglich mit dem
-								Anbieter in Kontakt zu treten, um eine Lösung zu finden. Der Anbieter behält sich
-								das Recht vor, bei ausstehenden Zahlungen angemessene Schritte zu unternehmen, um
-								die finanzielle Integrität des Abonnementdienstes aufrechtzuerhalten.
-							</li>
-
-							<li>
 								<strong>Fortsetzung der Dienstleistungen: </strong>Die Fortsetzung der
 								Dienstleistungen nach Ablauf des Abonnements erfolgt auf Basis der zu diesem
 								Zeitpunkt geltenden Konditionen. Der Abonnent wird über etwaige Änderungen
 								informiert und hat das Recht, das Abonnement zu kündigen, wenn er mit den neuen
 								Bedingungen nicht einverstanden ist.
 							</li>
+
+							<li>
+								<strong>*Laufzeit des Abonnements:</strong>
+								Die Laufzeit dieses Abonnements erstreckt sich über einen Zeitraum von 5 Monaten, beginnend
+								ab dem Datum der Anmeldung. Während dieser Periode ist eine vorzeitige Kündigung nicht
+								möglich.
+							</li>
+							<li>
+								<strong>**Monatsabrechnung:</strong>
+								Das wöchentliches Abonnement folgt einem monatlichen Abrechnungszyklus. Wenn sich der
+								Abonnent entscheidet, sein Abonnement in der laufenden Woche zu kündigen, wird ihn der
+								Service für den gesamten Monat in Rechnung gestellt, um sicherzustellen, dass der Abonnent
+								während dieser Zeit weiterhin uneingeschränkten Zugang genießen können.
+							</li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 3)}>Choose the abo!</button>
+					<button class="btn btn-primary" on:click={() => (page = 2)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -155,7 +178,7 @@
 			</figure>
 			<div class="card-body">
 				<h2 class="card-title">PREMIUM ABO</h2>
-				<p>60€ pro Jahr (Ab Abo Start 1,5 Jahre)</p>
+				<p>60€ pro Jahr *Ab Abo Start 2,5 Jahre*</p>
 
 				<ul class="ulstandard">
 					<li>Inklusive Probeabo</li>
@@ -166,35 +189,48 @@
 
 				<div class="collapse bg-base-100x">
 					<input type="checkbox" />
-					<div class="collapse-title text-s font-medium-light">Show more!</div>
+					<div class="collapse-title flex text-s font-medium-light">Mehr</div>
 					<div class="collapse-content">
 						<ul class="ulmore">
-							<p>
-								<strong>Vertragslaufzeit und Beendigung:</strong>
+							<li>
+								<strong>Zahlungsverpflichtung:</strong> Der Abonnent verpflichtet sich, den festgelegten
+								Preis für das Abonnement gemäß den vereinbarten Zahlungsbedingungen zu entrichten.
+							</li>
 
-								Die festgelegte Laufzeit des Abonnements erstreckt sich über einen Zeitraum von
-								einem Jahr, beginnend ab dem Datum der Anmeldung. Während dieser Zeitspanne ist eine
-								frühzeitige Kündigung nicht möglich. Nach Ablauf des Abonnements behält sich der
-								Anbieter das Recht vor, die anfallenden Kosten für die Nutzung der Dienste zu
-								evaluieren und gegebenenfalls anzupassen. Jegliche Änderungen werden dem Abonnenten
-								zeitnah mitgeteilt. Der Abonnent trägt die volle finanzielle Verantwortung für das
-								Abonnement. Im Falle von unvollständigen Zahlungen und nach wiederholten Mahnungen
-								behält sich der Anbieter das Recht vor, angemessene Maßnahmen zu ergreifen, darunter
-								auch die vorübergehende Aussetzung des Zugangs zu den Diensten. Bei
-								Zahlungsschwierigkeiten obliegt es dem Abonnenten, unverzüglich Kontakt mit dem
-								Anbieter aufzunehmen, um gemeinsam eine Lösung zu finden. Der Anbieter behält sich
-								das Recht vor, bei ausbleibenden Zahlungen angemessene Schritte zu unternehmen, um
-								die finanzielle Integrität des Abonnementdienstes zu wahren. Die Fortsetzung der
+							<li>
+								<strong>Festlegung und Anpassung des Preises:</strong> Der Anbieter behält sich das Recht
+								vor, den Preis für das PREMIUM Abonnement einseitig festzulegen und kann diesen unangekündigt
+								verändern. Änderungen werden dem Abonnenten im Nachhinein mitgeteilt.
+							</li>
+
+							<li>
+								<strong>Vertragslaufzeit:</strong>
+								Die festgelegte Laufzeit des Abonnements erstreckt sich über einen Zeitraum von 2,5 Jahren,
+								beginnend ab dem Datum der Anmeldung. Während dieser Zeitspanne ist eine frühzeitige
+								Kündigung nicht möglich. Nach Ablauf des Abonnements behält sich der Anbieter das Recht
+								vor, die anfallenden Kosten für die restlichen 6 Monaten des Jahres in Rechnung zu stellen.
+								Jegliche Änderungen werden dem Abonnenten zeitnah mitgeteilt.
+							</li>
+
+							<li>
+								<strong>Steuerliche Anpassungen</strong>: Der festgelegte Preis für das Abonnement
+								kann zusätzliche Steuern oder Abgaben enthalten oder von diesen betroffen sein. Der
+								Abonnent ist verantwortlich für alle geltenden Steuern, die im Zusammenhang mit dem
+								Abonnement anfallen.
+							</li>
+
+							<li>
+								<strong>Fortsetzung der Dienstleistungen: </strong>Die Fortsetzung der
 								Dienstleistungen nach Ablauf des Abonnements erfolgt gemäß den zu diesem Zeitpunkt
 								gültigen Bedingungen. Der Abonnent wird über mögliche Änderungen informiert und hat
 								das Recht, das Abonnement zu kündigen, sofern er den neuen Bedingungen nicht
 								zustimmt.
-							</p>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary" on:click={() => (page = 4)}>Choose the abo!</button>
+					<button class="btn btn-primary" on:click={() => (page = 2)}>ABO AUSWÄHLEN</button>
 				</div>
 			</div>
 		</div>
@@ -202,20 +238,90 @@
 {/if}
 
 {#if page === 2}
-	<!-- Open the modal using ID.showModal() method -->
-	<button class="btn" on:click={openModal}>open modal</button>
-	<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
-		<div class="modal-box">
-			<h3 class="font-bold text-lg">Hello!</h3>
-			<p class="py-4">Press ESC key or click the button below to close</p>
-			<div class="modal-action">
-				<form method="dialog">
-					<!-- if there is a button in the form, it will close the modal -->
-					<button class="btn">Close</button>
-				</form>
+	<div class="areyousure">WEISST DU WELCHES ANGEBOT AM GÜNSTIGSTEN IST?</div>
+	<button class="btn" on:click={() => handleConfirmation('JA')}>JA</button>
+	<button class="btn" on:click={() => (page = 3)}>NEIN</button>
+
+	<!-- First confirmation modal -->
+	{#if isConfirmationModalVisible}
+		<dialog bind:this={my_modal_5} class="modal modal-bottom sm:modal-middle">
+			<div class="modal-box">
+				<h3 class="font-bold text-lg">Bist du dir wirklich sicher?</h3>
+				<p class="py-4">Wir wissen beide das stimmt nicht. Gehe zurück und klicke NEIN!</p>
+				<div class="modal-action">
+					<form method="dialog">
+						<button class="btn" on:click={closeConfirmationModal}>Zurück</button>
+					</form>
+				</div>
+			</div>
+		</dialog>
+	{/if}
+{/if}
+
+{#if page === 3}
+	<div class="end w-2/5">
+		<h1 class="pb-14 text-4xl"><strong>Price Comparison Prevention</strong></h1>
+		<div class="text-lg pb-14">
+			<p class="pb-5">
+				Die Price Comparison Prevention bezieht sich auf eine Praxis, bei der Unternehmen versuchen,
+				Verbraucher daran zu hindern, Preise von Produkten oder Dienstleistungen mit Konkurrenten
+				oder zwischen Produkten selbst zu vergleichen. Dies wird oft durch verschiedene Methoden
+				erreicht, die sich darauf fokussieren, die Entscheidung der Verbraucher zu manipulieren.
+				Hier sind einige der bekanntesten Techniken:
+			</p>
+			<ul class="pb-5 flex flex-col gap-4">
+				<li>
+					<strong>Unklare Produktbezeichnungen:</strong> Unternehmen verwenden möglicherweise unterschiedliche
+					Bezeichnungen für dasselbe Produkt auf verschiedenen Plattformen, um den direkten Vergleich
+					zu erschweren.
+				</li>
+
+				<li>
+					<strong>Zusätzliche Gebühren:</strong> Versteckte Gebühren oder zusätzliche Kosten können absichtlich
+					erst später in "Kleintext" eingesetzt werden, denn es besteht meistens eine große Wahrscheinlichkeit,
+					dass die Verbraucher die langen Texten sowieso nicht lesen werden.
+				</li>
+
+				<li>
+					<strong>Komplexe Rabattstrukturen:</strong> Unternehmen können komplizierte Rabattstrukturen
+					einführen, bei denen Vergleiche zwischen Produkten schwierig sind, insbesondere wenn unterschiedliche
+					Rabattmodelle auf verschiedene Produkte angewendet werden.
+				</li>
+
+				<li>
+					<strong>Versteckte Bedingungen:</strong> Unternehmen können spezielle Bedingungen für Rabatte
+					oder Sonderangebote einführen, die ziemlich schwierig zu finden sind, um den Nutzer zu binden,
+					auch wenn der angezeigte Preis zunächst attraktiv erscheint.
+				</li>
+			</ul>
+
+			Diese Praxis ist oft ethisch fragwürdig, da sie die Transparenz und Fairness im Markt
+			beeinträchtigen kann. Verbraucher sollten sich bewusst sein und nach Möglichkeiten suchen,
+			solche Taktiken zu umgehen, indem sie die Details und Bedingungen von Angeboten vorsichtig
+			prüfen.
+		</div>
+
+		<p class="pb-12 text-xl text-center">Welches Angebot ist am günstigsten?</p>
+		<div class="flex justify-between">
+			<div class="tooltip" data-tip="falsch">
+				<button class="btn">BASIC</button>
+			</div>
+			<div class="tooltip" data-tip="falsch">
+				<button class="btn">PLUS</button>
+			</div>
+			<div class="tooltip" data-tip="richtig">
+				<button
+					class="btn"
+					on:click={() => {
+						($patterns[5].done = true), window.location.replace('/');
+					}}>PREMIUM</button
+				>
 			</div>
 		</div>
-	</dialog>
+	</div>
+	<p class="mt-44 text-sm">
+		Die Bilder wurden mit <a href="https://leonardo.ai/">Leonardo Ai</a> generiert.
+	</p>
 {/if}
 
 <style>
@@ -223,33 +329,29 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		/* or use "space-around" for space around each card */
 	}
-
 	.card {
 		margin-right: 30px;
 		margin-bottom: 20px;
 	}
 
-	/* .small {
-		font-size: xx-small;
-	} */
-
 	.ulstandard li {
 		list-style-type: disc;
 	}
 
-	.collapse-title {
-		display: flex;
-	}
-
 	@media screen and (max-width: 600px) {
 		.card {
-			width: 100%; /* Adjusted card width for smaller screens */
+			width: 100%; /* angepasste breite für kleinere bildschirme */
 		}
 
 		.boxes {
 			display: grid;
+		}
+
+		.end {
+			padding: 10px;
+			justify-content: center;
+			width: 100%;
 		}
 	}
 </style>

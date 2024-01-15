@@ -37,13 +37,14 @@
 		haben Schüler*innen der <a href="https://www.johak.at">JO.HAK</a>
 		auf der vorliegenden Website einen kleinen interaktiven "Hindernisparcours" zur Demonstration einer
 		Reihe verschiedener <em>Dark Patterns</em> erstellt. Wurde eine Aufgabe erfolgreich bewältigt, wird
-		sie von der Liste gestrichen:
+		das enstprechende Pattern von der Liste unten gestrichen. Sollten Sie sich auf der Website verirren,
+		kommen Sie über das Notausgang-Symbol links oben wieder zurück auf die Startseite. Viel Glück! 🍀
 	</p>
 </main>
 
 <div class="flex flex-col gap-7">
 	<nav>
-		<ul class="flex flex-col items-center gap-6 my-5">
+		<ol class="flex flex-col items-center gap-6 my-5">
 			{#each $patterns as pattern}
 				<li>
 					<a
@@ -53,7 +54,7 @@
 					>
 				</li>
 			{/each}
-		</ul>
+		</ol>
 	</nav>
 
 	<button on:click={clearProgress} class="btn mb-5">Clear Progress</button>
