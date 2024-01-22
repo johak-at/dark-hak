@@ -73,6 +73,19 @@
 	function setNeutral() {
 		mastered = 'neutral';
 	}
+
+	function closePhone() {
+		const phone = document.querySelector('.mockup-phone');
+		if (phone !== null) {
+			phone.classList.add('hidden');
+		}
+	}
+	function closeGirl() {
+		const phone = document.querySelector('.girl');
+		if (phone !== null) {
+			phone.classList.add('hidden');
+		}
+	}
 </script>
 
 {#if mastered === 'neutral'}
@@ -144,7 +157,9 @@
 
 	<div class="mockup-phone border-primary absolute left-10 hidden">
 		<div class="camera" />
-
+		<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" on:click={closePhone}
+			>✕</button
+		>
 		<div class="display">
 			<div class="artboard artboard-demo phone-1 handybg">
 				<div class="chat chat-start">
@@ -190,7 +205,10 @@
 		</div>
 	</dialog>
 
-	<div class="card w-96 bg-base-100 shadow-xl hidden absolute right-10 top-20">
+	<div class="card w-96 bg-base-100 shadow-xl hidden absolute right-10 top-20 girl">
+		<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" on:click={closeGirl}
+			>✕</button
+		>
 		<figure>
 			<img src="img/peter.png" alt="Shoes" />
 		</figure>
