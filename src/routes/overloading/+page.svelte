@@ -155,7 +155,7 @@
 		</div>
 	</div>
 
-	<div class="mockup-phone border-primary absolute left-10 hidden">
+	<div class="mockup-phone border-primary absolute left-10 hidden z-0">
 		<div class="camera" />
 		<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" on:click={closePhone}
 			>✕</button
@@ -205,7 +205,7 @@
 		</div>
 	</dialog>
 
-	<div class="card w-96 bg-base-100 shadow-xl hidden absolute right-10 top-20 girl">
+	<div class="card w-96 bg-base-100 shadow-xl hidden absolute right-10 top-20 girl z-100">
 		<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" on:click={closeGirl}
 			>✕</button
 		>
