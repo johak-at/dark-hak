@@ -75,9 +75,3 @@
 		</li>
 	</ul>
 </aside>
-
-<style>
-	* {
-		outline: 1px solid red;
-	}
-</style>
