@@ -45,9 +45,9 @@
 
 <div class="flex flex-col gap-7 prose">
 	<nav>
-		<ol class="flex flex-col items-center gap-6 my-5">
+		<ol class="flex flex-col items-center gap-6 my-5 list-none p-0">
 			{#each $patterns as pattern}
-				<li>
+				<li class="p-0">
 					<a
 						href="/{pattern.slug}"
 						class="text-lg transition-all hover:underline {pattern.done ? 'line-through' : ''}"
@@ -75,3 +75,9 @@
 		</li>
 	</ul>
 </aside>
+
+<style>
+	* {
+		outline: 1px solid red;
+	}
+</style>
