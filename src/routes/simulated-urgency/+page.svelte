@@ -74,7 +74,7 @@
 </div>
 <!-- popups end  -->
 
-<div class="boxes">
+<div class="flex flex-col gap-4 lg:flex-row">
 	{#each products as { name, description, pic }, index}
 		<div class="card w-96 bg-neutral text-neutral-content shadow-xl">
 			<figure>
@@ -213,11 +213,6 @@
 </div>
 
 <style>
-	.boxes {
-		display: flex;
-		gap: 10px;
-	}
-
 	.card {
 		width: 200 px;
 		height: 300 px;
