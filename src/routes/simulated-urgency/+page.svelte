@@ -70,13 +70,13 @@
 
 <!-- erklärung  -->
 <div class="button-container">
-	<button class="open-popup-button" on:click={openDialog}>Erklärung</button>
+	<button class="btn btn-accent" on:click={openDialog}>Erklärung</button>
 </div>
 <!-- popups end  -->
 
 <div class="boxes">
 	{#each products as { name, description, pic }, index}
-		<div class="card w-96 bg-base-100 shadow-xl">
+		<div class="card w-96 bg-neutral text-neutral-content shadow-xl">
 			<figure>
 				<p />
 			</figure>
@@ -151,7 +151,7 @@
 
 	{#if showDialog}
 		<div class="overlay" on:click={closeDialog} />
-		<div class="popup">
+		<div class="popup bg-neutral text-neutral-content">
 			<p>
 				Dark Patterns, insbesondere die Simulation von Dringlichkeit, sind manipulative
 				Design-Techniken in Benutzeroberflächen, die einen falschen Zeitdruck erzeugen, um Nutzer zu
@@ -224,7 +224,7 @@
 	}
 
 	.card-body {
-		background-color: gray;
+		/* background-color: gray; */
 	}
 
 	.popup {
@@ -232,7 +232,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background-color: black;
+		/* background-color: black; */
 		padding: 20px;
 		border: 1px solid #ccc;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
