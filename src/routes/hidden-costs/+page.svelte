@@ -34,15 +34,15 @@
 	];
 
 	let hiddenData = [
-		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 2.5 + '$' },
-		{ id: 2, name: 'Nerds Rainbow Edition', price: 3.5 + '$' },
-		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 3.5 + '$' },
-		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' },
+		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 7.5 + '$' },
+		{ id: 2, name: 'Nerds Rainbow Edition', price: 7.0 + '$' },
+		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 7.0 + '$' },
+		{ id: 4, name: 'Gesamtpreis', price: 21.5 + '$' },
 		{ id: 5, name: 'Versandgebühren', price: 5 + '$' },
 		{ id: 6, name: 'Bearbeitungsgebühren', price: 2 + '$' },
 		{ id: 7, name: 'Verpackungsgebühren', price: 1 + '$' },
 		{ id: 8, name: 'Zollgebühren', price: 3 + '$' },
-		{ id: 9, name: 'Gesamtpreis', price: 20.5 + '$' }
+		{ id: 9, name: 'Gesamtpreis', price: 32.5 + '$' }
 	];
 </script>
 
@@ -149,39 +149,27 @@
 	{/if}
 	{#if currentPage === 'checkout'}
 		<div class="grid grid-cols-3 gap-x-3 gap-y-5 lg:grid-cols-1 xl:grid-cols-1 xl:gap-x-5">
-			
-				<div class="aspect-h-0.1 aspect-w-0.1 w-full overflow-hidden rounded-lg">
-					<img
-						src="img/crisps.jpg"
-						alt="sweet"
-						style="width: 25%; height: auto;"
-					/>
-				</div>
-				<h3 class="mt-4 text-sm text-gray-700">Cheetos Crunchos Sweet Chilli</h3>
-				<p class="mt-1 text-lg font-medium text-gray-900">2,50€</p>
-			
-			
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg">
-					<img
-						src="img/candy.jpg"
-						alt="sweet"
-						style="width: 25%; height: auto;"
-					/>
-				</div>
-				<h3 class="mt-4 text-sm text-gray-700">Nerds Rainbow Edition</h3>
-				<p class="mt-1 text-lg font-medium text-gray-900">3,00€</p>
-		
-			
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg">
-					<img
-						src="img/chocolate.jpg"
-						alt="sweet"
-						style="width: 25%; height: auto;"
-					/>
-				</div>
-				<h3 class="mt-4 text-sm text-gray-700">Hersheys Pretzels Special Edition</h3>
-				<p class="mt-1 text-lg font-medium text-gray-900">3,00€</p>
-			
+			<div class="aspect-h-0.1 aspect-w-0.1 w-full overflow-hidden">
+				<img src="img/crisps.jpg" alt="sweet" style="width: 25%; height: auto; min-width:100px" />
+			</div>
+			<h3 class="mt-4 text-sm">Cheetos Crunchos Sweet Chilli</h3>
+			<p class="mt-1 text-lg font-medium">2,50€</p>
+
+			<div class="aspect-h-[0.25] aspect-w-[0.25] w-full overflow-hidden">
+				<img src="img/candy.jpg" alt="sweet" style="width: 25%; height: auto; min-width:100px" />
+			</div>
+			<h3 class="mt-4 text-sm">Nerds Rainbow Edition</h3>
+			<p class="mt-1 text-lg font-medium">3,00€</p>
+
+			<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden">
+				<img
+					src="img/chocolate.jpg"
+					alt="sweet"
+					style="width: 25%; height: auto; min-width:100px"
+				/>
+			</div>
+			<h3 class="mt-4 text-sm">Hersheys Pretzels Special Edition</h3>
+			<p class="mt-1 text-lg font-medium">3,00€</p>
 		</div>
 		<div>
 			<button class="btn btn-success" on:click={switchPageToPrice}>Zur Kasse</button>
