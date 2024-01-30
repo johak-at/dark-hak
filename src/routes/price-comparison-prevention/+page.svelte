@@ -313,7 +313,7 @@
 				<button
 					class="btn"
 					on:click={() => {
-						($patterns[5].done = true), window.location.replace('/');
+						($patterns[4].done = true), window.location.replace('/');
 					}}>PREMIUM</button
 				>
 			</div>

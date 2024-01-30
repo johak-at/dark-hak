@@ -420,7 +420,7 @@
 
 			<button
 				on:click={() => {
-					($patterns[6].done = true), window.location.replace('/');
+					($patterns[5].done = true), window.location.replace('/');
 				}}
 				class="btn">Aufgabe abschließen</button
 			>

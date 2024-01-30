@@ -60,7 +60,7 @@
 
 	function checkOverloading() {
 		if (selectedLanguage !== 'french') {
-			$patterns[4].done = true;
+			$patterns[3].done = true;
 			mastered = 'good';
 			const french = document.querySelector('.french');
 			if (french !== null) {
