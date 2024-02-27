@@ -34,15 +34,15 @@
 	];
 
 	let hiddenData = [
-		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 2.5 + '$' },
-		{ id: 2, name: 'Nerds Rainbow Edition', price: 3.5 + '$' },
-		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 3.5 + '$' },
-		{ id: 4, name: 'Gesamtpreis', price: 9.5 + '$' },
+		{ id: 1, name: 'Cheetos Crunchos Sweet Chilli', price: 7.5 + '$' },
+		{ id: 2, name: 'Nerds Rainbow Edition', price: 7.0 + '$' },
+		{ id: 3, name: 'Hersheys Pretzels Special Edition', price: 7.0 + '$' },
+		{ id: 4, name: 'Gesamtpreis', price: 21.5 + '$' },
 		{ id: 5, name: 'Versandgebühren', price: 5 + '$' },
 		{ id: 6, name: 'Bearbeitungsgebühren', price: 2 + '$' },
 		{ id: 7, name: 'Verpackungsgebühren', price: 1 + '$' },
 		{ id: 8, name: 'Zollgebühren', price: 3 + '$' },
-		{ id: 9, name: 'Gesamtpreis', price: 20.5 + '$' }
+		{ id: 9, name: 'Gesamtpreis', price: 32.5 + '$' }
 	];
 </script>
 
@@ -149,64 +149,31 @@
 	{/if}
 	{#if currentPage === 'checkout'}
 		<div class="grid grid-cols-3 gap-x-3 gap-y-5 lg:grid-cols-1 xl:grid-cols-1 xl:gap-x-5">
-			<a href="1" class="group">
-				<div class="aspect-h-0.1 aspect-w-0.1 w-full overflow-hidden rounded-lg">
-					<img
-						src="img/crisps.jpg"
-						alt="sweet"
-						class="group-hover:opacity-90"
-						style="width: 25%; height: auto;"
-					/>
-				</div>
-				<h3 class="mt-4 text-sm text-gray-700">Cheetos Crunchos Sweet Chilli</h3>
-				<p class="mt-1 text-lg font-medium text-gray-900">2,50€</p>
-			</a>
-			<a href="2" class="group">
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg">
-					<img
-						src="img/candy.jpg"
-						alt="sweet"
-						class="group-hover:opacity-90"
-						style="width: 25%; height: auto;"
-					/>
-				</div>
-				<h3 class="mt-4 text-sm text-gray-700">Nerds Rainbow Edition</h3>
-				<p class="mt-1 text-lg font-medium text-gray-900">3,00€</p>
-			</a>
-			<a href="3" class="group">
-				<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden rounded-lg">
-					<img
-						src="img/chocolate.jpg"
-						alt="sweet"
-						class="group-hover:opacity-90"
-						style="width: 25%; height: auto;"
-					/>
-				</div>
-				<h3 class="mt-4 text-sm text-gray-700">Hersheys Pretzels Special Edition</h3>
-				<p class="mt-1 text-lg font-medium text-gray-900">3,00€</p>
-			</a>
+			<div class="aspect-h-0.1 aspect-w-0.1 w-full overflow-hidden">
+				<img src="img/crisps.jpg" alt="sweet" style="width: 25%; height: auto; min-width:100px" />
+			</div>
+			<h3 class="mt-4 text-sm">Cheetos Crunchos Sweet Chilli</h3>
+			<p class="mt-1 text-lg font-medium">2,50€</p>
+
+			<div class="aspect-h-[0.25] aspect-w-[0.25] w-full overflow-hidden">
+				<img src="img/candy.jpg" alt="sweet" style="width: 25%; height: auto; min-width:100px" />
+			</div>
+			<h3 class="mt-4 text-sm">Nerds Rainbow Edition</h3>
+			<p class="mt-1 text-lg font-medium">3,00€</p>
+
+			<div class="aspect-h-0.25 aspect-w-0.25 w-full overflow-hidden">
+				<img
+					src="img/chocolate.jpg"
+					alt="sweet"
+					style="width: 25%; height: auto; min-width:100px"
+				/>
+			</div>
+			<h3 class="mt-4 text-sm">Hersheys Pretzels Special Edition</h3>
+			<p class="mt-1 text-lg font-medium">3,00€</p>
 		</div>
 		<div>
-			<button class="btn btn-success" on:click={switchPageToCheckout}>Zur Kasse</button>
+			<button class="btn btn-success" on:click={switchPageToPrice}>Zur Kasse</button>
 			<button class="btn btn-outline" on:click={goBackPage}>Startseite</button>
-		</div>
-	{/if}
-
-	{#if currentPage === 'switchPage'}
-		<div class="flex flex-col justify-center px-64 py-64 bg-base-800 gap-4">
-			<table>
-				<thead>
-					<tr><th>ID</th> <th>Name</th> <th>Preis</th> </tr>
-				</thead>
-				<tbody>
-					{#each data as item (item.id)}
-						<tr> <td>{item.id}</td> <td>{item.name}</td> <td>{item.price}</td> </tr>
-					{/each}
-				</tbody>
-			</table>
-			<button class="btn btn-success" on:click={switchPageToPrice}>Zahlungsbestätigung</button>
-			<button class="btn btn-default" on:click={switchPageToAGB}>AGB</button>
-			<button class="btn btn-accent" on:click={goBackPage}>Startseite</button>
 		</div>
 	{/if}
 
@@ -279,9 +246,6 @@
 				die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.
 				<h3>St.Johann im Pongau, 18.12.2023</h3>
 				<h3>Martin Mayrhofer</h3>
-				Hinweis: Die AGB sollten an die spezifischen Gegebenheiten und Anforderungen Ihres Onlineshops
-				angepasst werden. Es wird empfohlen, rechtlichen Rat einzuholen, um sicherzustellen, dass die
-				AGB den aktuellen rechtlichen Anforderungen entsprechen.
 				<button class="btn btn-success" on:click={goBackPage}>Startseite</button>
 			</div>
 		</div>
@@ -303,7 +267,7 @@
 			<button on:click={switchPageToExplain} class="btn btn-accent">
 				<Icon icon="material-symbols:book" /> Erklärung Hidden Costs
 			</button>
-
+			<button class="btn btn-default" on:click={switchPageToAGB}>AGB</button>
 			<button
 				on:click={() => {
 					($patterns[2].done = true), window.location.replace('/');
@@ -326,8 +290,5 @@
 		border: 1px solid #ddd;
 		padding: 8px;
 		text-align: left;
-	}
-	th {
-		background-color: #f2f2f2;
 	}
 </style>
