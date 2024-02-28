@@ -28,10 +28,5 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
-	"type": "module",
-	"dependencies": {
-		"countdown": "^2.6.0",
-		"fortnite": "^4.3.2",
-		"svelte-countdown": "^1.1.2"
-	}
+	"type": "module"
 }

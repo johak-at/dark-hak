@@ -4,20 +4,25 @@
 	function clearProgress() {
 		$patterns = defaultValue;
 	}
-
-	function close() {
-		$patterns[1].done = true;
-		window.location.replace('/');
-	}
 </script>
 
-<div class="flex justify-center items-center">
-	<button class="btn" onclick="description.showModal()">Erklärung Confirmshaming</button>
-</div>
+<button class="btn" onclick="description.showModal()">Erklärung Confirmshaming</button>
 
 <dialog id="description" class="modal">
 	<div class="modal-box prose">
 		<img src="img/confirmshaming2.png" alt="book" class="m-auto" />
+
+		<h2>Erklärung</h2>
+
+		<h2>Einleitung:</h2>
+		<p>
+			Das Internet hat unser tägliches Leben in vielerlei Hinsicht bereichert, ermöglicht aber auch
+			die Verbreitung von fragwürdigen Praktiken, die oft unbemerkt bleiben. Eine solche fragwürdige
+			Methode, die in den letzten Jahren verstärkt an Bedeutung gewonnen hat, ist das sogenannte
+			"Confirmshaming". Dabei handelt es sich um eine manipulative Technik, die in die Kategorie der
+			Dark Patterns fällt, also Gestaltungsmuster, die Nutzer zu Handlungen verleiten, die sie
+			vielleicht nicht bewusst oder freiwillig durchführen würden.
+		</p>
 
 		<h2>Erklärung von Confirmshaming:</h2>
 		<p>
@@ -62,9 +67,8 @@
 	</form>
 </dialog>
 
-<div class="flex justify-center items-center">
-	<button class="btn" onclick="my_modal_5.showModal()">Beispiel Confirmshaming</button>
-</div>
+<!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">Beispiel Confirmshaming</button>
 
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
 	<div class="card w-96 glass">
@@ -89,54 +93,14 @@
 </dialog>
 
 <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
-	<div class="modal-box flex flex-col items-center justify-center">
-		<h1 class="font-bold text-lg">Sind Sie sich sicher?</h1>
+	<div class="modal-box">
+		<h3 class="font-bold text-lg">Sind Sie sich sicher?</h3>
 		<img src="img/virus2.jpg" alt="car!" class="m-auto" />
 		<div class="modal-action">
 			<form method="dialog">
-				<div class="stats shadow">
-					<div class="stat">
-						<div class="stat-figure text-secondary">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								class="inline-block w-8 h-8 stroke-current"
-								><path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-								/></svg
-							>
-						</div>
-						<div class="stat-title">Downloads</div>
-						<div class="stat-value">31K</div>
-						<div class="stat-desc">in den letzten 3 Tagen</div>
-					</div>
-
-					<div class="stat">
-						<div class="stat-figure text-secondary">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								class="inline-block w-8 h-8 stroke-current"
-								><path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-								/></svg
-							>
-						</div>
-						<div class="stat-title">Neue User</div>
-						<div class="stat-value">4,200</div>
-						<div class="stat-desc">in den letzten 3 Tagen</div>
-					</div>
-				</div>
-
-				<button class="btn" on:click={close}>Ja, ich will es riskieren</button>
+				<button class="btn" onclick="my_modal_6.close(); my_modal_5.close()"
+					>Ja, ich will es riskieren</button
+				>
 
 				<button class="btn" onclick="my_modal_6.close()">Nein, ich gehe doch lieber sicher</button>
 			</form>
