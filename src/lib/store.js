@@ -28,12 +28,12 @@ export const defaultValue = [
         slug: "hidden-costs",
         done: false
     },
-    // {
-    //     id: 4,
-    //     name: "misdirection",
-    //     slug: "misdirection",
-    //     done: false
-    // },
+    {
+        id: 4,
+        name: "misdirection",
+        slug: "misdirection",
+        done: false
+    },
     {
         id: 5,
         name: "overloading",

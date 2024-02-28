@@ -22,14 +22,11 @@
 >
 	<header class="flex absolute top-0 w-full justify-between items-center p-3 bg-base-100">
 		<a href="/" class="text-4xl flip"><Icon icon="streamline:emergency-exit" /></a>
-		<div class="flex gap-4 items-baseline">
-			<label for="theme">Theme:</label>
-			<select bind:value={$theme} class="select select-bordered" id="theme">
-				<option value="synthwave">synthwave</option>
-				<option value="cyberpunk">cyberpunk</option>
-				<option value="johak">johak</option>
-			</select>
-		</div>
+		<select bind:value={$theme} class="select select-bordered">
+			<option value="synthwave">synthwave</option>
+			<option value="cyberpunk">cyberpunk</option>
+			<option value="johak">johak</option>
+		</select>
 	</header>
 
 	<slot />
